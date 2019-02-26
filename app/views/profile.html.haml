@@ -1,0 +1,10 @@
+.user-profile
+    .user-profile__title
+        %h2.user-profile__title__text プロフィール
+    .user-profile__background
+        .user-profile__background__image
+        =image_tag "", class: :"user-profile__background__image-figure"
+        %input{ type: "text", name: "", placeholder: "", class: :"user-profile__background__image-var" }
+    .user-profile__content
+        %textarea{ type: "text", placeholder: "test test test", name: "", class: :"user-profile__content-textarea"}
+    .user-profile__btn
