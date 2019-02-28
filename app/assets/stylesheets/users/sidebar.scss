@@ -17,12 +17,12 @@ body {
 }
 
 // TODO:ここの名前はトップページに合わせて変更する
-.Wrapper{
-  float: left;
-  width: 280px;
-  margin: 0 40px 0 0;
-  display: block;
-}
+// .{
+//   float: left;
+//   width: 280px;
+//   margin: 0 40px 0 0;
+//   display: block;
+// }
 
 .mypage-nav {
   display: block;
@@ -32,6 +32,7 @@ body {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     list-style: none;
+    width: 280px;
     &-item {
       background-color: #ffffff;
       display: list-item;
