@@ -14,7 +14,7 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/teamA_user.pem']
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
-
+set :linked_files, %w{ config/master.key }
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
