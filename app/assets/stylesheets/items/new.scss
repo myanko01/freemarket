@@ -1,0 +1,257 @@
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: Source Sans Pro, Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  background: #f5f5f5;
+}
+  .l-single-container {
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    h2 {
+      padding: 40px 0px 0px 0px;
+      font-size: 22px;
+      text-align: center;
+      line-height: 1.5;
+    }
+  .sell-upload-drop-box {
+    box-sizing: border-box;
+    flex: 1;
+    position: relative;
+    min-height: 116px;
+    background: #f5f5f5;
+    border: 1px dashed #ccc;
+    font-size: 0;
+    text-align: center;
+    transition: box-shadow ease-out .3s;
+    cursor: pointer;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+  }
+  .form-require {
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .p {
+    font-size: 1em;
+  }
+// 商品名から １６行
+  .sell-content {
+    height: 355px;
+    .form-group {
+      font-size: 1.1em;
+      p {
+        height: 30px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.9;
+        font-size: 16px;
+      }
+      .textarea-default{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-height: 140px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+    }
+// 27行
+  .clearfixx{
+    height: 261px;
+  }
+  .select-default {
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  // 59行
+    .sell-price {
+      list-style: none;
+      padding: 0 0 24px;
+      }
+    .clearfixxx {
+      height: 48px;
+    }
+    .l-left {
+      width: 50%;
+      line-height: 48px;
+    }
+    .l-right {
+      width: 50%;
+    .input-default {
+      box-sizing: border-box;
+      height: 48px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      width: 100%;
+      margin: 8px 0 0;
+    }
+    }
+    .clearfix.plce {
+      padding: 24px 0;
+    }
+
+  .form-group {
+    margin: 40px 0 0;
+    label {
+      font-weight: 600;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+    select {
+      width: 100%;
+    }
+    .select-wrap {
+      margin: 8px 0 0;
+    }
+  }
+  label {
+    display: inline-block;
+  }
+  .sell-content {
+    box-sizing: border-box;
+    padding: 40px;
+    border-top: 1px solid #eee;
+  }
+
+  .sell-sub-head {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .select-wrap {
+    position: relative;
+    background: #fff;
+
+  }
+  .form-question {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0099e8;
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+    text-align: center;
+  }
+  a {
+    color: #0099e8;
+    text-decoration: none;
+  }
+
+  li {
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .l-right {
+    float: right;
+  }
+
+  .sell-btn-box {
+    p {
+      line-height: 1.5;
+    }
+    .btn-red {
+      margin: 40px 0 0;
+      background: #ea352d;
+      border: 1px solid #ea352d;
+      color: #fff;
+    }
+    .btn-gray {
+      width: 45%;
+      margin: 24px auto 0;
+      background: #aaa;
+      border: 1px solid #aaa;
+      color: #fff;
+    }
+  }
+  .btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+
+@media screen and(min-width: 700px) {
+  #sell {
+    .sell-upload-box {
+      box-sizing: border-box;
+      width: 620px;
+      padding: 40px;
+    }
+    .sell-upload-drop-box {
+      width: 620px;
+      margin: 0;
+      min-height: 184px;
+      padding: 40px;
+      pre {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        pointer-events: none;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
+    .sell-sub-head {
+        float: left;
+      }
+    .sell-form-box {
+      float: right;
+      width: 400px;
+      margin: 0;
+    }
+    }
+}
