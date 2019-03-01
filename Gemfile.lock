@@ -109,6 +109,8 @@ GEM
     excon (0.62.0)
     execjs (2.7.0)
     ffi (1.10.0)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     fog-aws (3.3.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -300,6 +302,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  font-awesome-rails
   fog-aws
   haml-rails
   jbuilder (~> 2.5)
