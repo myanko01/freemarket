@@ -10,7 +10,7 @@ body{
                 float: right;
             .mypage{
                 position: relative;
-                &__wrap{
+                &__main{
                     text-align: center;
                 }
                 &__image{
@@ -19,8 +19,8 @@ body{
                     width: 60px;
                     margin-top: 40px;
                 }
-                &__wrap-top{
-                    background-color: aqua;
+                &__main-top{
+                    background: url("https://cdn.pixabay.com/photo/2018/07/01/19/20/water-3510210_1280.jpg");
                     height: 200px;
                     min-width: 700px;
                         #name{
@@ -164,47 +164,67 @@ body{
                             }
                         }
                     }
-                    &__tabs{
-                        &__trade{
-                            background-color: white;
-                            display: block;
-                            width: 50%;
-                            text-align: center;
-                            font-size: 16px;
-                            line-height: 74px;
-                            font-weight: bold;
-                            float: left;
-                            border-top: solid 2px #ea352d;
-                            cursor: pointer;
-                        }
-                        &__traded{
-                            background-color: #eee;
-                            display: block;
-                            width: 50%;
-                            text-align: center;
-                            font-size: 16px;
-                            line-height: 74px;
-                            font-weight: bold;
-                            float: right;
-                            cursor: pointer;
-                        }
-                        &__trading {
-                            display: block;
-                            width: 50%;
-                            text-align: center;
-                            font-size: 16px;
-                            line-height: 74px;
-                            font-weight: bold;
-                            float: left;
-                            background: #eee;
-                        }
+                    &-tabs{
+                        
+                        // &__trade{
+                        //     background-color: white;
+                        //     display: block;
+                        //     width: 50%;
+                        //     text-align: center;
+                        //     font-size: 16px;
+                        //     line-height: 74px;
+                        //     font-weight: bold;
+                        //     float: left;
+                        //     border-top: solid 2px #ea352d;
+                        //     cursor: pointer;
+                        // }
+                        // &__traded{
+                        //     background-color: #eee;
+                        //     display: block;
+                        //     width: 50%;
+                        //     text-align: center;
+                        //     font-size: 16px;
+                        //     line-height: 74px;
+                        //     font-weight: bold;
+                        //     float: right;
+                        //     cursor: pointer;
+                        // }
+                        // &__trading {
+                        //     display: block;
+                        //     width: 50%;
+                        //     text-align: center;
+                        //     font-size: 16px;
+                        //     line-height: 74px;
+                        //     font-weight: bold;
+                        //     float: left;
+                        //     background: #eee;
+                        // }
                     }
             }
-            .mypage-purchase-container{
-                .mypage-purchase-container-tabs{
+            .mypage-buy-container{
+                .mypage-buy-tabs{
                     background-color: #eee;
                     height: 74px;
-                    
+                    &__trade{
+                        background-color: white;
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 74px;
+                        font-weight: bold;
+                        border-top: solid 2px #ea352d;
+                        margin: 0;
+                    }
+                    &__traded{
+                        display: block;
+                        width: 50%;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 74px;
+                        font-weight: bold;
+                        float: right;
+                    }
                     }
                 }                
             }
