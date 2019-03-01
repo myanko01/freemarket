@@ -1,0 +1,35 @@
+.credit__title{
+    font-size: 24px;
+    padding: 23px 24px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: #fff;
+}
+.credit__content{
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    width: 700px;
+    border-top: solid 1px #f5f5f5;
+    background-color: #fff;
+    input{   
+    }
+    &__card-form{
+        padding: 64px;
+        max-width: 320px;
+        margin: 0 auto;
+        &__group{
+
+            label{
+                display: inline-block;
+                font-weight: 600;
+            }
+            &__icon{
+                background-color: #ea352d;
+                color: white;
+                border-radius: 2px;
+            }
+        }
+    }
+}
