@@ -7,7 +7,7 @@
       商品一覧
     %section.box
       %h3.box__title
-        = link_to books_path do
+        = link_to items_path do
           アイテム
       .box__content
         = render 'item'
@@ -47,5 +47,5 @@
         = render 'item'
         = render 'item'
       .view-all
-        = link_to books_path do
+        = link_to items_path do
           すべての商品を見る
