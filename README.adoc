@@ -1,0 +1,146 @@
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc==)
+
+* Deployment instructions
+
+= DB
+
+== users
+[options="header"]
+|====
+|Column| Type| Options
+|last_name|string|null: false
+|first_name|string|null: false
+|adress|reference|
+|====
+
+=== Association
+* has_many :items
+* has_many :sales
+
+* has_one :address
+
+
+== addresses
+[options="header"]
+|====
+|Column| Type| Options
+|zip|integer|
+|prefecture|string|
+|city|string|
+|block|string|
+|building|string|
+|====
+
+=== Association
+* belongs_to :user
+
+== sales
+[options="header"]
+|====
+|Column| Type| Options
+|user|reference|null: false
+|item|reference|null: false
+|status|int| 
+|====
+
+=== Association
+* belongs_to :user
+* belongs_to :item
+
+== items
+[options="header"]
+|====
+|Column| Type| Options
+|name|string|null: false
+|price|integer|null: false
+|detail|text|null: false
+|user|reference|null:false, foreign_key:true
+|category_id|integer|null: false
+|subcatergory_id|integer|null: false
+|subsubcatergory_id|integer|null: false
+|brand|reference|
+|ship_from|string|null: false
+|shipping_date|reference|null: false
+|condition|reference|null: false
+|====
+
+=== Association
+* belongs_to :user
+* belongs_to :brand
+* belongs_to :ship_from
+* belongs_to :shipping_date
+* belongs_to :condition
+
+* has_many :images
+
+* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
+
+== categories
+[options="header"]
+|====
+|Column| Type| Options
+|name|string|null: false
+|parent_id|integer|
+|====
+
+=== Association
+has_many :items
+
+== brands
+[options="header"]
+|====
+|Column| Type| Options
+|name|string|null: false
+|====
+
+=== Association
+has_many :items
+
+== images
+[options="header"]
+|====
+|Column| Type| Options
+|image_url|string|null: false
+|item|reference|null: false
+|====
+belongs_to :item
+
+
+== conditions
+[options="header"]
+|====
+|Column| Type| Options
+|name|string|null: false
+|====
+
+=== Association
+* has_many :items
+
+== shipping_dates
+[options="header"]
+|====
+|Column| Type| Options
+|name|string|null: false
+|====
+
+== Association
+* has_many :items
