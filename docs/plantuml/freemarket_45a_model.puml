@@ -1,0 +1,93 @@
+@startuml
+scale 100 width
+scale 3000 height
+skinparam monochrome true
+
+
+
+entity "users" as users {
+    + id : Integer
+    --
+    # address : Reference
+    last_name : String
+    first_name : String
+}
+
+entity "addresses" as addresses {
+    + id : Integer
+    --
+    zip : String
+    prefecture : String
+    city : String
+    block : String
+    building : String
+}
+
+entity "sales" as sales {
+    + id : Integer
+    --
+    # user : Reference
+    # item : Reference
+    status : Integer
+}
+
+entity "items" as items {
+    + id : Integer
+    --
+    name : String
+    price : Integer
+    detail : Text
+    # user : Reference
+    category_id : Integer
+    subcategory_id : Integer
+    subsubcategory_id : Integer
+    # brand : Reference
+    ship_from : String
+    # shipping_date : Reference
+    # condition : Reference
+}
+
+entity "categories" as categories {
+    + id : Integer
+    --
+    name : String
+    parent_id : Integer
+}
+
+entity "brands" as brands {
+    + id : Integer
+    --
+    name : String
+}
+
+entity "images" as images {
+    + id : Integer
+    --
+    image_url : String
+    item : Reference
+}
+
+entity "conditions" as conditions {
+    + id : Integer
+    --
+    name : String
+}
+
+entity "shipping_dates" as dates {
+    + id : Integer
+    --
+    name : String
+}
+
+users  ||-|| sales
+users  ||-|| addresses
+images }-||  items
+users  }-||  items
+items  ||-|| sales
+items  }-||  brands
+items  }-||  categories
+items  }-||  conditions
+items  }-||  dates
+
+
+@enduml
