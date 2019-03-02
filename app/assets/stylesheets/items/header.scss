@@ -11,18 +11,18 @@
     padding: 8px 0 0;
     margin: 0 177.5px;
     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    .logo-bar{
+    &__bar{
       height: 36px;
       width: 700px;
       padding: 0;
       margin: 0;
-      .logo{
+      &__logo{
         background-repeat: no-repeat;
         margin: 0;
         padding: 0;
         float: left;
       }
-      .header-form{
+      &__form{
         position:relative;
         width: calc(100% - (134px + 16px));
         float: right;
@@ -47,12 +47,12 @@
         }
       }
     }
-    .header-nav-box{
+    &__nav{
       margin: 8px 0 0;
       height: 38px;
       display: flex;
       width: 700px;
-      .left-nav{
+      &__left{
         height: 38px;
         width: 254px;
         float: left;
@@ -92,14 +92,14 @@
               display: inline-block;
               text-decoration: none;
               &:hover {
-                color: $blue;
+                color: #0099e8;
                 transition-duration: 0.3s;
               }
             }
           }
         }
       }
-       .right-nav{
+       &__right{
         float: right;
         width: 600px;
         .user-nav{
