@@ -1,0 +1,73 @@
+body {
+  position: relative;
+  min-height: 100%;
+  background: $body-gray;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: $ink;
+  line-height: 1;
+}
+
+* {
+  border-style: solid;
+  border-width: 0;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.mypage-nav {
+  display: block;
+  &__list {
+    display: block;
+    list-style-type: disc;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    list-style: none;
+    border: none;
+    width: 280px;
+    .side{
+      margin: 0;
+      padding: 0;
+    }
+      &-item {
+        border: none;
+        background-color: $white;
+        border-bottom: solid 1px $body-gray;
+        display: list-item;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        padding: 16px;
+        background: $white;
+        color: $ink;
+      }
+    
+  }
+  &__head {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 40px 0 0;
+  }
+  &__number{
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $red;
+    text-align: center;
+    line-height: 24px;
+    color: $white;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+}
