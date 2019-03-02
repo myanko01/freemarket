@@ -1,7 +1,7 @@
 %section.box__item
-  %a{href: ''}
+  = link_to books_path do
     %figure.box__item__photo
-      %img{src: "briefcase.png", alt: "サンプル画像"}
+      = image_tag "briefcase.png", alt: "サンプル画像"
     .box__item__body
       %h3.box__item__body__name
         ビジネスバッグ
