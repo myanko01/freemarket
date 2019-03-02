@@ -28,7 +28,7 @@ Things you may want to cover:
 |====
 |Column| Type| Options
 |last_name|string|null: false
-|first_name|string|null: false
+|first_name|string|null: false
 |adress|reference|
 |====
 
@@ -43,11 +43,11 @@ Things you may want to cover:
 [options="header"]
 |====
 |Column| Type| Options
-|zip|integer|
+|zip|integer|
 |prefecture|string|
 |city|string|
 |block|string|
-|building|string|
+|building|string|
 |====
 
 === Association
@@ -92,7 +92,7 @@ Things you may want to cover:
 
 * has_many :images
 
-* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
+* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
 
 == categories
 [options="header"]
