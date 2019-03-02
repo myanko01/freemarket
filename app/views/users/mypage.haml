@@ -2,84 +2,43 @@
     .user-page
         .user-page__content
             .mypage
-                .mypage__wrap
-                    .mypage__wrap-top
-                        = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage__image"
+                .mypage__main
+                    .mypage__main-top
+                        = image_tag "https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409", class: :"mypage__image"
                         .h2#name 名前
-                        .mypage__wrap-top-number
+                        .mypage__main-top-number
                             .h2#valuation 評価数
                             %span.num 0
                             .h2#exhibit 出品数
                             %span.num 0
-                    .mypage-tab-notification
-                        .mypage-tab-container
-                            %ul.mypage-tab-container__tabs
-                                %li.tab
+                    .mypage-tab-container-1.hidden.active
+                        .mypage-tab-notification
+                            %ul.mypage-tab-notification__tabs
+                                %li.tab.focus
                                     %h3 お知らせ
-                                %li.tab
+                                %li.tab.do
                                     %h3 やることリスト
                         .mypage-notification
                             %ul.mypage-notification__data
                                 %li.mypage-notification__data__list
                                     =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage-notification__data__list-image"
                                     .mypage-notification__data__list__detail
-                                        .mypage-notification__data__list__detail-text 事務局から個別メッセージ
+                                        %p.mypage-notification__data__list__detail-text 事務局から個別メッセージ
                                         .mypage-notification__data__list__detail-time
-                                            %i.icon
+                                            %i.icon-time
                                             %span １６時間前
-                                        %i.icon-var
-                        .mypage-notification
-                            %ul.mypage-notification__data
-                                %li.mypage-notification__data__list
-                                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage-notification__data__list-image"
-                                    .mypage-notification__data__list__detail
-                                        .mypage-notification__data__list__detail-text 事務局から個別メッセージ
-                                        .mypage-notification__data__list__detail-time
-                                            %i.icon
-                                            %span １６時間前
-                                        %i.icon-var
-                        .mypage-notification
-                            %ul.mypage-notification__data
-                                %li.mypage-notification__data__list
-                                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage-notification__data__list-image"
-                                    .mypage-notification__data__list__detail
-                                        .mypage-notification__data__list__detail-text 事務局から個別メッセージ
-                                        .mypage-notification__data__list__detail-time
-                                            %i.icon
-                                            %span １６時間前
-                                        %i.icon-var
-                        .mypage-notification
-                            %ul.mypage-notification__data
-                                %li.mypage-notification__data__list
-                                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage-notification__data__list-image"
-                                    .mypage-notification__data__list__detail
-                                        .mypage-notification__data__list__detail-text 事務局から個別メッセージ
-                                        .mypage-notification__data__list__detail-time
-                                            %i.icon
-                                            %span １６時間前
-                                        %i.icon-var
+                                        %i.icon-chevron-right
                         .notification-contain
                             .notification-contain__btn
                                 .notification-contain__btn__text 一覧を見る
-                        // やること起動
-                        //      .mypage-tab-notification.hidden
-                        //          .mypage-tab-container
-                        //              %ul.mypage-tabs
-                        //                  %li.tab
-                        //                  %h3 お知らせ
-                        //              %li.tab
-                        //                  %h3 やることリスト
-                        //          .mypage-purchase__content
-                        //              %ul.mypage-purchase__content__data.hidden
-                        //                  %li.mypage-purchase__content__data-detail 現在やることはありません
             .mypage-purchase
                 %h2.mypage-purchase__title 購入した商品
                     
-            .mypage-purchase-container1
-                %ul.mypage-purchase-tabs
-                    %li.mypage-purchase-tabs__trade
+            .mypage-buy-container
+                %ul.mypage-buy-tabs
+                    %li.mypage-buy-tabs__trade
                         %h3 取引中
-                    %li.mypage-purchase-tabs__traded
+                    %li.mypage-buy-tabs__traded
                         %h3 過去の取引
                 .mypage-purchase__content
                     %ul.mypage-purchase__content__data

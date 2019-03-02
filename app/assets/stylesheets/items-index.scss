@@ -1,0 +1,118 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main, section, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  background-color: $white;
+  display: block;
+  .header__banner{
+    height: 390px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .top-banner{
+      background-image: url("header__banner.png");
+      height: 390px;
+      width: 100%;
+    }
+  }
+  .boxes{
+    padding: 20px 0 0 0;
+    background: $body-gray;
+    min-height: 100vh;
+    height: 3500px;
+    &__title{
+      font-size: 22px;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .box{
+      &__title{
+        font-size: 18px;
+        margin: 26px 11px;
+        text-align: center;
+        a{
+          color: $blue;
+          text-decoration: none;
+          touch-action: manipulation;
+        }
+      }
+      &__content{
+        width: 940px;
+        margin: 0 auto;
+        .box__item{
+          margin: 0 0 20px 20px;
+          position: relative;
+          float: left;
+          background-color: $white;
+          max-height:330px;
+          max-width: 213px;
+          a{
+            display: block;
+            color: $ink;
+            text-decoration: none;
+            touch-action: manipulation;
+            .box__item__photo{
+              overflow: hidden;
+              position: relative;
+              width: 213px;
+              height: 220px;
+              margin: 0;
+              img{
+                width: 213px;
+                height: 213px;
+              }
+            }
+            .box__item__body{
+              padding: 16px;
+              height: 110px;
+              &__name{
+                overflow: hidden;
+                position: relative;
+                font-weight: 400;
+                height: 3em;
+                line-height: 1.5;
+                word-break: break-word;
+                white-space: normal;
+                font-size: 16px;
+                color: $ink;
+                margin: 0;
+              }
+              &__num{
+                margin: 0;
+                &__price{
+                  float: left;
+                  font-weight: 600;
+                  color: $ink;
+                }
+                &__tax{
+                  font-size: 10px;
+                  clear: both;
+                }
+              }
+            }
+          }
+        }
+      }
+      .view-all{
+        margin-left: 200px;
+        padding: 0 0 30px;
+        text-align: right;
+        width: 940px;
+        clear: both;
+        a{
+          color: $blue;
+          text-decoration: none;
+          touch-action: manipulation;
+        }
+      }
+    }
+  }
+}
