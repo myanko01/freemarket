@@ -1,4 +1,4 @@
-= README
+# README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -91,6 +91,8 @@ Things you may want to cover:
 * belongs_to :condition
 
 * has_many :images
+
+* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
 
 == categories
 [options="header"]
