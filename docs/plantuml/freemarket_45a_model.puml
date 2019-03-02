@@ -1,6 +1,4 @@
 @startuml
-scale 100 width
-scale 3000 height
 skinparam monochrome true
 
 
