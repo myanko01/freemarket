@@ -1,0 +1,132 @@
+%aside.app-banner
+  .banner-pc
+    .app-banner__inner
+      %h2.app-banner__inner__title スマホでかんたんフリマアプリ
+      %p.app-banner__inner__publicity 今すぐ無料ダウンロード!
+      .app-banner__inner___icon
+        %figure.footer-mercari-icon
+          = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1857733084", width: "68", height: "68"
+        %ul.app-install-icons
+          %li.app-install-icon
+            = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", class: "app-install--link" do
+              = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?1857733084"
+          %li.app-install-icon
+            = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", class: "app-install--link" do
+              = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1857733084"
+    %figure.app-banner__pc__image
+      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1857733084", width: "300", heigth: "260"
+%footer.global-footer
+  %nav
+    %ul
+      %li.footer-cell
+        %h2.footer-hed メルカリについて
+        %ul
+          %li
+            = link_to root_path do
+              %p 会社概要(運営会社)
+          %li
+            = link_to root_path do
+              %p プライバシーポリシー
+          %li
+            = link_to root_path do
+              %p メルカリ利用規約
+          %li
+            = link_to root_path do
+              %p 有償ポイントの関する特約
+          %li
+            = link_to root_path do
+              %p あんしんスマホサポート制度に関する利用特約
+          %li
+            = link_to root_path do
+              %p コンプライアンスポリシー
+          %li
+            = link_to root_path do
+              %p 個人データの安全管理にかかる基本方針
+          %li
+            = link_to root_path do
+              %p 特定商取引に基づく表示
+          %li
+            = link_to root_path do
+              %p 資金決済法に基づく表示
+          %li
+            = link_to root_path do
+              %p 法令遵守と犯罪抑止のために
+          %li
+            = link_to root_path do
+              %p 採用情報
+      %li.footer-cell
+        %h2.footer-hed メルカリを見る
+        %ul
+          %li
+            = link_to root_path do
+              %p カテゴリー一覧
+          %li
+            = link_to root_path do
+              %p ブランド一覧
+          %li
+            = link_to root_path do
+              %p 出品地域一覧
+          %li
+            = link_to root_path do
+              %p 公式ブログ
+          %li
+            = link_to root_path do
+              %p 公式Twitter
+          %li
+            = link_to root_path do
+              %p 公式Facebook
+      %li.footer-cell
+        %h2.footer-hed ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to root_path do
+              %p メルカリガイド
+          %li
+            = link_to root_path do
+              %p メルカリロゴ利用ガイドライン
+          %li
+            = link_to root_path do
+              %p お知らせ
+          %li
+            = link_to root_path do
+              %p らくらくメルカリ便とは
+          %li
+            = link_to root_path do
+              %p ゆうゆうメルカリ便とは
+          %li
+            = link_to root_path do
+              %p 大型らくらくメルカリ便とは
+          %li
+            = link_to root_path do
+              %p 車体取引ガイド
+          %li
+            = link_to root_path do
+              %p 返品・返金ポリシー
+          %li
+            = link_to root_path do
+              %p メルカリあんしん・あんぜん宣言！
+          %li
+            = link_to root_path do
+              %p 偽ブランド品撲滅への取り組み
+          %li
+            = link_to root_path do
+              %p メルカリボックス
+      %li.footer-cell
+        %h2.footer-hed 国
+        %ul.footer-nav-lang
+          %li
+            = link_to root_path do
+              = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/flag_us.png?4136293187", alt: "", width: "22"
+              United States
+          %li
+            = link_to root_path do
+              = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/flag_uk.png?4136293187", alt: "", width: "22"
+              United Kingdom
+          %li
+            = link_to root_path do
+              = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/flag_jp.png?4136293187", alt: "", width: "22"
+              日本
+  = link_to "https://www.mercari.com/jp/", class: "footer-logo" do
+    = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?128691313", width: "124", heigth: "33", alt: "mercari"
+  %p.footer-copyright
+    %small © 2018 Mercari

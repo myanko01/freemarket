@@ -1,0 +1,104 @@
+.app-banner{
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?52584806);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 768px;
+  .banner-pc {
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    &__inner {
+      height: 166px;
+      width: 420px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      &__title {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin: 0;
+        font-size: 16px;
+      }
+      &__publicity {
+        font-size: 35px;
+        color: white;
+        margin: 10px 0 0;
+        font-size: 24px;
+      }
+      &__icon {
+        height: 68px;
+        margin-top: 10px;
+        display: flex;
+        .footer-mercari-icon {
+          margin: 0;
+          width: 70px;
+        }
+        .app-install-icons {
+          display: flex;
+          align-items: center;
+          .app-install-icon {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    &__image{
+      margin: 0;
+      width: 300px;
+      height: 262.625px;
+      margin: 5px 0 0 15px;
+    }
+  }
+}
+.global-footer{
+  padding: 60px 0;
+  text-align: center;
+  background-color: #212121;
+  color: $white;
+  height:645px;
+  nav{
+    margin: 0 auto;
+    width: 700px;
+    ul {
+      list-style: none;
+       overflow:  hidden;
+      .footer-cell{
+        display: inline-block;
+        width: 23%;
+        margin: 0 2% 0 0;
+        vertical-align: top;
+        float: left;
+        .footer-hed{
+          font-size: 16px;
+          line-height: 1.4;
+        }
+          li:first-child{
+            margin: 24px 0 0;
+          }
+          li {
+            margin-top: 16px;
+          }
+          a{
+            display: block;
+            line-height: 1;
+            font-size: 13px;
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .footer-logo{
+    color: $white;
+    display: block;
+    margin: 40px 0 0;
+    text-align: center;
+    }
+  .footer-copyright{
+    margin-top: 8px;
+    text-align:center;
+  }
