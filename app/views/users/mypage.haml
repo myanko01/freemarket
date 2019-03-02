@@ -4,7 +4,7 @@
             .mypage
                 .mypage__main
                     .mypage__main-top
-                        = image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: :"mypage__image"
+                        = image_tag "https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409", class: :"mypage__image"
                         .h2#name 名前
                         .mypage__main-top-number
                             .h2#valuation 評価数
@@ -31,17 +31,6 @@
                         .notification-contain
                             .notification-contain__btn
                                 .notification-contain__btn__text 一覧を見る
-                        // やること起動
-                    -# .mypage-tab-container-2
-                    -#     .mypage-tab-notification
-                    -#         %ul.mypage-tab-container__tabs
-                    -#             %li.tab.notice
-                    -#                 %h3 お知らせ
-                    -#             %li.tab.active
-                    -#                 %h3 やることリスト
-                    -#     .mypage-purchase__content
-                    -# %ul.mypage-purchase__content__data.hidden
-                    -#     %li.mypage-purchase__content__data-detail 現在やることはありません
             .mypage-purchase
                 %h2.mypage-purchase__title 購入した商品
                     
@@ -54,13 +43,4 @@
                 .mypage-purchase__content
                     %ul.mypage-purchase__content__data
                         %li.mypage-purchase__content__data-detail 取引中の商品がありません
-            -# .mypage-buy-container-2.hidden
-            -#     %ul.mypage-buy-tabs
-            -#         %li.mypage-buy-tabs__trading
-            -#             %h3 取引中
-            -#         %li.mypage-buy-tabs__trade
-            -#             %h3 過去の取引
-            -#     .mypage-purchase__content
-            -#         %ul.mypage-purchase__content__data
-            -#             %li.mypage-purchase__content__data-detail 過去に取引した商品がありません
         = render 'sidebar'
