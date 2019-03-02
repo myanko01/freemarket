@@ -77,17 +77,15 @@
         .sell-content.sell-btn-box
           %div
             %p
-              %a{href: "https://www.mercari.com/jp/help_center/getting_started/prohibited_items/", target: "_blank"}> 禁止されている出品
-              、
-              %a{href: "https://www.mercari.com/jp/help_center/getting_started/prohibited_conduct/", target: "_blank"}> 行為
+              =link_to "禁止されている出品、", "", target: "_blank"
+              =link_to "行為", "", target: "_blank"
               を必ずご確認ください。
             %p
               またブランド品でシリアルナンバー等がある場合はご記載ください。
-              %a{href: "https://www.mercari.com/jp/help_center/getting_started/counterfeit_goods/", target: "_blank"}> 偽ブランドの販売
+              =link_to "" , target: "_blank"
               は犯罪であり処罰される可能性があります。
             %p
-              また、出品をもちまして
-              %a{href: "https://www.mercari.com/jp/seller_terms/"}> 加盟店規約
+              =link_to "加盟店規約", ""
               に同意したことになります。
             .btn__default.btn-red 出品する
           %a.btn__default.btn-gray もどる
