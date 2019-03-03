@@ -1,9 +1,9 @@
 %aside.app-banner
-  .banner-pc
-    .app-banner__inner
-      %h2.app-banner__inner__title スマホでかんたんフリマアプリ
-      %p.app-banner__inner__publicity 今すぐ無料ダウンロード!
-      .app-banner__inner___icon
+  .banner
+    .banner__inner
+      %h2.banner__inner__title スマホでかんたんフリマアプリ
+      %p.banner__inner__publicity 今すぐ無料ダウンロード!
+      .banner__inner__icon
         %figure.footer-mercari-icon
           = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/mercari_icon.png?1857733084", width: "68", height: "68"
         %ul.app-install-icons
@@ -13,14 +13,14 @@
           %li.app-install-icon
             = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", class: "app-install--link" do
               = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?1857733084"
-    %figure.app-banner__pc__image
+    %figure.banner__image
       = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/jp/download_content_pc.png?1857733084", width: "300", heigth: "260"
 %footer.global-footer
   %nav
     %ul
       %li.footer-cell
-        %h2.footer-hed メルカリについて
-        %ul
+        %h2.footer-cell__hed メルカリについて
+        %ul.footer-cell__inner
           %li
             = link_to root_path do
               %p 会社概要(運営会社)
@@ -55,7 +55,7 @@
             = link_to root_path do
               %p 採用情報
       %li.footer-cell
-        %h2.footer-hed メルカリを見る
+        %h2.footer-cell__hed メルカリを見る
         %ul
           %li
             = link_to root_path do
@@ -76,7 +76,7 @@
             = link_to root_path do
               %p 公式Facebook
       %li.footer-cell
-        %h2.footer-hed ヘルプ＆ガイド
+        %h2.footer-cell__hed ヘルプ＆ガイド
         %ul
           %li
             = link_to root_path do
@@ -112,7 +112,7 @@
             = link_to root_path do
               %p メルカリボックス
       %li.footer-cell
-        %h2.footer-hed 国
+        %h2.footer-cell__hed 国
         %ul.footer-nav-lang
           %li
             = link_to root_path do
