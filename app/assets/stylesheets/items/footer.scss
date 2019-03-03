@@ -1,55 +1,72 @@
 .app-banner{
-  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?52584806);
-  background-size: cover;
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?6820409);
   background-position: center;
-  background-repeat: no-repeat;
-  min-width: 768px;
-  .banner-pc {
+  .banner{
+    display: block;
+    overflow: hidden;
+    position: relative;
     width: 750px;
     height: 260px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
+    color: #fff;
     &__inner {
-      height: 166px;
-      width: 420px;
-      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
       &__title {
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
         color: white;
-        font-size: 16px;
-        font-weight: bold;
         line-height: 1.4;
         margin: 0;
         font-size: 16px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4)
       }
       &__publicity {
         font-size: 35px;
         color: white;
         margin: 10px 0 0;
-        font-size: 24px;
       }
       &__icon {
-        height: 68px;
-        margin-top: 10px;
-        display: flex;
+        margin: 20px 0 0;
         .footer-mercari-icon {
-          margin: 0;
-          width: 70px;
+          float: left;
+          img{
+            vertical-align: middle;
+          }
         }
         .app-install-icons {
-          display: flex;
-          align-items: center;
+          float: left;
+          margin: 0 0 0 24px;
+          line-height: 68px;
+          list-style: none;
           .app-install-icon {
-            margin-left: 15px;
+            float: left;
+            a:hover {
+             text-decoration: underline;
+             opacity: .7;
+             }
+            a{
+               display: block;
+               line-height: 68px;
+               img{
+                vertical-align: middle;
+                }
+              }
+            &:last-child {
+            margin: 0 0 0 16px;
+
+            }
           }
         }
       }
     }
     &__image{
-      margin: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
       width: 300px;
-      height: 262.625px;
-      margin: 5px 0 0 15px;
+      height: 100%;
     }
   }
 }
@@ -58,23 +75,24 @@
   text-align: center;
   background-color: #212121;
   color: $white;
-  height:645px;
   nav{
     margin: 0 auto;
-    width: 700px;
+    width: 1020px;
     ul {
       list-style: none;
-       overflow:  hidden;
+      .footer-cell:last-child {
+        margin: 0;
+        }
       .footer-cell{
         display: inline-block;
         width: 23%;
         margin: 0 2% 0 0;
         vertical-align: top;
-        float: left;
-        .footer-hed{
-          font-size: 16px;
-          line-height: 1.4;
+        &__hed{
+          color: $white;
+         font-size: 16px;
         }
+        &__inner
           li:first-child{
             margin: 24px 0 0;
           }
@@ -83,8 +101,8 @@
           }
           a{
             display: block;
-            line-height: 1;
-            font-size: 13px;
+            // line-height: 1;
+            // font-size: 13px;
             color: $white;
             text-decoration: none;
           }
