@@ -1,0 +1,183 @@
+.app-banner{
+  background: url(https://gyazo.com/269a7d12135561f7f9711b24f1c8ee3a)
+}
+.header{
+  width: 100%;
+  height: 90px;
+  background-color: $white;
+  .header-inner{
+    width: 1020px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+    margin: 0 177.5px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    &__bar{
+      height: 36px;
+      width: 700px;
+      padding: 0;
+      margin: 0;
+      &__logo{
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        float: left;
+      }
+      &__form{
+        position:relative;
+        width: calc(100% - (134px + 16px));
+        float: right;
+        .input-default{
+          width: 100%;
+          height: 36px;
+          padding: 9px 32px 9px 8px;
+          border: 1px solid $key-gray;
+          line-height: 1.5;
+          font-size: 16px;
+          box-sizing:border-box;
+          display: inline-block;
+          border-radius: 4px;
+        }
+        .icon{
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 36px;
+          line-height: 36px;
+          text-align: center;
+        }
+      }
+    }
+    &__nav{
+      margin: 8px 0 0;
+      height: 38px;
+      display: flex;
+      width: 700px;
+      &__left{
+        height: 38px;
+        width: 254px;
+        float: left;
+        margin: 0;
+        padding:  0;
+        border-width: 0;
+        .search-nav{
+          height: 38px;
+          width: 254px;
+          font-size: 14px;
+          float: left;
+          display: flex;
+          .nav-list{
+            display: block;
+            &__title{
+              font-size: 14px;
+              font-weight: 400;
+            }
+            &__category{
+              font-size: 14px;
+              font-weight: 400;
+              position: relative;
+              color: $ink;
+              display: inline-block;
+              text-decoration: none;
+              &:hover {
+                color: $blue;
+                transition-duration: 0.3s;
+              }
+            }
+            &__brand{
+              font-size: 14px;
+              font-weight: 400;
+              position: relative;
+              color: $ink;
+              padding: 0 0 0 16px;
+              display: inline-block;
+              text-decoration: none;
+              &:hover {
+                color: #0099e8;
+                transition-duration: 0.3s;
+              }
+            }
+          }
+        }
+      }
+       &__right{
+        float: right;
+        width: 600px;
+        .user-nav{
+          display: flex;
+          justify-content: flex-end;
+          height: 38px;
+          &__list {
+            line-height: 45px;
+            margin-left: 10px;
+            &__link-sign-in {
+              display: block;
+              border: solid 1px $red;
+              background-color: $red;
+              text-decoration: none;
+              line-height: 30px;
+              height: 30px;
+              width: 80px;
+              margin-top: 5px;
+              color: white;
+              text-align: center;
+              border-radius: 3px;
+            }
+            &__link-sign-up {
+              display: block;
+              border: solid 1px $blue;
+              text-decoration: none;
+              line-height: 30px;
+              height: 30px;
+              width: 110px;
+              margin-top: 5px;
+              color: $blue;
+              text-align: center;
+              border-radius: 3px;
+              &:hover {
+                background-color: $blue;
+                color: white;
+                transition-duration: 0.3s;
+              }
+            }
+            &__link {
+              text-decoration: none;
+              color: $ink;
+              display: flex;
+              flex-direction: row;
+              &:hover {
+                color: $blue;
+                transition-duration: 0.3s;
+              }
+              .mypage-icon {
+                margin: 0 10px 0 0;
+                &__conteiner {
+                  height: 45px;
+                  img {
+                    display: inline-block;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                  }
+                }
+              }
+              p{
+                display: inline-block;
+                margin: 0 0 0 8px;
+                font-size: 14px;
+                vertical-align: middle;
+              }
+              .far {
+                line-height: 45px;
+                font-size: 17px;
+              }
+              .fa {
+                line-height: 45px;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
