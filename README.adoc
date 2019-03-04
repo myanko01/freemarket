@@ -66,6 +66,8 @@ Things you may want to cover:
 * belongs_to :user
 * belongs_to :item
 
+* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
+
 == items
 [options="header"]
 |====
@@ -92,7 +94,7 @@ Things you may want to cover:
 
 * has_many :images
 
-* enum status:{default: 0,nonpayment:1,undispache:2,dispached:3, buyer-evaluated:4, closed:5}
+
 
 == categories
 [options="header"]
