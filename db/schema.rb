@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_015132) do
+ActiveRecord::Schema.define(version: 2019_03_04_055359) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "zip", limit: 7
@@ -20,6 +20,25 @@ ActiveRecord::Schema.define(version: 2019_03_04_015132) do
     t.string "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "price", null: false
+    t.text "detail", null: false
+    t.bigint "user_id", null: false
+    t.integer "category_id", null: false
+    t.integer "subcategory_id", null: false
+    t.integer "subsubcategory", null: false
+    t.integer "brand", null: false
+    t.string "ship_from", null: false
+    t.bigint "shipping_date_id", null: false
+    t.bigint "condition_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["condition_id"], name: "index_items_on_condition_id"
+    t.index ["shipping_date_id"], name: "index_items_on_shipping_date_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sales", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
