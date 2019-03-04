@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_095331) do
+ActiveRecord::Schema.define(version: 2019_03_04_111817) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "zip", limit: 7
@@ -114,5 +114,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_095331) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "sales", "items"
+  add_foreign_key "sales", "users"
   add_foreign_key "users", "addresses"
 end
