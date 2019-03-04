@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_111817) do
+ActiveRecord::Schema.define(version: 2019_03_04_114821) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "zip", limit: 7
@@ -63,12 +63,13 @@ ActiveRecord::Schema.define(version: 2019_03_04_111817) do
     t.integer "category_id", null: false
     t.integer "subcategory_id", null: false
     t.integer "subsubcategory", null: false
-    t.integer "brand", null: false
+    t.bigint "brand_id"
     t.string "ship_from", null: false
     t.bigint "shipping_date_id", null: false
     t.bigint "condition_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["condition_id"], name: "index_items_on_condition_id"
     t.index ["shipping_date_id"], name: "index_items_on_shipping_date_id"
     t.index ["user_id"], name: "index_items_on_user_id"
@@ -100,8 +101,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_111817) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "last_name", null: false
-    t.string "first_name", null: false
     t.string "last_name_kana", null: false
+    t.string "first_name", null: false
     t.string "first_name_kana", null: false
     t.string "phone_number", limit: 20, null: false
     t.string "nickname", null: false
@@ -114,6 +115,11 @@ ActiveRecord::Schema.define(version: 2019_03_04_111817) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "images", "items"
+  add_foreign_key "items", "brands"
+  add_foreign_key "items", "conditions"
+  add_foreign_key "items", "shipping_dates"
+  add_foreign_key "items", "users"
   add_foreign_key "sales", "items"
   add_foreign_key "sales", "users"
   add_foreign_key "users", "addresses"

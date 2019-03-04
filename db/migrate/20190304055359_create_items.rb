@@ -8,7 +8,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer    :category_id,    null: false
       t.integer    :subcategory_id, null: false
       t.integer    :subsubcategory, null: false
-      t.integer    :brand,          null: false
+      t.references :brand
       t.string     :ship_from,      null: false
       t.references :shipping_date,  null: false
       t.references :condition,      null: false
