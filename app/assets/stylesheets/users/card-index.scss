@@ -1,0 +1,105 @@
+body{
+  position: relative;
+  min-height: 100%;
+  background: $body-gray;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: $ink;
+  line-height: 1;
+  .card{
+    margin: 24px auto 0;
+    padding: 0 0 40px;
+    width:700px;
+    .card-content{
+      float: none;
+      width: 700px;
+      height: 358.109px;
+      margin: 0;
+      background-color: $white;
+      &__top{
+       font-size: 24px;
+       padding: 8px 24px;
+       display: block;
+      font-weight: bold;
+      line-height: 1.4;
+      border-bottom: 1px solid $body-gray;
+      text-align: center;
+      }
+      &__main{
+        padding: 64px;
+        line-height: 14px;
+        border-top: 1px solid $body-gray;
+        height: 308px;
+        &__single{
+          margin: auto;
+          max-width: 320px;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        &__second{
+          padding: 24px 0;
+          border-bottom: 1px solid $border-gray;
+          height: 107px;
+          width: 572px;
+          .l-single-content{
+            margin: auto;
+            width: 320px;
+            background-color: $red;
+            color: white;
+            line-height: 48px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            .btn-default{
+              margin-bottom: 8px !important;
+              background: #ea352d;
+              border: 1px solid $red;
+              color: #fff;
+              margin: 0;
+              text-align: center;
+              display: block;
+              width: 100%;
+              line-height: 48px;
+              font-size: 14px;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-decoration: none;
+              .far{
+                margin-right: 16px;
+                font-size: 16px;
+                font-family: FontAwesome;
+                font-style:normal;
+               }
+            }
+          }
+        }
+        &__bottom{
+          display: block;
+          .btn-root{
+            display: block;
+            margin: 40px 0 0;
+            float: right;
+            text-align: right;
+            display: inline-flex;
+            line-height: 24px;
+            color: #0099e8;
+            text-decoration: none;
+          &:hover {
+            opacity: 0.7;
+          }
+            span:hover {
+              text-decoration: underline;
+            }
+              .fa-angle-right {
+              margin-left: 5px;
+              font-size: 24px;
+              font-family: FontAwesome;
+              font-style:normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
