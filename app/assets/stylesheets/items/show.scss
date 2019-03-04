@@ -7,6 +7,11 @@
   color: #333;
   line-height: 1;
 }
+
+  .image01 {
+    height: 45px;
+    width: 45px;
+  }
   .item {
     margin:40px auto 0;
     padding: 30px 40px 40px;
@@ -38,11 +43,23 @@
             min-height:300px;
         }
 
+        .image0 {
+          height: 300px;
+          width: 300px;
+        }
+
+        .image00 {
+          height: 75px;
+          width: 75px;
+        }
+
           &__list{
             height:75px;
-        }
       }
-    }
+        }
+        }
+
+
         .item__content__table {
           float:right;
           max-width:300px;
