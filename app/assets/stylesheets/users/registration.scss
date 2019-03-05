@@ -57,16 +57,16 @@
   }
 
   .progressbar li.active {
-    color: $logo-red;
+    color: $red;
   }
 
   .progressbar li.active:before {
-    background-color: $logo-red;
+    background-color: $red;
     color:$white;
   }
 
   .progressbar li.active + li:after {
-    background-color: $logo-red;
+    background-color: $red;
   }
 }
 
@@ -120,7 +120,7 @@
     }
 
     &__label-req {
-      background: $logo-red;
+      background: $red;
       margin: 0 0 0 100px;
       padding: 2px 4px;
       border-radius: 2px;
@@ -132,7 +132,7 @@
     }
 
     &__labels-req {
-      background: $logo-red;
+      background: $red;
       margin: 0 0 0 100px;
       padding: 2px 4px;
       border-radius: 2px;
@@ -241,8 +241,8 @@
 
     .lob__box-next {
       margin: 40px 0 0;
-      background: $logo-red;
-      border: 1px solid $logo-red;
+      background: $red;
+      border: 1px solid $red;
       color: $white;
     }
 }
