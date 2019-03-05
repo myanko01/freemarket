@@ -24,8 +24,8 @@
           %span.form-box__label-req 必須
           .form-box__input PC・携帯どちらでも可
         .form-box__text
-          .form-box__text--a 本人確認
-          .form-box__text--b
+          .form-box__text-name 本人確認
+          .form-box__texts
             安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
         .form-box__width
           %p.form-box__label 姓 (全角)
@@ -56,7 +56,7 @@
 
         .lob__forms--box
           .lo__box
-            .lo__box--wr
+            .lo__box
             %span わたしはロボットではありません。
           = image_tag("https://www.gstatic.com/recaptcha/api2/logo_48.png",class: "logo__item")
           %div
@@ -65,4 +65,4 @@
               %a 利用規約
               に同意したものとみなします
         .lob__box
-          .lob__box-err 次へ進む
+          .lob__box-next 次へ進む
