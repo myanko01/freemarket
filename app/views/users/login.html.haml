@@ -1,0 +1,30 @@
+.header
+  .logo
+    = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2855175014", class: "logos__item")
+    = link_to ""
+.login
+  .login__top
+    %p.login__acc アカウントをお持ちでない方はこちら
+    %p.login__signup
+      = link_to '新規会員登録'
+  .login__form
+    .login__box
+      .login__item
+        = link_to 'facebookでログイン'
+    .login__box
+      .login__items
+        = link_to 'Googleでログイン'
+  .login__form--er
+    .login__form--box
+      .login__boxs メールアドレス
+    .login__form--box
+      .login__box0 パスワード
+    .login__form--boxs
+      .login__boxs
+        .login__boxs--wr
+        %span わたしはロボットではありません。
+      = image_tag("https://www.gstatic.com/recaptcha/api2/logo_48.png", class: "logo__item")
+
+  .login__box
+    .login__box-er ログイン
+    = link_to "パスワードをお忘れの方"
