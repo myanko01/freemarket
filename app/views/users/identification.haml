@@ -1,3 +1,4 @@
+= render 'items/header'
 .gray-background
     .user-page
         .user-page__content
@@ -5,7 +6,8 @@
             .identification
                 %p お客さまの本人情報をご登録ください。<br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
                 .identification__top__message 
-                    = link_to root_path, class: "" do 本人確認書類のアップロードについて ▶
+                    = link_to root_path, class: "" do
+                        本人確認書類のアップロードについて ▶
                 .input-form__item
                     %label お名前
                     %p 加藤尚人
@@ -24,7 +26,7 @@
                     %span.input-form__icon 任意
                     %div.select
                         %select
-                        = @address.name
+                        = @address
                 .input-form__item
                     %label 市区町村
                     %span.input-form__icon 任意
@@ -39,5 +41,8 @@
                     %input{type:"text", value:"", name:"",placeholder:"ex)フォンティスビル"}
                 %button{type:"submit"} 登録する
                 .identification__bottom__message
-                    = link_to root_path, class: "" do 本人情報の登録について ▶
+                    = link_to root_path, class: "" do
+                        本人情報の登録について ▶
         = render 'sidebar'
+= render 'items/footer'
+= render 'items/footer-sell-btn'

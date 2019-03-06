@@ -1,6 +1,9 @@
+= render 'items/header'
 .gray-background
     .user-page
         .user-page__content
             .logout
                 = link_to "ログアウト", destroy_user_session_path, method: :delete, class: :'logout__btn'
         = render 'sidebar'
+= render 'items/footer'
+= render 'items/footer-sell-btn'
