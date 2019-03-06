@@ -1,251 +1,253 @@
-.l__single-container {
-  width: 700px;
-  margin: 0 auto;
-  background: $white;
-  h2 {
-    padding: 40px 0px 0px 0px;
-    font-size: 22px;
+.wrap{
+  .l__single-container {
+    width: 700px;
+    margin: 0 auto;
+    background: $white;
+    h2 {
+      padding: 40px 0px 0px 0px;
+      font-size: 22px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+  .sell__upload__drop-box {
+    box-sizing: border-box;
+    flex: 1;
+    position: relative;
+    min-height: 116px;
+    background: $body-gray;
+    border: 1px dashed $key-gray;
+    font-size: 0;
     text-align: center;
-    line-height: 1.5;
+    transition: box-shadow ease-out .3s;
+    cursor: pointer;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+  }
+  .form__require {
+    background: $red;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .p {
+    font-size: 1em;
   }
 
-.sell__upload__drop-box {
-  box-sizing: border-box;
-  flex: 1;
-  position: relative;
-  min-height: 116px;
-  background: $body-gray;
-  border: 1px dashed $key-gray;
-  font-size: 0;
-  text-align: center;
-  transition: box-shadow ease-out .3s;
-  cursor: pointer;
-}
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-weight: bold;
-}
-.form__require {
-  background: $red;
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: $white;
-  font-size: 12px;
-  vertical-align: top;
-}
-.p {
-  font-size: 1em;
-}
+  .sell-content {
+    height: 355px;
+    .form-group {
+      font-weight: 600;
+      font-size: 1.1em;
+      border: 0;
+      p {
+        height: 30px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $key-gray;
+        background: $white;
+        line-height: 1.9;
+        font-size: 16px;
+        color: $logo-gray;
+        font-weight: 200;
+      }
+    .textarea-default{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-height: 140px;
+      padding: 10px;
+      border: 1px solid $key-gray;
+      background: $white;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $logo-gray;
+      font-weight: 200;
+    }
+    }
+  }
+  }
 
-.sell-content {
-  height: 355px;
-  .form-group {
-    font-weight: 600;
-    font-size: 1.1em;
-    border: 0;
-    p {
-      height: 30px;
+  .clearfixx{
+    height: 261px;
+  }
+  .select-default {
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid $key-gray;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+    .sell__price {
+      list-style: none;
+      padding: 0 0 24px;
+      border: 0;
+      }
+    .clearfixxx {
+      height: 48px;
+    }
+    .l-left {
+      width: 50%;
+      line-height: 48px;
+    }
+    .l-right {
+      width: 50%;
+    .input-default {
+      box-sizing: border-box;
+      height: 48px;
       padding: 10px 16px 8px;
       border-radius: 4px;
       border: 1px solid $key-gray;
       background: $white;
-      line-height: 1.9;
+      line-height: 1.5;
       font-size: 16px;
-      color: $logo-gray;
+      width: 100%;
+      margin: 8px 0 0;
       font-weight: 200;
+      color: $logo-gray;
     }
-  .textarea-default{
+    }
+    .clearfix.plce {
+      padding: 24px 0;
+    }
+
+  .form-group {
+    margin: 40px 0 0;
+    label {
+      font-weight: 600;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+    select {
+      width: 100%;
+    }
+    .select-wrap {
+      margin: 8px 0 0;
+    }
+  }
+  .sell-content {
+    box-sizing: border-box;
+    padding: 40px;
+    border-top: 1px solid $border-gray;
+  }
+
+  .sell-sub-head {
+    color: $logo-gray;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .select-wrap {
+    position: relative;
+    background: $white;
+  }
+  .form__question {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0099e8;
+    color: $white;
+    line-height: 14px;
+    font-size: 12px;
+    text-align: center;
+  }
+  a {
+    color: #0099e8;
+    text-decoration: none;
+  }
+
+  li {
+    padding: 24px 0;
+    border-top: 1px solid $key-gray;
+  }
+
+  .l-right {
+    float: right;
+  }
+
+  .sell-btn-box {
+    p {
+      line-height: 1.5;
+    }
+    .btn-red {
+      margin: 40px 0 0;
+      background: $red;
+      border: 1px solid $red;
+      color: $white;
+    }
+    .btn-gray {
+      width: 45%;
+      margin: 24px auto 0;
+      background: #aaa;
+      border: 1px solid #aaa;
+      color: $white;
+    }
+  }
+  .btn__default {
     display: block;
     width: 100%;
-    max-width: 100%;
-    min-height: 140px;
-    padding: 10px;
-    border: 1px solid $key-gray;
-    background: $white;
-    font-size: 16px;
-    line-height: 1.5;
-    color: $logo-gray;
-    font-weight: 200;
-  }
-  }
-}
-}
-
-.clearfixx{
-  height: 261px;
-}
-.select-default {
-  position: relative;
-  z-index: 2;
-  height: 48px;
-  padding: 0 16px;
-  border-radius: 4px;
-  border: 1px solid $key-gray;
-  background: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  cursor: pointer;
-}
-
-  .sell__price {
-    list-style: none;
-    padding: 0 0 24px;
-    border: 0;
-    }
-  .clearfixxx {
-    height: 48px;
-  }
-  .l-left {
-    width: 50%;
     line-height: 48px;
-  }
-  .l-right {
-    width: 50%;
-  .input-default {
-    box-sizing: border-box;
-    height: 48px;
-    padding: 10px 16px 8px;
-    border-radius: 4px;
-    border: 1px solid $key-gray;
-    background: $white;
-    line-height: 1.5;
-    font-size: 16px;
-    width: 100%;
-    margin: 8px 0 0;
-    font-weight: 200;
-    color: $logo-gray;
-  }
-  }
-  .clearfix.plce {
-    padding: 24px 0;
+    font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
   }
 
-.form-group {
-  margin: 40px 0 0;
-  label {
-    font-weight: 600;
-  }
-
-  &:first-child {
-    margin: 0;
-  }
-  select {
-    width: 100%;
-  }
-  .select-wrap {
-    margin: 8px 0 0;
-  }
-}
-.sell-content {
-  box-sizing: border-box;
-  padding: 40px;
-  border-top: 1px solid $border-gray;
-}
-
-.sell-sub-head {
-  color: $logo-gray;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-}
-
-.select-wrap {
-  position: relative;
-  background: $white;
-}
-.form__question {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #0099e8;
-  color: $white;
-  line-height: 14px;
-  font-size: 12px;
-  text-align: center;
-}
-a {
-  color: #0099e8;
-  text-decoration: none;
-}
-
-li {
-  padding: 24px 0;
-  border-top: 1px solid $key-gray;
-}
-
-.l-right {
-  float: right;
-}
-
-.sell-btn-box {
-  p {
-    line-height: 1.5;
-  }
-  .btn-red {
-    margin: 40px 0 0;
-    background: $red;
-    border: 1px solid $red;
-    color: $white;
-  }
-  .btn-gray {
-    width: 45%;
-    margin: 24px auto 0;
-    background: #aaa;
-    border: 1px solid #aaa;
-    color: $white;
-  }
-}
-.btn__default {
-  display: block;
-  width: 100%;
-  line-height: 48px;
-  font-size: 14px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  text-align: center;
-}
-
-@media screen and(min-width: 700px) {
-#sell {
-  .sell__upload__box {
-    box-sizing: border-box;
-    width: 620px;
-    padding: 40px;
-  }
-  .sell__upload__drop-box {
-    width: 620px;
-    margin: 0;
-    min-height: 184px;
-    padding: 40px;
-    pre {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      right: 16px;
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.5;
-      transform: translate(0, -50%);
-      transform: translate(0, -50%);
-      pointer-events: none;
-      white-space: pre-wrap;
-      word-wrap: break-word;
+  @media screen and(min-width: 700px) {
+  #sell {
+    .sell__upload__box {
+      box-sizing: border-box;
+      width: 620px;
+      padding: 40px;
+    }
+    .sell__upload__drop-box {
+      width: 620px;
+      margin: 0;
+      min-height: 184px;
+      padding: 40px;
+      pre {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        pointer-events: none;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
+    .sell-sub-head {
+        float: left;
+      }
+    .sell-form-box {
+      float: right;
+      width: 400px;
+      margin: 0;
     }
   }
-  .sell-sub-head {
-      float: left;
-    }
-  .sell-form-box {
-    float: right;
-    width: 400px;
-    margin: 0;
   }
-}
 }
