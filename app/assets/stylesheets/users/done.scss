@@ -71,113 +71,34 @@
 }
 
 .log__item {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
 }
 
-.credit__item {
-  width: 40px;
-  height: 30px;
-}
-
-.pay {
+.Done {
   width: 700px;
   margin: 0 auto;
-  background: $white;
+  background:  $white;
 
-  &__ment {
-    padding: 25px 16px;
+  &__top {
+    padding: 32px 16px;
     font-size: 22px;
     line-height: 1.5;
     text-align: center;
     font-weight: 700;
   }
 
-  &__bottoms {
-    padding: 40px;
-    border-top: 1px solid #f5f5f5;
+  &__bottoms{
+    padding: 64px;
+    border-top: 1px solid $body-gray;
     margin: 0;
+    text-align: center;
   }
 
-  .payment-box {
+  .form-boxs {
     max-width: 320px;
     margin: 0 auto;
-
-    &__width {
-      margin: 0;
     }
-
-    &__label {
-      font-weight: 600;
-      position: relative;
-      top: 25px;
-    }
-
-    &__label-req {
-      background: $red;
-      margin: 0 0 0 100px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      color: $white;
-      font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-    }
-
-    .p {
-      margin: 0 0 0 100px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      font-size: 15px;
-      vertical-align: top;
-      position: relative;
-      left: 50px;
-      top: 36px;
-    }
-
-    &__put {
-      height: 33px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      border: 1px solid $key-gray;
-      background: $white;
-      line-height: 2;
-      font-size: 15px;
-      color: $dark-grays;
-    }
-
-    &__puts {
-      height: 33px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      border: 1px solid $key-gray;
-      background: $white;
-      line-height: 2;
-      font-size: 15px;
-      color: $dark-grays;
-      width: 110px;
-      position: relative;
-      bottom: 16px;
-    }
-
-    &__labels-req {
-      background: $red;
-      margin: 0 0 0 138px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      color: $white;
-      font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-    }
-
-    .cre__item {
-      width: 190px;
-      height: 40px;
-    }
-  }
 
     .lob__box {
       display: block;
@@ -198,6 +119,6 @@
       margin: 40px 0 0;
       background: $red;
       border: 1px solid $red;
-      color: $white;
+      color:  $white;
     }
 }
