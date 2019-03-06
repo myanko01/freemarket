@@ -97,6 +97,16 @@
           %textarea{type:"text", value:""}
           .sell__btn__gray
             %span コメントする
+    .item-next
+      %ul.item-next-content
+        %li
+          = link_to root_path, class: "item-next-content-left" do
+            %i.fa.fa-angle-left
+            グーグルに学ぶディープラーニング
+        %li
+          = link_to root_path , class: "item-next-content-right" do
+            多動力
+            %i.fa.fa-angle-right
     .item-social-media
       %ul.item-social-media__box
         %li
