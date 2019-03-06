@@ -71,3 +71,21 @@ body {
     transform: translate(0, -50%);
   }
 }
+li.side:hover{
+  opacity: 0.7;
+  .fa-angle-right{
+    top: 20%;
+    color: black;
+    right: .3em;
+    font-size: 30px;
+  }
+  .mypage-nav__list-item{
+    color: black;
+  }
+}
+.fa-angle-right.side{
+  position: absolute;
+  font-size: 20px;
+  right: 16px;
+  color: $logo-gray;
+}
