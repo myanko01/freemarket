@@ -53,6 +53,7 @@
         padding: 10px 10px 30px;
         text-align: center;
         &-change{
+            text-decoration: none;
             background-color: $red;
             border: 1px solid $red;
             color: $white;
