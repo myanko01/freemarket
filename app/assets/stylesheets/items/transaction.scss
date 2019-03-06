@@ -138,6 +138,16 @@ body{
               margin: 8px 0 0;
               font-size: 14px;
               line-height: 1.4;
+              width: 320px;
+              &__postal-code{
+                width: 320px;
+              }
+              &__address{
+                @extend .purchase__user-address__inner__text__postal-code;
+              }
+              &__name{
+                @extend .purchase__user-address__inner__text__postal-code;
+              }
             }
             &__fix{
               display: block;
@@ -158,17 +168,21 @@ body{
           &__inner{
             max-width: 320px;
             margin: 0 auto;
-
             h3{
               margin: 0;
               font-size: 14px;
-
             }
             &__text{
               margin: 8px 0 0;
               font-size: 14px;
               line-height: 1.4;
-
+              width: 320px;
+              &__num{
+                width: 320px;
+              }
+              &__date{
+                @extend .purchase__pay-method__inner__text__num;
+              }
             }
             &__fix{
               display: block;

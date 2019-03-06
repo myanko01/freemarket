@@ -32,12 +32,12 @@
           %h3
             配送先
           %address.purchase__user-address__inner__text
-            〒333-3333
-            %br
-            東京都未来区未来3-33-3
-            %br
-            未来 太郎
-            %br
+            .purchase__user-address__inner__text__postal-code
+              〒333-3333
+            .purchase__user-address__inner__text__address
+              東京都未来区未来3-33-3
+            .purchase__user-address__inner__text__name
+              未来 太郎
           %p.purchase__user-address__inner__text
           = link_to 'https://www.mercari.com/jp/', class: "purchase__user-address__inner__fix" do
             %span
@@ -46,11 +46,12 @@
         .purchase__pay-method__inner
           %h3
             支払い方法
-          %p.purchase__pay-method__inner__text
-            ************3333
-            %br
-            01/01
+          .purchase__pay-method__inner__text
+            .purchase__pay-method__inner__text__num
+              ************3333
+            .purchase__pay-method__inner__text__date
+              01/01
           = link_to 'https://www.mercari.com/jp/', class: "purchase__pay-method__inner__fix" do
             %span
               変更する
-  = render 'footer-buy'
+  = render 'footer'
