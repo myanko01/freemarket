@@ -1,0 +1,81 @@
+@import "./common/colorvaliation.scss";
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: relative;
+  min-height: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  color: $ink;
+  line-height: 1;
+  background-color: $body-gray;
+  .single-container{
+    padding: 0 0 220px;
+    .single-main{
+      display: block;
+    }
+    @media screen and (min-width: 768px){
+      .single-footer{
+        width:456px;
+        height:140px;
+        margin:0 auto;
+      }
+    }
+    .single-footer{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 140px;
+      padding: 40px 0;
+      text-align: center;
+      nav{
+        ul{
+          font-size: 0;
+          li:first-child{
+            margin: 0;
+          }
+          li{
+            font-size: 12px;
+            display: inline-block;
+            margin:  0 0 0 16px;
+            a{
+              display: block;
+              color: $ink;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .single-footer__logo{
+        display: block;
+        color: $ink;
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+        text-decoration: none;
+        img{
+          vertical-align: middle;
+          width: 80px;
+          height: 65px;
+        }
+      }
+      p{
+        margin: 8px 0 0;
+        small{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

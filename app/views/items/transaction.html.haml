@@ -1,0 +1,57 @@
+.single-container
+  %main.single-main
+    %section.purchase
+      %h2.purchase__head
+        購入を確定しますか？
+      %section.purchase__content
+        .purchase__content__inner
+          %h3
+            = image_tag "briefcase.png", alt: "サンプル画像",class: "purchase__content__inner__image"
+          %p.purchase__content__inner__name
+            出来るビジネスマンのビジネスバッグ
+          %form{action: "", method: "POST", class: "purchase__content__inner__form", novalidate: "novalidate"}
+            %p.purchase__content__inner__form__item-price
+              ¥ 500
+              %span.purchase__content__inner__form__item-price__shipping-fee
+                送料込み
+            %ul.purchase__content__inner__form__point
+              %li
+                .purchase__content__inner__form__point__toggle
+                  ポイントはありません
+            %ul.purchase__content__inner__form__price
+              %li.purchase__content__inner__form__price__details
+                .price-cell
+                  支払い金額
+                .price-cell
+                  %span
+                    ¥ 500
+            %button{type: "submit", class: "purchase__content__inner__form__button"}
+              購入する
+      %section.purchase__user-address
+        .purchase__user-address__inner
+          %h3
+            配送先
+          %address.purchase__user-address__inner__text
+            .purchase__user-address__inner__text__postal-code
+              〒333-3333
+            .purchase__user-address__inner__text__address
+              東京都未来区未来3-33-3
+            .purchase__user-address__inner__text__name
+              未来 太郎
+          %p.purchase__user-address__inner__text
+          = link_to 'https://www.mercari.com/jp/', class: "purchase__user-address__inner__fix" do
+            %span
+              変更する
+      %section.purchase__pay-method
+        .purchase__pay-method__inner
+          %h3
+            支払い方法
+          .purchase__pay-method__inner__text
+            .purchase__pay-method__inner__text__num
+              ************3333
+            .purchase__pay-method__inner__text__date
+              01/01
+          = link_to 'https://www.mercari.com/jp/', class: "purchase__pay-method__inner__fix" do
+            %span
+              変更する
+  = render 'footer'
