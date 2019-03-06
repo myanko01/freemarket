@@ -1,12 +1,17 @@
-.body
+= render 'items/header'
+.gray-background
   .section.item
     %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
     .item__content.clearfix
       .item__content__image
         .item__content__image__top
           = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image0")
+        .item__content__image__top2
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image1")
         .item__content__image__list.clearfix
           = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image00")
+        .item__content__image__list.clearfix
+          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image001")
       %table.item__content__table
         %tbody
           %tr
@@ -16,15 +21,15 @@
               %div
                 .item-user__rating
                   = image_tag("")
-                  %i.fa.fa-laugh
+                  😁
                   %span 192
                 .item-user__rating
                   = image_tag("")
-                  %i.fa.fa-meh
+                  😐
                   %span 3
                 .item-user__rating
                   = image_tag("")
-                  %i.fa.fa-frown
+                  😵
                   %span 0
           %tr
             %th カテゴリー
@@ -37,7 +42,6 @@
                 %i.fa.fa-angle-right
               = link_to "ビジネス"
               .small-category
-                %i.fa.fa-angle-right
           %tr
             %th ブランド
             %td
@@ -76,34 +80,33 @@
     .item__likes.clearfix
       .item__likes__left
         %button.item__button__likes
-          %i.far.fa-heart
+          %i.fa.fa-heart
           %span いいね!
           %span 1420
         %a.item__button__report
-          %i.far.fa-flag
+          %i.fa.fa-flag
             %span 不適切な商品の報告
       .item__likes__right
-        %i.fas.fa-lock
+        %i.fa.fa-lock
         = link_to "あんしん・あんぜんへの取り組み"
   .item-messages
     .item-messages__content
       .item-messages__content--inner
         .item-messages__content--inner__form
           %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          .messages__body
+          %textarea{type:"text", value:""}
           .sell__btn__gray
             %span コメントする
-  .item-social-media
-    %ul.item-social-media__box
-      %li
-        = link_to ""
-        = image_tag("https://ja.facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png", class: "image01")
-        %i.fab.fa-facebook-square
-      %li
-        = link_to ""
-        = image_tag("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/600px-LINE_logo.svg.png", class: "image01")
-        %i.fab.fa-twitter-square
-      %li
-        = link_to ""
-        = image_tag("http://www.marksign.net/wp-content/uploads/2016/03/twitter_m.jpg", class: "image01")
-        %i.fab.fa-line
+    .item-social-media
+      %ul.item-social-media__box
+        %li
+          = link_to ""
+          = image_tag("https://ja.facebookbrand.com/wp-content/uploads/2016/05/flogo_rgb_hex-brc-site-250.png", class: "image01")
+        %li
+          = link_to ""
+          = image_tag("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/600px-LINE_logo.svg.png", class: "image01")
+        %li
+          = link_to ""
+          = image_tag("http://www.marksign.net/wp-content/uploads/2016/03/twitter_m.jpg", class: "image01")
+= render 'items/footer'
+= render 'items/footer-sell-btn'
