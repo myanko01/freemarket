@@ -1,0 +1,53 @@
+.box__item{
+    margin: 0 0 20px 20px;
+    position: relative;
+    display: inline-block;
+    background-color: $white;
+    max-height:330px;
+    max-width: 210px;
+    a{
+      display: inline-block;
+      color: $ink;
+      text-decoration: none;
+      touch-action: manipulation;
+      .box__item__photo{
+        overflow: hidden;
+        position: relative;
+        width: 210px;
+        height: 220px;
+        margin: 0;
+        img{
+          width: 213px;
+          height: 213px;
+        }
+      }
+      .box__item__body{
+        padding: 16px;
+        height: 110px;
+        &__name{
+          overflow: hidden;
+          position: relative;
+          font-weight: 400;
+          height: 3em;
+          line-height: 1.5;
+          word-break: break-word;
+          white-space: normal;
+          font-size: 16px;
+          color: $ink;
+          margin: 0;
+        }
+        &__num{
+          margin: 0;
+          &__price{
+            float: left;
+            font-weight: 600;
+            color: $ink;
+          }
+          &__tax{
+            font-size: 10px;
+            clear: both;
+          }
+        }
+      }
+    }
+  }
