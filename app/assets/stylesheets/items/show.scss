@@ -216,6 +216,22 @@
         }
       }
   }
+  .item-next{
+    margin: 0 160px;
+    padding: 20px 0;
+    .item-next-content{
+      .item-next-content-left{
+        text-decoration: none;
+        float: left;
+        color: $blue;
+      }
+      .item-next-content-right{
+        text-decoration: none;
+        float: right;
+        color: $blue;
+      }
+    }
+  }
 
   .item-messages{
     width:700px;
@@ -278,6 +294,18 @@
 
       }
     }
+  }
+  .item-user-profile{
+    width: 700px;
+    margin: 0 auto;
+    &__container{
+      margin: 8px 0;
+      &-1{
+        text-decoration: none;
+        font-size: 25px;
+        color: $blue;
+      }
+    } 
   }
 .fa-angle-right{
   color: #0099e8;
