@@ -1,81 +1,83 @@
 = render 'items/header'
 .gray-background
-  .section.item
-    %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
-    .item__content.clearfix
-      .item__content__image
-        .item__content__image__top
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image0")
-        .item__content__image__top2
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image1")
-        .item__content__image__list.clearfix
-          = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image00")
-        .item__content__image__list.clearfix
-          = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image001")
-      %table.item__content__table
-        %tbody
-          %tr
-            %th 出品者
-            %td
-              = link_to "わたし"
-              %div
-                .item-user__rating
-                  = image_tag("")
-                  😁
-                  %span 192
-                .item-user__rating
-                  = image_tag("")
-                  😐
-                  %span 3
-                .item-user__rating
-                  = image_tag("")
-                  😵
-                  %span 0
-          %tr
-            %th カテゴリー
-            %td
-              = link_to "本・ゲーム"
-              .large-category
-                %i.fa.fa-angle-right
-              = link_to "本"
-              .medium-category
-                %i.fa.fa-angle-right
-              = link_to "ビジネス"
-              .small-category
-          %tr
-            %th ブランド
-            %td
-              = link_to "自社"
-              %div
-          %tr
-            %th 商品の状態
-            %td 目立った傷や汚れなし
-          %tr
-            %th 配送料の負担
-            %td 送料込み(出品者負担)
-          %tr
-            %th 配送の方法
-            %td らくらくメルカリ便
-          %tr
-            %th 配送元地域
-            %td
-              = link_to ""
-              %div 東京都
-          %tr
-            %th 発送の目安
-            %td 4~7日で発送
-    .item__price
-      %span.item__price--bold  ¥30000
-      %span.item__price__tax (税込)
-      %span.item__price__shipping-fee 送料込み
-      .item__btn
-        = link_to "購入画面に進む"
-    .item__description
-      %p.item__description--inner
-        新品購入しました。
-        とても、素敵な本です！！
-        若干カバーが大きいため、余っている状態です。
+  .user-page
+    .section.item
+      %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
+      .item__content.clearfix
+        .item__content__image
+          .item__content__image__top
+            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image0")
+          .item__content__image__top2
+            = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image1")
+          .item__content__image__list.clearfix
+            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image00")
+          .item__content__image__list.clearfix
+            = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image001")
+        %table.item__content__table
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                = link_to "わたし"
+                %div
+                  .item-user__rating
+                    = image_tag("")
+                    😁
+                    %span 192
+                  .item-user__rating
+                    = image_tag("")
+                    😐
+                    %span 3
+                  .item-user__rating
+                    = image_tag("")
+                    😵
+                    %span 0
+            %tr
+              %th カテゴリー
+              %td
+                = link_to "本・ゲーム"
+                .large-category
+                  %i.fa.fa-angle-right
+                = link_to "本"
+                .medium-category
+                  %i.fa.fa-angle-right
+                = link_to "ビジネス"
+                .small-category
+            %tr
+              %th ブランド
+              %td
+                = link_to "自社"
+                %div
+            %tr
+              %th 商品の状態
+              %td 目立った傷や汚れなし
+            %tr
+              %th 配送料の負担
+              %td 送料込み(出品者負担)
+            %tr
+              %th 配送の方法
+              %td らくらくメルカリ便
+            %tr
+              %th 配送元地域
+              %td
+                = link_to ""
+                %div 東京都
+            %tr
+              %th 発送の目安
+              %td 4~7日で発送
+      .item__price
+        %span.item__price--bold  ¥30000
+        %span.item__price__tax (税込)
+        %span.item__price__shipping-fee 送料込み
+        .item__btn
+          = link_to "購入画面に進む"
+      .item__description
+        %p.item__description--inner
+          新品購入しました。
+          とても、素敵な本です！！
+          若干カバーが大きいため、余っている状態です。
 
+<<<<<<< HEAD
         世界一速く仕事をする彼らの仕事術
     .item__likes.clearfix
       .item__likes__left
@@ -97,6 +99,29 @@
           %textarea{type:"text", value:""}
           .sell__btn__gray
             %span コメントする
+=======
+          世界一速く仕事をする彼らの仕事術
+      .item__likes.clearfix
+        .item__likes__left
+          %button.item__button__likes
+            %i.fa.fa-heart
+            %span いいね!
+            %span 1420
+          %a.item__button__report
+            %i.fa.fa-flag
+              %span 不適切な商品の報告
+        .item__likes__right
+          %i.fa.fa-lock
+          = link_to "あんしん・あんぜんへの取り組み"
+    .item-messages
+      .item-messages__content
+        .item-messages__content--inner
+          .item-messages__content--inner__form
+            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %textarea{type:"text", value:""}
+            .sell__btn__gray
+              %span コメントする
+>>>>>>> tansioooooooo/master
     .item-next
       %ul.item-next-content
         %li
@@ -118,5 +143,25 @@
         %li
           = link_to ""
           = image_tag("http://www.marksign.net/wp-content/uploads/2016/03/twitter_m.jpg", class: "image01")
+    .item-user-profile
+      .item-user-profile__container
+        = link_to root_path, class: "item-user-profile__container-1" do
+          わたしさんのその他の出品
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
+    .item-user-profile
+      .item-user-profile__container
+        = link_to root_path, class: "item-user-profile__container-1" do
+          ビジネス/経済 （本・音楽・ゲーム） その他の商品
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
+      = render 'item'
 = render 'items/footer'
 = render 'items/footer-sell-btn'
