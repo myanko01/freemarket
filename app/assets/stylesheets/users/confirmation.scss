@@ -1,6 +1,8 @@
-.header {
+
+.header2 {
   height: 167px;
   text-align: center;
+  background-color: $body-gray;
 
   &__log {
     width: 390px;
@@ -69,27 +71,29 @@
     background-color: $red;
   }
 }
+  .log__item {
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+  }
 
-.log__item {
-    width: 200px;
-    height: 200px;
-}
+  p {
+    margin: 8px 0 0;
+    line-height: 22px;
+  }
 
-p {
-  line-height: 22px;
-}
-
-.Member {
+.member {
   width: 700px;
   margin: 0 auto;
   background: $white;
 
   &__top {
-    padding: 3px 16px;
-    font-size: 22px;
-    line-height: 0.1;
+    padding: 10px 24px;
+    font-size: 24px;
     text-align: center;
-    font-weight: 700;
+    h2{
+      font-weight: bold;
+    }
   }
 
   &__bottom{
@@ -104,15 +108,26 @@ p {
 
     &__width {
       margin: 0;
+      input{
+        width: 93%;
+        margin: 8px 0 0;
+        height: 30px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $key-gray;
+        background: $white;
+        line-height: 2;
+        font-size: 15px;
+        color: $dark-grays;
+      }
     }
 
     &__label {
       font-weight: 600;
-      position: relative;
-      top: 10px;
     }
 
     &__input {
+      margin: 8px 0 0;
       height: 30px;
       padding: 10px 16px 8px;
       border-radius: 4px;
@@ -134,7 +149,7 @@ p {
       transition: all ease-out .3s;
       cursor: pointer;
       text-align: center;
-      a {
+      &-sms2{
         text-decoration: none;
         color: #0099e8;
       }
@@ -145,6 +160,21 @@ p {
       background: $red;
       border: 1px solid $red;
       color: $white;
+    }
+  }
+  .lob__box2 {
+    display: inline-block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    background-color: $red;
+    border: 1px solid $red;
+    &-next{
+      color: $white;
+      text-decoration: none;
     }
   }
 }

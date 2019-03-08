@@ -1,35 +1,43 @@
-.body
-  .header
-    .header__log
-      = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1278822302",class: "log__item")
-    .header__container
-      %ul.progressbar
-        %li 会員情報
-        %li 電話番号認証
-        %li お届け先住所入力
-        %li.active お支払い方法
-        %li 完了
+
+.header4
+  .header4__log
+    = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1278822302",class: "log__item")
+  .header4__container
+    %ul.progressbar
+      %li.active 会員情報
+      %li.active 電話番号認証
+      %li.active お届け先住所入力
+      %li.active お支払い方法
+      %li 完了
+.gray-background
   .pay
     .pay__ment
       %p.pay__text お支払い方法
     .pay__bottoms
       .payment-box
         .payment-box__width
-          %p.payment-box__label カード番号
-          %span.payment-box__label-req 必須
-          .payment-box__put 半角数字のみ
-          = image_tag("http://okane-hosoku.com/wp-content/uploads/2017/06/64c222ce27a794eddad2ef5d4b91c4d6.png",class: "credit__item")
+          %label.payment-box__label カード番号
+          %span.payment-box__label-req 必須    
+        %input{type:"text", value:"", name:"", placeholder:"半角数字のみ", class:"input__number"}
+        = image_tag("http://okane-hosoku.com/wp-content/uploads/2017/06/64c222ce27a794eddad2ef5d4b91c4d6.png",class: "credit__item")
         .payment-box__width
-          %p.payment-box__label 有効期限
+          %label.payment-box__label 有効期限
           %span.payment-box__label-req 必須
-          .p 月
-          .payment-box__puts 01
-          .p 年
-          .payment-box__puts 18
+          %p 月
+          -# selectにする場合用
+          -# %div.select-month
+          -#   %select
+          %input{type:"text", value:"", name:"", placeholder:"01", class:"input__month"}
+          %p 年
+          -#   selectにする場合用
+          -# %div.select-year
+          -#   %select
+          %input{type:"text", value:"", name:"", placeholder:"18", class:"input__year"}
         .payment-box__width
-          %p.payment-box__label セキュリティコード
-          %span.payment-box__labels-req 必須
-          .payment-box__put カード背面4桁もしくは3桁の番号
-          .lob__box
-            .lob__box-next
-            = link_to "次へ進む" ,'/users/done'
+          %label.payment-box__label セキュリティコード
+          %span.payment-box__label-req 必須
+          %input{type:"text", value:"", name:"", placeholder:"カード背面4桁もしくは3桁の番号", class:"input__number-seq"}
+        .lob__box4
+          .lob__box4-next
+            = link_to "次へ進む" ,'/users/done',class:"lob__box4-next"
+= render 'items/footer-buy'

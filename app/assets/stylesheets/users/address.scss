@@ -1,6 +1,7 @@
-.header {
+.header3 {
   height: 167px;
   text-align: center;
+  background-color: $body-gray;
 
   &__log {
     width: 390px;
@@ -99,39 +100,42 @@
     margin: 0 auto;
 
     &__width {
-      margin: 0;
+      margin: 40px 0 0;
     }
 
-    &__label {
+    label {
       font-weight: 600;
-      position: relative;
-      top: 25px;
+      display: inline-block;
     }
 
+    input{
+      width: 93%;
+      margin: 8px 0 0;
+      height: 30px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid $key-gray;
+      background: $white;
+      line-height: 2;
+      font-size: 15px;
+      color: $dark-grays;
+    }
+
+   
     &__label-req {
       background: $red;
-      margin: 0 0 0 100px;
       padding: 2px 4px;
       border-radius: 2px;
       color: $white;
       font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-      right: 5px;
     }
 
     &__label-with {
       background: #bbb;
-      margin: 0 0 0 100px;
       padding: 2px 4px;
       border-radius: 2px;
       color: $white;
       font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-      right: 60px;
     }
 
     &__telephone {
@@ -146,25 +150,19 @@
     }
     }
 
-    .lob__box {
-      display: block;
-      width: 100%;
-      line-height: 48px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      -webkit-transition: all ease-out .3s;
-      transition: all ease-out .3s;
-      cursor: pointer;
-      text-align: center;
-      a {
-        text-decoration: none;
-      }
-    }
-
-    .lob__box-next {
-      margin: 40px 0 0;
-      background: $red;
-      border: 1px solid $red;
+  .lob__box3 {
+    display: inline-block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin: 40px 0 0;
+    background-color: $red;
+    border: 1px solid $red;
+    &-next{
       color: $white;
+      text-decoration: none;
     }
+  }
 }
