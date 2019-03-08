@@ -13,8 +13,11 @@
 ActiveRecord::Schema.define(version: 2019_03_04_114821) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "prefecture_id"
+    t.string "zip", limit: 7
+    t.string "prefecture", limit: 4
     t.string "city"
+    t.string "block"
+    t.string "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "last_name", null: false
