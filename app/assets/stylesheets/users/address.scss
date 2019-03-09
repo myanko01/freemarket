@@ -1,5 +1,4 @@
-
-.header2 {
+.header3 {
   height: 167px;
   text-align: center;
   background-color: $body-gray;
@@ -71,62 +70,46 @@
     background-color: $red;
   }
 }
-  .log__item {
-    width: 185px;
-    height: 49px;
-    line-height: 49px;
-  }
 
-  p {
-    margin: 8px 0 0;
-    line-height: 22px;
-  }
+.log__item {
+    width: 200px;
+    height: 200px;
+}
 
-.member {
+.address {
   width: 700px;
   margin: 0 auto;
   background: $white;
 
   &__top {
-    padding: 10px 24px;
-    font-size: 24px;
+    padding: 32px 16px;
+    font-size: 22px;
+    line-height: 1.5;
     text-align: center;
-    h2{
-      font-weight: bold;
-    }
+    font-weight: 700;
   }
 
-  &__bottom{
-    padding: 40px;
+  &__bottoms{
+    padding: 64px;
     border-top: 1px solid $body-gray;
     margin: 0;
   }
 
-  .form-box {
+  .form-boxs {
     max-width: 320px;
     margin: 0 auto;
 
     &__width {
-      margin: 0;
-      input{
-        width: 93%;
-        margin: 8px 0 0;
-        height: 30px;
-        padding: 10px 16px 8px;
-        border-radius: 4px;
-        border: 1px solid $key-gray;
-        background: $white;
-        line-height: 2;
-        font-size: 15px;
-        color: $dark-grays;
-      }
+      margin: 40px 0 0;
     }
 
-    &__label {
+    label {
       font-weight: 600;
+      display: inline-block;
     }
 
-    &__input {
+    input{
+      width: 93%;
       margin: 8px 0 0;
       height: 30px;
       padding: 10px 16px 8px;
@@ -136,40 +119,45 @@
       line-height: 2;
       font-size: 15px;
       color: $dark-grays;
-      width: 290px;
     }
 
-    .last__box {
-      display: block;
-      width: 100%;
-      line-height: 48px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      -webkit-transition: all ease-out .3s;
-      transition: all ease-out .3s;
-      cursor: pointer;
-      text-align: center;
-      &-sms2{
-        text-decoration: none;
-        color: #0099e8;
-      }
-    }
-
-    .last__boxes {
-      margin: 30px 0 0;
+   
+    &__label-req {
       background: $red;
-      border: 1px solid $red;
+      padding: 2px 4px;
+      border-radius: 2px;
       color: $white;
+      font-size: 12px;
     }
-  }
-  .lob__box2 {
+
+    &__label-with {
+      background: #bbb;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: $white;
+      font-size: 12px;
+    }
+
+    &__telephone {
+      height: 33px;
+      padding: 10px 16px 8px;
+      border-radius: 4px;
+      border: 1px solid $key-gray;
+      background: $white;
+      line-height: 2;
+      font-size: 15px;
+      color: $dark-grays;
+    }
+    }
+
+  .lob__box3 {
     display: inline-block;
     width: 100%;
-    line-height: 48px;
+    line-height: 40px;
     font-size: 14px;
-    border: 1px solid transparent;
     cursor: pointer;
     text-align: center;
+    margin: 40px 0 0;
     background-color: $red;
     border: 1px solid $red;
     &-next{

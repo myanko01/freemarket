@@ -1,9 +1,7 @@
-
-.header2 {
+.header4 {
   height: 167px;
   text-align: center;
   background-color: $body-gray;
-
   &__log {
     width: 390px;
     height: 80px;
@@ -64,52 +62,59 @@
 
   .progressbar li.active:before {
     background-color: $red;
-    color:$white;
+    color: $white;
   }
 
   .progressbar li.active + li:after {
     background-color: $red;
   }
 }
-  .log__item {
-    width: 185px;
-    height: 49px;
-    line-height: 49px;
-  }
 
-  p {
-    margin: 8px 0 0;
-    line-height: 22px;
-  }
+.log__item {
+  width: 200px;
+  height: 200px;
+}
 
-.member {
+.credit__item {
+  margin: 2px 0;
+  width: 40px;
+  height: 30px;
+}
+
+.pay {
   width: 700px;
   margin: 0 auto;
   background: $white;
 
-  &__top {
-    padding: 10px 24px;
-    font-size: 24px;
+  &__ment {
+    padding: 25px 16px;
+    font-size: 22px;
+    line-height: 1.5;
     text-align: center;
-    h2{
-      font-weight: bold;
-    }
+    font-weight: 700;
   }
 
-  &__bottom{
+  &__bottoms {
     padding: 40px;
-    border-top: 1px solid $body-gray;
+    border-top: 1px solid #f5f5f5;
     margin: 0;
   }
 
-  .form-box {
+  .payment-box {
     max-width: 320px;
     margin: 0 auto;
 
     &__width {
-      margin: 0;
-      input{
-        width: 93%;
+      margin: 40px 0 0;
+    }
+
+    label {
+      font-weight: 600;
+      display: inline-block;
+    }
+    .input{
+      &__month , &__year{
+        width: 50%;
         margin: 8px 0 0;
         height: 30px;
         padding: 10px 16px 8px;
@@ -120,61 +125,71 @@
         font-size: 15px;
         color: $dark-grays;
       }
+      &__number , &__number-seq{
+        width: 100%;
+        margin: 8px 0 0;
+        height: 30px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $key-gray;
+        background: $white;
+        line-height: 2;
+        font-size: 15px;
+        color: $dark-grays;
+      } 
+    }
+    // select使用の時用
+    // .select-month, .select-year{
+    //   margin: 0 0 8px 0;
+    //   height: 30px;
+    //   padding: 10px 16px 8px;
+    //   border-radius: 4px;
+    //   border: solid 1px #ccc;
+    //   background: #fff;
+    //   line-height: 1.5;
+    //   font-size: 16px;
+    //   width: 572px;
+    //   display: inline-block;
+    // }
+
+    &__label-req {
+      background: $red;
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: $white;
+      font-size: 12px;
     }
 
-    &__label {
-      font-weight: 600;
-    }
-
-    &__input {
-      margin: 8px 0 0;
-      height: 30px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      border: 1px solid $key-gray;
-      background: $white;
-      line-height: 2;
+    p {
+      margin: 0 0 0 100px;
+      padding: 2px 4px;
+      border-radius: 2px;
       font-size: 15px;
-      color: $dark-grays;
-      width: 290px;
+      vertical-align: middle;
+      position: relative;
+      left: 50px;
+      top: 36px;
     }
 
-    .last__box {
+    .credit__item {
+      width: 190px;
+      height: 40px;
+    }
+  }
+
+    .lob__box4 {
       display: block;
       width: 100%;
       line-height: 48px;
       font-size: 14px;
-      border: 1px solid transparent;
-      -webkit-transition: all ease-out .3s;
-      transition: all ease-out .3s;
       cursor: pointer;
       text-align: center;
-      &-sms2{
+      margin: 40px 0 0;
+      background-color: $red;
+      border: 1px solid $red;
+      &-next {
         text-decoration: none;
-        color: #0099e8;
+        color: $white;
       }
     }
-
-    .last__boxes {
-      margin: 30px 0 0;
-      background: $red;
-      border: 1px solid $red;
-      color: $white;
-    }
-  }
-  .lob__box2 {
-    display: inline-block;
-    width: 100%;
-    line-height: 48px;
-    font-size: 14px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    text-align: center;
-    background-color: $red;
-    border: 1px solid $red;
-    &-next{
-      color: $white;
-      text-decoration: none;
-    }
-  }
 }
