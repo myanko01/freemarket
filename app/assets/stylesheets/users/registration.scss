@@ -96,6 +96,9 @@
 
     &__width {
       margin: 40px 0 0;
+      &--top {
+        margin: 0;
+      }
     }
 
     &__label {
@@ -105,13 +108,14 @@
 
     &__label-req {
       background: $red;
+      margin-left: 8px;
       padding: 2px 4px;
       border-radius: 2px;
       color: $white;
       font-size: 12px;
     }
 
-    input {
+    .user-form {
       margin: 8px 0 0;
       height: 30px;
       padding: 10px 16px 8px;
@@ -135,17 +139,18 @@
       font-size: 16px;
       line-height: 1.5;
       cursor: pointer;
-      width: 180px;
+      width: 140px;
     }
 
     &__texts {
       color: #888;
+
     }
 
     .day {
       position: relative;
-      left: 183px;
-      top: 36px;
+      left: 150px;
+      top: 32px;
       font-size: 15px;
     }
   }
@@ -203,11 +208,13 @@
     }
 
     .lob__next {
-      margin-top: 20px;
-      font-size: 13px;
+      margin-top: 40px;
+      font-size: 14px;
+      text-align: center;
     }
   }
-    .lob__box1{
+    .next{
+      margin: 40px 0 0;
       display: block;
       width: 100%;
       line-height: 48px;
@@ -216,10 +223,7 @@
       text-align: center; 
       background: $red;
       border: 1px solid $red;
-      &-next {
-        color: $white;
-        text-decoration: none;
-      }
+      color: $white;
     }
 
 
