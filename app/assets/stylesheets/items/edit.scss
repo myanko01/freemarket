@@ -1,0 +1,219 @@
+.main{
+    .l__single-containers {
+        width: 700px;
+        margin: 0 auto;
+        background: $white;
+        &-head {
+            padding: 32px 16px;
+            font-size: 22px;
+            text-align: center;
+            line-height: 1.5;
+            border-bottom: solid 1px $border-gray;
+        }
+        .sell__upload__boxes {
+            box-sizing: border-box;
+            width: 620px;
+            padding: 40px;
+        }
+        .sell__upload__drop-box {
+            width: 620px;
+            margin: 0;
+            min-height: 184px;
+            padding: 40px;
+            box-sizing: border-box;
+            flex: 1;
+            position: relative;
+            min-height: 116px;
+            background: $body-gray;
+            border: 1px dashed $key-gray;
+            font-size: 0;
+            text-align: center;
+            transition: box-shadow ease-out .3s;
+            cursor: pointer;
+            pre {
+                position: absolute;
+                top: 50%;
+                left: 16px;
+                right: 16px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 1.5;
+                transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                pointer-events: none;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+        }
+    h3 {
+        display: block;
+        font-size: 14px;
+        float: left;
+        font-weight: bold;
+    }
+    .form__required {
+        background: $red;
+        margin: 0 0 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        color: $white;
+        font-size: 12px;
+        vertical-align: top;
+    }
+  
+    .sell-contents{
+        border-top: 1px solid $border-gray;
+        padding: 40px 0 ;
+        .form-group{
+            padding: 20px 0 0;
+            border: 0;
+            label{
+                font-weight: 600;
+                padding-left: 35px;
+            }
+            .input-name{
+                margin: 8px 0 0 0;
+                height: 30px;
+                padding: 10px 16px 8px;
+                border-radius: 4px;
+                border: solid 1px #ccc;
+                background: #fff;
+                line-height: 1.5;
+                outline: 0;
+                margin: 0 35px;
+                width: 600px;
+            }
+            .textarea-default{
+                margin: 0 35px;
+                font-size: 16px;
+                width: 90%;
+                height: 150px;
+                border: solid 1px $key-gray;
+            }
+        }
+    }
+    .sell-content1, .sell-content2, .sell-content3, .sell-content4 {
+        padding: 40px;
+        border-top: 1px solid $border-gray;
+        .sell-form-box {
+            // float: right;
+            width: 400px;
+            margin: 0;
+            .form-groups {
+                margin: 0;
+                padding: 20px 0 0;
+                // float: right;
+                border: 0;
+                label {
+                    font-weight: 600;
+                }
+                select {
+                    width: 100%;
+                    position: relative;
+                    margin: 0 0 8px 0;
+                    height: 48px;
+                    padding: 10px 16px 8px;
+                    border-radius: 4px;
+                    border: solid 1px #ccc;
+                    background: #fff;
+                    line-height: 1.5;
+                    font-size: 16px;
+                }
+                .select-wrap {
+                    margin: 8px 0 0;
+                }
+            }
+        }
+            .btn__default-red {
+                // padding: 0 40px;
+                display: block;
+                width: 560px;
+                line-height: 48px;
+                font-size: 14px;
+                border: 1px solid transparent;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                margin: 40px 40px 0 ;
+                background: $red;
+                border: 1px solid $red;
+                color: $white;
+            }
+            .btn__default-gray {
+                padding: 0;
+                display: block;
+                width: 100%;
+                line-height: 48px;
+                font-size: 14px;
+                border: 1px solid transparent;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                width: 45%;
+                margin: 24px auto;
+                background: #aaa;
+                border: 1px solid #aaa;
+                color: $white;
+            }
+        }
+  
+    .sell__price {
+        list-style: none;
+        .sell__price-input{
+            width: 50%;
+            .input-default {
+                // float: right;
+                box-sizing: border-box;
+                height: 48px;
+                padding: 10px 16px 8px;
+                border-radius: 4px;
+                border: 1px solid $key-gray;
+                background: $white;
+                line-height: 1.5;
+                font-size: 16px;
+                margin: 8px 0 0;
+                font-weight: 200;
+                color: $logo-gray;
+            }
+        }
+    }
+    
+    .l-left {
+        width: 50%;
+        line-height: 48px;
+    }
+    .l-right{
+        width: 50%;
+        line-height: 48px;
+        float: right;
+    }
+    
+    .plce {
+        list-style: none;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+  
+    .sell-sub-head {
+        color: $logo-gray;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .form__question {
+        text-decoration: none;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #0099e8;
+        color: $white;
+        line-height: 14px;
+        font-size: 12px;
+        text-align: center;
+    }
+        .sell-sub-head {
+            float: left;
+        }
+    }
+}
