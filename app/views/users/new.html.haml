@@ -1,4 +1,5 @@
-.body
+= render 'items/header-simple'
+.body-gray
   .main
     .main__top
       %p.main__text 新規会員登録
@@ -12,4 +13,5 @@
           facebookで登録
       .main__box
         .main__item.main__item--aa
-          Googleで登録
+          = link_to "Googleで登録", '/users/registration'
+= render 'items/footer-buy'
