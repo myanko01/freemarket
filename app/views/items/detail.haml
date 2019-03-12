@@ -1,0 +1,92 @@
+= render 'header'
+.gray-background
+    .user-page
+        .section.item
+            %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
+            .item__content.clearfix
+                .item__content__image
+                    .item__content__image__top
+                        = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image0")
+                    .item__content__image__top2
+                        = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image1")
+                    .item__content__image__list.clearfix
+                        = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image00")
+                    .item__content__image__list.clearfix
+                        = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image001")
+                %table.item__content__table
+                    %tbody
+                    %tr
+                        %th 出品者
+                        %td
+                            = link_to "わたし"
+                            %div
+                            .item-user__rating
+                                = image_tag("")
+                                = fa_icon "smile-o"
+                                %span 192
+                            .item-user__rating
+                                = image_tag("")
+                                = fa_icon "meh-o"
+                                %span 3
+                            .item-user__rating
+                                = image_tag("")
+                                = fa_icon "frown-o"
+                                %span 0
+                    %tr
+                        %th カテゴリー
+                        %td
+                            = link_to "本・ゲーム"
+                            .large-category
+                                %i.fa.fa-angle-right
+                            = link_to "本"
+                            .medium-category
+                                %i.fa.fa-angle-right
+                            = link_to "ビジネス"
+                            .small-category
+                    %tr
+                        %th ブランド
+                        %td
+                            = link_to "自社"
+                            %div
+                    %tr
+                        %th 商品の状態
+                        %td 目立った傷や汚れなし
+                    %tr
+                        %th 配送料の負担
+                        %td 送料込み(出品者負担)
+                    %tr
+                        %th 配送の方法
+                        %td らくらくメルカリ便
+                    %tr
+                        %th 配送元地域
+                        %td
+                            = link_to ""
+                            %div 東京都
+                    %tr
+                        %th 発送の目安
+                        %td 4~7日で発送
+                .item__price
+                    %span.item__price--bold  ¥30000
+                    %span.item__price__tax (税込)
+                    %span.item__price__shipping-fee 送料込み
+                .item__description
+                    %p.item__description--inner
+                        新品購入しました。
+                        とても、素敵な本です！！
+                        若干カバーが大きいため、余っている状態です。
+                        世界一速く仕事をする彼らの仕事術
+        .item-listing-box
+            .item-listing-box__change
+                = link_to "商品の編集", '/items/edit', class: "item-listing-box__change"
+            %p.item-listing-box__which or
+            .item-listing-box__stop 出品を一時停止する
+            .item-listing-box__delete この商品を削除する
+        .item-messages
+            .item-messages__content
+                .item-messages__content--inner
+                    .item-messages__content--inner__form
+                        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+                        %textarea{type:"text", value:""}
+                        .sell__btn__gray
+                            %span コメントする
+= render 'footer'
