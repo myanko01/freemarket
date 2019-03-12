@@ -7,11 +7,11 @@
       .main__box
         .main__item
           .main__item--black
-            メールアドレスで登録
+            = link_to "メールアドレスで登録", new_user_session_path
       .main__box
         .main__item.main__item--a
-          facebookで登録
+          = link_to "facebookで登録", new_user_session_path
       .main__box
         .main__item.main__item--aa
-          = link_to "Googleで登録", '/users/registration'
+          = link_to "Googleで登録", new_user_session_path
 = render 'items/footer-buy'
