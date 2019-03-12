@@ -68,6 +68,9 @@
         .progressbar-status:after{
           background-color: $red;
         }
+        .progressbar-status:before{
+          background-color: $red;
+        }
       }
     }
   }
@@ -117,6 +120,9 @@
       background-color: $red;
     }
     .progressbar-status:after{
+      background-color: $red;
+    }
+    .progressbar-status:before{
       background-color: $red;
     }
   }

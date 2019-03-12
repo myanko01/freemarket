@@ -5,10 +5,14 @@
     line-height: 49px;
   }
 
-  p {
-    margin: 8px 0 0;
-    line-height: 22px;
-  }
+.log__item {
+    width: 200px;
+    height: 200px;
+}
+
+p {
+  line-height: 22px;
+}
 
 .member {
   width: 700px;
@@ -16,12 +20,11 @@
   background: $white;
 
   &__top {
-    padding: 10px 24px;
-    font-size: 24px;
+    padding: 3px 16px;
+    font-size: 22px;
+    line-height: 0.1;
     text-align: center;
-    h2{
-      font-weight: bold;
-    }
+    font-weight: 700;
   }
 
   &__bottom{
@@ -36,26 +39,15 @@
 
     &__width {
       margin: 0;
-      input{
-        width: 93%;
-        margin: 8px 0 0;
-        height: 30px;
-        padding: 10px 16px 8px;
-        border-radius: 4px;
-        border: 1px solid $key-gray;
-        background: $white;
-        line-height: 2;
-        font-size: 15px;
-        color: $dark-grays;
-      }
     }
 
     &__label {
       font-weight: 600;
+      position: relative;
+      top: 10px;
     }
 
     &__input {
-      margin: 8px 0 0;
       height: 30px;
       padding: 10px 16px 8px;
       border-radius: 4px;
@@ -77,7 +69,7 @@
       transition: all ease-out .3s;
       cursor: pointer;
       text-align: center;
-      &-sms2{
+      a {
         text-decoration: none;
         color: #0099e8;
       }

@@ -1,7 +1,6 @@
-.header1 {
+.header {
   height: 167px;
   text-align: center;
-  background-color: $body-gray;
 
   &__log {
     width: 390px;
@@ -71,6 +70,16 @@
   }
 }
 
+.log__item {
+    width: 200px;
+    height: 200px;
+}
+
+.logo__item {
+  width: 30px;
+  height: 30px;
+}
+
 .Member {
   width: 700px;
   margin: 0 auto;
@@ -103,7 +112,13 @@
 
     &__label {
       font-weight: 600;
-      display: inline-block;
+      position: relative;
+    }
+
+    &__labels {
+      font-weight: 600;
+      position: relative;
+      top: 39px;
     }
 
     &__label-req {
@@ -113,6 +128,9 @@
       border-radius: 2px;
       color: $white;
       font-size: 12px;
+      vertical-align: top;
+      position: relative;
+      bottom: 4px;
     }
 
     .user-form {
@@ -128,11 +146,9 @@
       width: 290px;
     }
 
-    select {
-      position: relative;
-      z-index: 2;
-      height: 48px;
-      padding: 0 16px;
+    &__inputs {
+      height: 33px;
+      padding: 10px 16px 8px;
       border-radius: 4px;
       border: 1px solid $key-gray;
       background: 0;
@@ -165,46 +181,34 @@
     }
 
   .lob__forms--box {
-    margin-top: 16px;
     height: 60px;
-    padding: 10px 20px 8px;
+    padding: 10px 16px 8px;
     border-radius: 4px;
     border: 1px solid $key-gray;
     background: $white;
     line-height: 1.5;
     font-size: 16px;
-    width: 270px;
+    width: 280px;
     line-height: 30px;
+    margin: 1.5em 0px;
     background: #f9f9f9;
-    .lob__boxes {
-      width: 152px;
-      display: inline-block;
-      color: #7b7777;
-      span {
-        font-family: Roboto,helvetica,arial,sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        margin-right: 20px;
-        line-height: 17px;
-      }
-    }
-    .lob__boxs{
-      display: inline-block;
-      border-radius: 2px;
-      background-color: $white;
-      border: 2px solid #c1c1c1;
-      font-size: 1px;
-      height: 24px;
-      position: relative;
-      width: 24px;
-    }
   }
-    .logo__item {
+
+    span {
+      font-family: Roboto,helvetica,arial,sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 20px;
+      line-height: 17px;
+    }
+
+    .lob__item {
       background-size: 32px;
       height: 32px;
       margin-left: 240px;
       width: 32px;
-      position: relative;
+      position: absolute;
+      bottom: 245px;
     }
 
     .lob__next {
@@ -212,13 +216,16 @@
       font-size: 14px;
       text-align: center;
     }
-  }
+  
     .next{
       margin: 40px 0 0;
       display: block;
       width: 100%;
       line-height: 48px;
       font-size: 14px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
       cursor: pointer;
       text-align: center; 
       background: $red;
@@ -226,5 +233,10 @@
       color: $white;
     }
 
-
-
+    .lob__box-next {
+      margin: 40px 0 0;
+      background: $red;
+      border: 1px solid $red;
+      color: $white;
+    }
+}

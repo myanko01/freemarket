@@ -1,7 +1,7 @@
-.header5 {
+.header {
   height: 167px;
   text-align: center;
-background-color: $body-gray;
+
   &__log {
     width: 390px;
     height: 80px;
@@ -100,19 +100,25 @@ background-color: $body-gray;
     margin: 0 auto;
     }
 
-    .lob__box4 {
-      display: inline-block;
+    .lob__box {
+      display: block;
       width: 100%;
-      line-height: 40px;
+      line-height: 48px;
       font-size: 14px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
       cursor: pointer;
       text-align: center;
-      margin: 40px 0 0;
-      background-color: $red;
-      border: 1px solid $red;
-      &-next{
-        color: $white;
+      a {
         text-decoration: none;
       }
+    }
+
+    .lob__box-next {
+      margin: 40px 0 0;
+      background: $red;
+      border: 1px solid $red;
+      color:  $white;
     }
 }

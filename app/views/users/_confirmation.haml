@@ -3,16 +3,15 @@
   .member__top
     %h2 電話番号の確認
   .member__bottom
-    .form-box
+    = form_with(model: @user, class: "form-box", id: 'phone-form') do |f|
       .form-box__width
         .form-box__label 携帯電話の番号
-        %input{type:"int", value:"", placeholder:" 電話番号の電話を入力"} 
+        = f.telephone_field :phone_number, placeholder:" 電話番号の電話を入力" 
       %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
       .last__box
         .last__boxes SMSを送信する
         %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
         .last__box-sms
           = link_to "電話番号の確認が必要な理由 ＞", class: "last__box-sms2"
-        .lob__box2
-          = link_to "次へ進む", '/users/address', class: "lob__box2-next"
+        %button.next#user-submit 次へ進む
 = render 'items/footer-buy'
