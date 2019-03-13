@@ -1,0 +1,67 @@
+= render '/users/header_progress'
+.gray-background
+  .Member
+    .Member__top
+      %p.Member__text 会員情報入力
+    .Member__bottom
+      .form-box#user-forms
+        = form_for @user do |f|
+          .form-box__width--top
+            %label.form-box__label ニックネーム
+            %span.form-box__label-req 必須
+            = f.text_field :nickname, class:'user-form', placeholder:"例)メルカリ太郎" 
+          .form-box__width
+            %label.form-box__label メールアドレス
+            %span.form-box__label-req 必須
+            = f.text_field :email, class:'user-form', placeholder:"PC・携帯どちらでも可"
+          .form-box__width
+            %label.form-box__label パスワード
+            %span.form-box__label-req 必須
+            = f.text_field :password, class:'user-form', placeholder:"6文字以上"
+          .form-box__width
+            %label.form-box__label パスワード（確認）
+            %span.form-box__label-req 必須
+            = f.text_field :password_confirmation, class:'user-form', placeholder:"6文字以上"
+          .form-box__text
+            .form-box__text-name 本人確認
+            .form-box__texts
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+          .form-box__width
+            %label.form-box__label 姓 (全角)
+            %span.form-box__label-req 必須
+            = f.text_field :last_name, class:'user-form', placeholder:"例）山田"
+          .form-box__width
+            %label.form-box__label 名 (全角)
+            %span.form-box__label-req 必須
+            = f.text_field :first_name, class:'user-form', placeholder:"例）彩"
+          .form-box__width
+            %label.form-box__label 姓カナ (全角)
+            %span.form-box__label-req 必須
+            = f.text_field :last_name_kana, class:'user-form', placeholder:"例）ヤマダ"
+          .form-box__width
+            %label.form-box__label 名カナ (全角）
+            %span.form-box__label-req 必須
+            = f.text_field :first_name_kana, class:'user-form', placeholder:"例）アヤ"
+          .form-box__width
+            %label.form-box__label 生年月日
+            %span.form-box__label-req 必須
+            .day 年
+            = f.select :birth_year, ''
+            .day 月
+            = f.select :birth_month, ''
+            .day 日
+            = f.select :birth_day, ''
+            %p.form-box__texts ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+
+          .lob__forms--box
+            .lob__boxs
+              = image_tag("https://www.gstatic.com/recaptcha/api2/logo_48.png",class: "logo__item")
+            .lob__boxes
+              %span 私はロボットではありません。
+          %div
+            .lob__next
+              「次へ進む」のボタンを押すことにより、
+              %a 利用規約
+              に同意したものとみなします
+          = f.submit '次へ進む', class:'next'
+= render 'items/footer-buy'
