@@ -13,11 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_03_12_165647) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "zip", limit: 7
-    t.string "prefecture", limit: 4
+    t.integer "prefecture_id"
     t.string "city"
-    t.string "block"
-    t.string "building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "last_name", null: false
@@ -39,12 +36,6 @@ ActiveRecord::Schema.define(version: 2019_03_12_165647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["parent_id"], name: "index_categories_on_parent_id"
-  end
-
-  create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
