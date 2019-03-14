@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_12_165647) do
+ActiveRecord::Schema.define(version: 2019_03_14_093907) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "prefecture_id"
-    t.string "city"
+    t.string "zip", limit: 7
+    t.string "prefecture", limit: 4
+    t.string "address_detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "last_name", null: false
-    t.string "last_name_kana", null: false
-    t.string "first_name", null: false
-    t.string "first_name_kana", null: false
+    t.string "name", null: false
+    t.string "name_kana", null: false
     t.string "phone_number", limit: 20, null: false
   end
 
@@ -36,6 +35,12 @@ ActiveRecord::Schema.define(version: 2019_03_12_165647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["parent_id"], name: "index_categories_on_parent_id"
+  end
+
+  create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -96,9 +101,9 @@ ActiveRecord::Schema.define(version: 2019_03_12_165647) do
     t.string "last_name_kana", null: false
     t.string "first_name", null: false
     t.string "first_name_kana", null: false
-    t.string "phone_number", limit: 20, null: false
+    t.string "phone_number", limit: 20
     t.string "nickname", null: false
-    t.integer "birth_year", null: false
+    t.integer "birth_year_id", null: false
     t.integer "birth_month", null: false
     t.integer "birth_day", null: false
     t.bigint "address_id"
