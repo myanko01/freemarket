@@ -4,8 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    # 編集可能を確認後削除
-    item = Item.find(params[:id])
+    
   end
 
   def new
@@ -18,6 +17,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    @image = Image.find(params[:id])
   end
 
   def destroy
@@ -30,13 +30,14 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
+    @image = Image.find(params[:id])
     if @item.update(item_params)
-      redirect_to root_path(@item), notice: "編集が完了しました"
+      redirect_to root_path(@item, @image), notice: "編集が完了しました"
     end
   end
 
   private
     def item_params
-      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id)
+      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id)
     end
 end
