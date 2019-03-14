@@ -5,11 +5,12 @@
       #sell-container
         %h2.l__single-head 商品の情報を入力
         %form.sell__form
+        = form_for @item do |f|
           .sell__upload__box
             %h3.sell__upload__box-head
               出品画像
               %span.form__require 必須
-            %p 最大10枚までアップロードできます
+            %p 最大1枚までアップロードできます
             .sell__dropbox-container-clearfix
               .sell__upload__drop-box
                 %pre.visible-pc
@@ -22,11 +23,11 @@
                 商品名
                 %span.form__require 必須
               %div
-                %input.input-name{type:"text", value:"", name:"",placeholder:"商品名（必須40字まで）"}
+                = f.text_field :name, class:"input-name", placeholder: "商品名（必須40文字まで）"
             .form-group
               商品の説明
               %span.form__require 必須
-              %textarea{ type: "text", placeholder: "test test test", name: "", class: :"textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+              = f.text_area :detail,class:"textarea-default", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           .sell-content.clearfixx
             %h3.sell-sub-head 商品の詳細
             .sell-form-box
@@ -36,12 +37,13 @@
                 .select-wrap
                 %div.select-default
                   %select
+                  = fa_icon 'angle-down'
               .form-group
                 商品の状態
                 %span.form__require 必須
                 .select-wrap
-                %div
-                  %select
+                = f.select :condition, Item.conditions.keys.to_a
+                = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 配送について
             = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
@@ -51,20 +53,21 @@
                 配送料の負担
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.select :price, Item.prices.keys.to_a
+                = fa_icon 'angle-down'
               .form-group
                 発送元の地域
                 %span.form__require 必須
                 .select-wrap
                 %div.select-default
                   %select
+                = fa_icon 'angle-down'
               .form-group
                 発送までの日数
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.select :shipping_date, Item.shipping_dates.keys.to_a
+                = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
             = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
@@ -82,7 +85,7 @@
                     .handling_charge.l-right
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right 
+                    .profitFee.l-right
           .sell-content.sell-btn-box
             %div
               %p
