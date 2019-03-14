@@ -1,10 +1,17 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.includes(:images).limit(4)
+    @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
+    @mens_items = Item.includes(:images).where(category_id: 2).limit(4)
+    @baby_kids_items = Item.includes(:images).where(category_id: 3).limit(4)
+    @cosmetics_perfume_beauty_items = Item.includes(:images).where(category_id: 4).limit(4)
+    @chanel_items = Item.includes(:images).where(brand_id: 2).limit(4)
+    @louis_vuitton_items = Item.includes(:images).where(brand_id: 3).limit(4)
+    @supreme_items = Item.includes(:images).where(brand_id: 4).limit(4)
+    @nike_items = Item.includes(:images).where(brand_id: 5).limit(4)
   end
 
   def show
-    
+
   end
 
   def new
