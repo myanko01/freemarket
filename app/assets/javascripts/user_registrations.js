@@ -19,13 +19,12 @@ $(function(){
     activeSection.removeClass('active');
     nextSection = activeSection.next()
     nextSection.addClass('active');
-    progressBarController(nextSection);
     $(window).scrollTop(0);
   }
 
   // progressBar制御
-  function progressBarController(section){
-    var nextProgressBar = $(section).children('.header-reg').find('li.active')
+  function progressBarController(){
+    var nextProgressBar = $('.header-reg').find('li.active')
     nextProgressBar.removeClass('active').addClass('thlough');
     nextProgressBar.next().addClass('active');
   }
@@ -36,6 +35,7 @@ $(function(){
     var formData = new FormData(this);
     setUserFormData(formData);
     nextPage(this);
+    progressBarController();
     return false;
   })
 
@@ -43,6 +43,7 @@ $(function(){
     e.preventDefault();
     formData = getUserFormData();
     nextPage(this);
+    progressBarController();
     return false;
   })
 })
