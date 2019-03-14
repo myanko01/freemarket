@@ -1,80 +1,3 @@
-.header {
-  height: 167px;
-  text-align: center;
-
-  &__log {
-    width: 390px;
-    height: 80px;
-    line-height: 49px;
-  }
-
-  .progressbar {
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    position: relative;
-    left: 345px;
-    bottom: 0px;
-  }
-
-  .progressbar li {
-    list-style-type: none;
-    width: 11%;
-    float: left;
-    font-size: 13px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    color: $dark-gray;
-  }
-
-  .progressbar li:before {
-    width: 12px;
-    height: 12px;
-    content: no-open-quote;
-    counter-increment: initial;
-    line-height: 30px;
-    display: block;
-    text-align: center;
-    margin: 0 auto 10px auto;
-    border-radius: 50%;
-    background-color: $border-gray;
-  }
-
-  .progressbar li:after {
-    width: 100%;
-    height: 2px;
-    content: '';
-    position: absolute;
-    background-color: $border-gray;
-    top: 5px;
-    left: -50%;
-    z-index: -1;
-  }
-
-  .progressbar li:first-child:after {
-    content: none;
-  }
-
-  .progressbar li.active {
-    color: $red;
-  }
-
-  .progressbar li.active:before {
-    background-color: $red;
-    color:$white;
-  }
-
-  .progressbar li.active + li:after {
-    background-color: $red;
-  }
-}
-
-.log__item {
-    width: 200px;
-    height: 200px;
-}
-
 .address {
   width: 700px;
   margin: 0 auto;
@@ -89,82 +12,83 @@
   }
 
   &__bottoms{
-    padding: 64px;
+    padding: 0px,64px,64px,64px;
     border-top: 1px solid $body-gray;
     margin: 0;
-  }
+  
+    .form-boxs {
+      max-width: 320px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      &__width {
+        max-width: 320px;
 
-  .form-boxs {
-    max-width: 320px;
-    margin: 0 auto;
+        margin-top: 40px;
+        .address-form {
+          border: 1px solid $key-gray;
+          background: $white;
+          color: $dark-grays;
+          width: 290px;
+          height: 30px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+        select{
+          position: relative;
+          z-index: 2;
+          height: 48px;
+          padding: 0 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: 0;
+          font-size: 16px;
+          line-height: 1.5;
+          cursor: pointer;
+          width: 320px;
+        }
+      }
 
-    &__width {
-      margin: 0;
-    }
-
-    &__label {
-      font-weight: 600;
-      position: relative;
-      top: 25px;
-    }
-
-    &__label-req {
-      background: $red;
-      margin: 0 0 0 100px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      color: $white;
-      font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-      right: 5px;
-    }
-
-    &__label-with {
-      background: #bbb;
-      margin: 0 0 0 100px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      color: $white;
-      font-size: 12px;
-      vertical-align: top;
-      position: relative;
-      bottom: 4px;
-      right: 60px;
-    }
-
-    &__telephone {
-      height: 33px;
-      padding: 10px 16px 8px;
-      border-radius: 4px;
-      border: 1px solid $key-gray;
-      background: $white;
-      line-height: 2;
-      font-size: 15px;
-      color: $dark-grays;
-    }
-    }
-
-    .lob__box {
-      display: block;
-      width: 100%;
-      line-height: 48px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      -webkit-transition: all ease-out .3s;
-      transition: all ease-out .3s;
-      cursor: pointer;
-      text-align: center;
-      a {
-        text-decoration: none;
+      &__label {
+        font-weight: 600;
+        position: relative;
+      
+        &-req {
+          background: $red;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        &-with {
+          background: #bbb;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+ 
+      }
+      .next {
+        margin: 40px 0 0;
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background: $red;
+        border: 1px solid $red;
+        color: $white;
       }
     }
-
-    .lob__box-next {
-      margin: 40px 0 0;
-      background: $red;
-      border: 1px solid $red;
-      color: $white;
-    }
+  }
 }
