@@ -1,8 +1,10 @@
 = render 'header'
+-# ファイル名”detail.haml”変更
 .gray-background
     .user-page
         .section.item
-            %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
+            %h1.item__name 
+                = @item
             .item__content.clearfix
                 .item__content__image
                     .item__content__image__top
@@ -80,7 +82,9 @@
                 = link_to "商品の編集", '/items/edit', class: "item-listing-box__change"
             %p.item-listing-box__which or
             .item-listing-box__stop 出品を一時停止する
-            .item-listing-box__delete この商品を削除する
+            .item-listing-box__delete 
+                = link_to root_path, method: :delete do
+                    この商品を削除する
         .item-messages
             .item-messages__content
                 .item-messages__content--inner

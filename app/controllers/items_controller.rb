@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
-    @image = Image.find(params[:id])
+    @item.images.build
   end
 
   def destroy
@@ -30,14 +30,15 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    @image = Image.find(params[:id])
     if @item.update(item_params)
-      redirect_to root_path(@item, @image), notice: "編集が完了しました"
+      redirect_to root_path, notice: "編集が完了しました"
+    else
+      render :edit
     end
   end
 
   private
     def item_params
-      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id)
+      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
     end
 end
