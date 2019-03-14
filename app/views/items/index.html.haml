@@ -6,50 +6,75 @@
         = image_tag 'header__banner.png', class: 'top-banner'
     %section.boxes
       %h2.boxes__title
-        商品一覧
+        ピックアップカテゴリー
       %section.box
         %h3.box__title
           = link_to items_path do
-            アイテム
+            レディース 新着アイテム
         .box__content
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
-          = render 'item'
+          = render @items
         .view-all
           = link_to items_path do
             すべての商品を見る
-  =render 'footer'
+        %h3.box__title
+          = link_to items_path do
+            メンズ 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+        %h3.box__title
+          = link_to items_path do
+            ベビー・キッズ 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+        %h3.box__title
+          = link_to items_path do
+            コスメ・香水・美容 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+    %section.boxes
+      %h2.boxes__title
+        ピックアップブランド
+      %section.box
+        %h3.box__title
+          = link_to items_path do
+            シャネル 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+        %h3.box__title
+          = link_to items_path do
+            ルイ ヴィトン 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+        %h3.box__title
+          = link_to items_path do
+            シュプリーム 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+        %h3.box__title
+          = link_to items_path do
+            ナイキ 新着アイテム
+        .box__content
+          = render @items
+        .view-all
+          = link_to items_path do
+            すべての商品を見る
+  = render 'footer'
   = render 'footer-sell-btn'

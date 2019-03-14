@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-
+    @items = Item.includes(:images).limit(4)
   end
 
   def show

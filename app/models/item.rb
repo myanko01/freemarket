@@ -6,3 +6,4 @@ class Item < ApplicationRecord
   belongs_to :condition
   has_many :images
 end
+
