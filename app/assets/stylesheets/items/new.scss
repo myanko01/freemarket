@@ -15,13 +15,15 @@
     box-sizing: border-box;
     flex: 1;
     position: relative;
-    min-height: 116px;
+    left : 65px;
+    min-height: 130px;
     background: $body-gray;
     border: 1px dashed $key-gray;
     font-size: 0;
     text-align: center;
     transition: box-shadow ease-out .3s;
     cursor: pointer;
+    width: 570px;
   }
   h3 {
     display: block;
@@ -30,6 +32,11 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
     font-weight: bold;
+  }
+  .upload-box {
+    position: relative;
+    bottom: 70px;
+    left : 250px;
   }
   .form__require {
     background: $red;
@@ -85,7 +92,6 @@
     font-size: 16px;
     width: 572px;
     display: inline-block;
-    -webkit-appearance: none;
   }
 
     .sell__price {

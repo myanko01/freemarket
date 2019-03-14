@@ -11,12 +11,12 @@
               出品画像
               %span.form__require 必須
             %p 最大1枚までアップロードできます
-            .sell__dropbox-container-clearfix
-              .sell__upload__drop-box
-                %pre.visible-pc
-                  ドラッグアンドドロップ
-                  またはクリックしてファイルをアップロード
-                  %br>/
+            = f.fields_for :image_url do |fini|
+              .sell__dropbox-container-clearfix
+                .sell__upload__drop-box
+                = fini.label :image_url, class:"upload-box" do
+                  = fini.file_field :image_url, class: 'hidden'
+                  = image_tag "", height:"140", width:"140",class: 'item_image',alt:""
           .sell-content
             .form-group
               %label
