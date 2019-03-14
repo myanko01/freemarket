@@ -1,8 +1,9 @@
 .main{
-    .l__single-containers {
-        width: 700px;
-        margin: 0 auto;
-        background: $white;
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+    background: $white;
+    .l__single-container {
         &-head {
             padding: 32px 16px;
             font-size: 22px;
@@ -15,11 +16,10 @@
             width: 620px;
             padding: 40px;
         }
-        .sell__upload__drop-box {
+        .dz-message {
             width: 620px;
             margin: 0;
             min-height: 184px;
-            padding: 40px;
             box-sizing: border-box;
             flex: 1;
             position: relative;
@@ -30,7 +30,7 @@
             text-align: center;
             transition: box-shadow ease-out .3s;
             cursor: pointer;
-            pre {
+            .dz-text {
                 position: absolute;
                 top: 50%;
                 left: 16px;
@@ -45,7 +45,7 @@
                 word-wrap: break-word;
             }
         }
-    h3 {
+    .sell__upload__boxes-head {
         display: block;
         font-size: 14px;
         float: left;
@@ -63,7 +63,7 @@
   
     .sell-contents{
         border-top: 1px solid $border-gray;
-        padding: 40px 0 ;
+        padding: 40px 0;
         .form-group{
             padding: 20px 0 0;
             border: 0;
@@ -92,40 +92,65 @@
             }
         }
     }
-    .sell-content1, .sell-content2, .sell-content3, .sell-content4 {
+    .sell-content1, .sell-content2, .sell-content3 {
         padding: 40px;
         border-top: 1px solid $border-gray;
-        .sell-form-box {
-            // float: right;
+    }
+    .sell-content1:after, .sell-content2:after, .sell-content3:after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+        .sell-form-box1, .sell-form-box2, .sell-form-box3{
+            float: right;
             width: 400px;
             margin: 0;
-            .form-groups {
-                margin: 0;
-                padding: 20px 0 0;
-                // float: right;
-                border: 0;
-                label {
-                    font-weight: 600;
-                }
+        }
+        .sell-form-box3:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .form-groups {
+            margin: 40px 0 0;
+            label {
+                font-weight: 600;
+                display: inline-block;
+            }
+            .select-wrap {
+                position: relative;
+                margin: 8px 0 0;
+                background-color: $white;
                 select {
                     width: 100%;
                     position: relative;
-                    margin: 0 0 8px 0;
                     height: 48px;
-                    padding: 10px 16px 8px;
+                    padding: 0 16px;
                     border-radius: 4px;
-                    border: solid 1px #ccc;
-                    background: #fff;
-                    line-height: 1.5;
+                    border: 1px solid #ccc;
+                    background: 0;
                     font-size: 16px;
-                }
-                .select-wrap {
-                    margin: 8px 0 0;
+                    line-height: 1.5;
+                    cursor: pointer;
                 }
             }
         }
+        .form-group-price{
+            overflow: auto;
+        }
+        .clearfix-2{
+            margin: 2px 0 0;
+            width: 50%;
+            float: left;
+        }
+        .form-groups:first-child{
+            margin: 0;
+        }
+        
+        .sell-content4{
+            padding: 40px;
+            border-top: 1px solid #eee;
             .btn__default-red {
-                // padding: 0 40px;
                 display: block;
                 width: 560px;
                 line-height: 48px;
@@ -160,9 +185,11 @@
     .sell__price {
         list-style: none;
         .sell__price-input{
+            float: right;
             width: 50%;
             .input-default {
-                // float: right;
+                text-align: right;
+                float: right;
                 box-sizing: border-box;
                 height: 48px;
                 padding: 10px 16px 8px;
@@ -171,7 +198,7 @@
                 background: $white;
                 line-height: 1.5;
                 font-size: 16px;
-                margin: 8px 0 0;
+                margin: 0 0 20px;
                 font-weight: 200;
                 color: $logo-gray;
             }
@@ -179,11 +206,11 @@
     }
     
     .l-left {
+        float: left;
         width: 50%;
         line-height: 48px;
     }
     .l-right{
-        width: 50%;
         line-height: 48px;
         float: right;
     }
@@ -192,6 +219,11 @@
         list-style: none;
         padding: 10px 0;
         border-top: 1px solid #ccc;
+    }
+    .plce:after{
+        content: '';
+        clear: both;
+        display: block;
     }
   
     .sell-sub-head {
