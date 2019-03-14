@@ -30,20 +30,20 @@ $(function(){
   }
 
 
-  $('#user-forms').on('submit', function(e){
-    e.preventDefault();
-    var formData = new FormData(this);
-    setUserFormData(formData);
-    nextPage(this);
-    progressBarController();
-    return false;
-  })
+  // $('#user-forms').on('submit', function(e){
+  //   e.preventDefault();
+  //   var formData = new FormData(this);
+  //   setUserFormData(formData);
+  //   nextPage(this);
+  //   progressBarController();
+  //   return false;
+  // })
 
-  $('#phone-form').on('submit', function(e){
-    e.preventDefault();
-    formData = getUserFormData();
-    nextPage(this);
-    progressBarController();
-    return false;
-  })
+  // $('#phone-form').on('submit', function(e){
+  //   e.preventDefault();
+  //   formData = getUserFormData();
+  //   nextPage(this);
+  //   progressBarController();
+  //   return false;
+  // })
 })
