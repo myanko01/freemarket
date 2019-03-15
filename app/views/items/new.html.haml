@@ -103,6 +103,6 @@
                 = link_to "#", target: '_blank' do
                   加盟店規約
                 に同意したことになります。
-              .btn__default.btn-red 出品する
-            %a.btn__default.btn-gray もどる
+              = link_to '出品する', '/items/new', class: 'btn__default btn-red'
+              = link_to 'もどる', '/items/new', class: 'btn__default btn-gray'
 = render 'footer-buy'

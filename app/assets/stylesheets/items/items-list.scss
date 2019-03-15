@@ -1,0 +1,149 @@
+.items-list{
+    position: relative;
+    &__main{
+        text-align: center;
+        &-top{
+            text-align: left;
+            min-width: 700px;
+            display: inline-block;
+            line-height: 72px;
+            padding: 0 16px;
+            font-size: 16px;
+            background-color: $buy-gray; 
+        }
+        &__tabs-container{
+            position: relative;
+            .items-list__tabs{
+                min-width: 732px;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                line-height: 50px;
+                background: $border-gray;
+                height: 70px;
+            }
+        }
+        .tab {
+            width: 33.33%;
+            display: block;
+            font-size: 16px;
+            float: left;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        .focus{
+            width: 33.33%;
+            display: block;
+            font-size: 16px;
+            float: left;
+            line-height: 70px;
+            background: $white;
+            border-top: solid 2px $red;
+        }
+        &-lists{
+            width: 732px;
+            background-color: $white;
+            .items-list__container{
+                list-style: none;
+                &-list{
+                    display: block;
+                    padding: 16px;
+                    border-bottom: solid 1px $border-gray;
+                    color: $ink;
+                    &__image{
+                        height: 40px;
+                        width: 40px;
+                    }
+                    &__detail{
+                        width: 560px;
+                        text-decoration: none;
+                        display: inline-block;
+                        margin: 0 40px 0 20px;
+                        color: $ink;
+                        position: relative;
+                        &-text{
+                            text-decoration: none;
+                            color: black;
+                            width: 100%;
+                            text-align: left;
+                            float: left;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            max-height: 4.4em;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            text-overflow: ellipsis;
+                            line-height: 1.5;
+                        }
+                        .icons{
+                            .heart{
+                                margin: 8px 0 0;
+                                font-size: 15px;
+                                position:  relative;
+                                float: left;
+                                transform: translate(0, -50%);
+                            }
+                            .message-icon{
+                                margin: 8px 0 0;
+                                font-size: 15px;
+                                position: relative;
+                                float: left;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                        .angle-right{
+                            font-size: 30px;
+                            position: absolute;
+                            top: 50%;
+                            float: right;
+                            transform: translate(0, -50%);
+                        }
+                    }
+                    &-status{
+                        display: inline-block;
+                        margin: 8px 0 0 0;
+                        padding: 5px 6px;
+                        border-radius: 2px;
+                        font-size: 12px;
+                        color: #fff;
+                        background: #0099e8;
+                    }
+                }
+            }
+        }
+        .items-list__main-angles{
+            width: 732px;
+            margin: 40px auto;
+            height: 44px;
+            position: relative;
+            font-size: 0;
+            text-align: center;
+            .angle-left{
+                left: 0;
+                position: absolute;
+                top: 0;
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                border-radius: 4px;
+                background: #fff;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                line-height: 42px;
+            }
+            .angle-right{
+                right: 0;
+                position: absolute;
+                top: 0;
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                border-radius: 4px;
+                background: #fff;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                line-height: 42px;
+            }
+        }
+    }
+}
