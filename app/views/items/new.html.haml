@@ -11,12 +11,12 @@
               出品画像
               %span.form__require 必須
             %p 最大1枚までアップロードできます
-            .sell__dropbox-container-clearfix
-              .sell__upload__drop-box
-                %pre.visible-pc
-                  ドラッグアンドドロップ
-                  またはクリックしてファイルをアップロード
-                  %br>/
+            = f.fields_for :image_url do |fini|
+              .sell__dropbox-container-clearfix
+                .sell__upload__drop-box
+                = fini.label :image_url, class:"upload-box" do
+                  = fini.file_field :image_url, class: 'hidden'
+                  = image_tag "", height:"140", width:"140",class: 'item_image',alt:""
           .sell-content
             .form-group
               %label
@@ -35,9 +35,8 @@
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
-                  = fa_icon 'angle-down'
+                = f.select :category_id, Item.category_ids.keys.to_a
+                = fa_icon 'angle-down'
               .form-group
                 商品の状態
                 %span.form__require 必須
@@ -70,7 +69,7 @@
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
-            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
+            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question-for" do
               ?
             .sell-form-box
               %ul.sell__price
@@ -104,6 +103,6 @@
                 = link_to "#", target: '_blank' do
                   加盟店規約
                 に同意したことになります。
-              .btn__default.btn-red 出品する
-            %a.btn__default.btn-gray もどる
+              = link_to '出品する', '/items/new', class: 'btn__default btn-red'
+              = link_to 'もどる', '/items/new', class: 'btn__default btn-gray'
 = render 'footer-buy'

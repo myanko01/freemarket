@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2019_03_14_114753) do
     t.integer "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "lft"
+    t.integer "rgt"
     t.index ["parent_id"], name: "index_categories_on_parent_id"
   end
 
