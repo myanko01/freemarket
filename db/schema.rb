@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_083350) do
     t.integer "prefecture_id"
     t.integer "condition_id"
     t.integer "shipping_date_id"
-    t.integer "burden"
+    t.integer "burden_id"
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
