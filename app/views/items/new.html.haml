@@ -35,13 +35,13 @@
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                = f.select :category_id, Item.category_ids.keys.to_a
+                = f.collection_select :category_id, Category.all, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 商品の状態
                 %span.form__require 必須
                 .select-wrap
-                = f.select :condition, Item.conditions.keys.to_a
+                = f.collection_select :condition_id, Condition.all, :id, :name
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 配送について
@@ -52,20 +52,19 @@
                 配送料の負担
                 %span.form__require 必須
                 .select-wrap
-                = f.select :price, Item.prices.keys.to_a
+                = f.collection_select :category_id, Category.all, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 発送元の地域
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 発送までの日数
                 %span.form__require 必須
                 .select-wrap
-                = f.select :shipping_date, Item.shipping_dates.keys.to_a
+                = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
@@ -78,13 +77,13 @@
                     価格
                     %span.form__require 必須
                     #inputPrice.l-right.sell-price-input
-                      %input.input-default{type: "int", value:"", placeholder:"例)300円"}
+                      = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
                   %li.clearfix.plce
                     .l-left 販売手数料 (10%)
-                    .handling_charge.l-right
+                    .handling_charge.l-right -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right
+                    .profitFee.l-right -
           .sell-content.sell-btn-box
             %div
               %p
