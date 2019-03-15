@@ -82,9 +82,13 @@
                 = link_to "商品の編集", '/items/edit', class: "item-listing-box__change"
             %p.item-listing-box__which or
             .item-listing-box__stop 出品を一時停止する
-            .item-listing-box__delete 
-                = link_to root_path, method: :delete do
-                    この商品を削除する
+            #js-show-popup.item-listing-box__delete この商品を削除する
+            #js-popup.popup
+                .popup-inner
+                    #js-close-btn.close-btn
+                    = link_to "削除", method: :delete
+                #js-black-bg.black-background
+                  
         .item-messages
             .item-messages__content
                 .item-messages__content--inner

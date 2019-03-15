@@ -6,8 +6,7 @@
             = form_for @item, method: :patch, html:{class: "dropzone", id: "my-awesome-dropzone"} do |f|
                 .sell__upload__boxes
                     = f.fields_for :image_url do |i|
-                        %h3.sell__upload__boxes-head
-                        出品画像
+                        %h3.sell__upload__boxes-head 出品画像
                         %span.form__required 必須
                         %p 最大10枚までアップロードできます
                         .dz-message 
@@ -15,7 +14,7 @@
                                 ドラッグアンドドロップ
                                 またはクリックしてファイルをアップロード
                                 %br>/
-                            #dz-previews.dropzone-previews
+                            -# #dz-previews.dropzone-previews
                 .sell-contents
                     .form-group
                         %label 商品名

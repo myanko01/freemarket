@@ -117,5 +117,4 @@ ActiveRecord::Schema.define(version: 2019_03_14_093907) do
   add_foreign_key "items", "users"
   add_foreign_key "sales", "items"
   add_foreign_key "sales", "users"
-  add_foreign_key "users", "addresses"
 end
