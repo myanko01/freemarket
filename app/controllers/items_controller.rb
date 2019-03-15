@@ -31,7 +31,7 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     if item.user_id == current_user.id
       item.destory
-       redirect_to '/items/items-list', notice: "商品を削除しました"
+      redirect_to '/items/items-list', notice: "商品を削除しました"
     end
   end
 
@@ -45,15 +45,7 @@ class ItemsController < ApplicationController
   end
 
   private
-    def item_params
-      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
-    end
-<<<<<<< HEAD
+  def item_params
+    params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
+  end
 end
-=======
-<<<<<<< HEAD
-end
-=======
-end
->>>>>>> 387d1b03ff0aef952c4edef6e60eabd8d373155a
->>>>>>> tansioooooooo/master
