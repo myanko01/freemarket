@@ -10,9 +10,4 @@ class Item < ApplicationRecord
   belongs_to_active_hash :condition
   belongs_to_active_hash :shipping_date
 
-
-
-  enum shipping_date: [['---',0],['1~2日で発送',1],['2~3日で発送',2],['4~7日で発送',3]]
-
-
 end
