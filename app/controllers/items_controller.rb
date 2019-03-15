@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-
+    @item = Item.new
   end
 
   def create
@@ -48,4 +48,12 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
     end
+<<<<<<< HEAD
 end
+=======
+<<<<<<< HEAD
+end
+=======
+end
+>>>>>>> 387d1b03ff0aef952c4edef6e60eabd8d373155a
+>>>>>>> tansioooooooo/master
