@@ -35,9 +35,8 @@
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
-                  = fa_icon 'angle-down'
+                = f.select :category_id, Item.category_ids.keys.to_a
+                = fa_icon 'angle-down'
               .form-group
                 商品の状態
                 %span.form__require 必須
@@ -70,7 +69,7 @@
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
-            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
+            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question-for" do
               ?
             .sell-form-box
               %ul.sell__price
