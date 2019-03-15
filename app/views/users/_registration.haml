@@ -45,11 +45,11 @@
             %label.form-box__label 生年月日
             %span.form-box__label-req 必須
             .day 年
-            = f.select :birth_year, ''
+            = f.collection_select :birth_year_id, BirthYear.all, :id, :name
             .day 月
-            = f.select :birth_month, ''
+            = f.select :birth_month, [1,2,3,4,5,6,7,8,9,10,11,12]
             .day 日
-            = f.select :birth_day, ''
+            = f.select :birth_day, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
             %p.form-box__texts ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
 
           .lob__forms--box

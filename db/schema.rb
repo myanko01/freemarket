@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_093907) do
+ActiveRecord::Schema.define(version: 2019_03_14_114753) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "zip", limit: 7
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_093907) do
     t.string "name", null: false
     t.string "name_kana", null: false
     t.string "phone_number", limit: 20, null: false
+    t.bigint "user_id"
   end
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
