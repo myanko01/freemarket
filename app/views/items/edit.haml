@@ -5,16 +5,19 @@
             .l__single-container-head 商品の情報を入力
             = form_for @item, method: :patch, html:{class: "dropzone", id: "my-awesome-dropzone"} do |f|
                 .sell__upload__boxes
-                    = f.fields_for :image_url do |i|
-                        %h3.sell__upload__boxes-head 出品画像
-                        %span.form__required 必須
-                        %p 最大10枚までアップロードできます
-                        .dz-message 
+                    %h3.sell__upload__boxes-head 出品画像
+                    %span.form__required 必須
+                    %p 最大10枚までアップロードできます
+                    = f.fields_for :images do |i|
+                        %form.dropzone{:action => "/file-upload"}
+                        .fallback
+                            %input{:multiple => "multiple", :name => "file", :type => "file"}/
+                        .dz-message
                             .dz-text
                                 ドラッグアンドドロップ
                                 またはクリックしてファイルをアップロード
                                 %br>/
-                            -# #dz-previews.dropzone-previews
+                            #dz-previews.dropzone-previews
                 .sell-contents
                     .form-group
                         %label 商品名
