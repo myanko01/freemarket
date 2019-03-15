@@ -27,17 +27,19 @@ main, section, ul {
     padding: 20px 0 0 0;
     background: $body-gray;
     min-height: 100vh;
-    height: 3500px;
+    height: 1950px;
     &__title{
       font-size: 22px;
       text-align: center;
       line-height: 1.4;
+      font-weight: bold;
     }
     .box{
       &__title{
         font-size: 18px;
         margin: 26px 11px;
         text-align: center;
+        font-weight: bold;
         a{
           color: $blue;
           text-decoration: none;
