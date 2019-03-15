@@ -64,7 +64,7 @@
                 発送までの日数
                 %span.form__require 必須
                 .select-wrap
-                = f.select :shipping_date, Item.shipping_dates.keys.to_a
+                = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
