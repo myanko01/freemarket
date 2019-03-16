@@ -24,7 +24,7 @@
             %li.user-nav__list
               = link_to "ログイン", root_path, class: "user-nav__list__link-sign-in"
             %li.user-nav__list
-              = link_to "新規会員登録", '/users/new', class: "user-nav__list__link-sign-up"
+              = link_to "新規会員登録", root_path, class: "user-nav__list__link-sign-up"
           -else
             %li.user-nav__list
               = link_to root_path, class: "user-nav__list__link" do

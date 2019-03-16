@@ -5,28 +5,29 @@
       #sell-container
         %h2.l__single-head 商品の情報を入力
         %form.sell__form
+        = form_for @item do |f|
           .sell__upload__box
             %h3.sell__upload__box-head
               出品画像
               %span.form__require 必須
-            %p 最大10枚までアップロードできます
-            .sell__dropbox-container-clearfix
-              .sell__upload__drop-box
-                %pre.visible-pc
-                  ドラッグアンドドロップ
-                  またはクリックしてファイルをアップロード
-                  %br>/
+            %p 最大1枚までアップロードできます
+            = f.fields_for :image_url do |fini|
+              .sell__dropbox-container-clearfix
+                .sell__upload__drop-box
+                = fini.label :image_url, class:"upload-box" do
+                  = fini.file_field :image_url, class: 'hidden'
+                  = image_tag "", height:"140", width:"140",class: 'item_image',alt:""
           .sell-content
             .form-group
               %label
                 商品名
                 %span.form__require 必須
               %div
-                %input.input-name{type:"text", value:"", name:"",placeholder:"商品名（必須40字まで）"}
+                = f.text_field :name, class:"input-name", placeholder: "商品名（必須40文字まで）"
             .form-group
               商品の説明
               %span.form__require 必須
-              %textarea{ type: "text", placeholder: "test test test", name: "", class: :"textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+              = f.text_area :detail,class:"textarea-default", rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
           .sell-content.clearfixx
             %h3.sell-sub-head 商品の詳細
             .sell-form-box
@@ -34,14 +35,14 @@
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.collection_select :category_id, Category.all, :id, :name
+                = fa_icon 'angle-down'
               .form-group
                 商品の状態
                 %span.form__require 必須
                 .select-wrap
-                %div
-                  %select
+                = f.collection_select :condition_id, Condition.all, :id, :name
+                = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 配送について
             = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
@@ -51,23 +52,23 @@
                 配送料の負担
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.collection_select :category_id, Category.all, :id, :name
+                = fa_icon 'angle-down'
               .form-group
                 発送元の地域
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+                = fa_icon 'angle-down'
               .form-group
                 発送までの日数
                 %span.form__require 必須
                 .select-wrap
-                %div.select-default
-                  %select
+                = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name
+                = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
-            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question" do
+            = link_to "https://www.mercari.com/jp/help_center/article/64/", class: "form__question-for" do
               ?
             .sell-form-box
               %ul.sell__price
@@ -76,13 +77,13 @@
                     価格
                     %span.form__require 必須
                     #inputPrice.l-right.sell-price-input
-                      %input.input-default{type: "int", value:"", placeholder:"例)300円"}
+                      = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
                   %li.clearfix.plce
                     .l-left 販売手数料 (10%)
-                    .handling_charge.l-right
+                    .handling_charge.l-right -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right 
+                    .profitFee.l-right -
           .sell-content.sell-btn-box
             %div
               %p
@@ -101,6 +102,6 @@
                 = link_to "#", target: '_blank' do
                   加盟店規約
                 に同意したことになります。
-              .btn__default.btn-red 出品する
-            %a.btn__default.btn-gray もどる
+              = link_to '出品する', '/items/new', class: 'btn__default btn-red'
+              = link_to 'もどる', '/items/new', class: 'btn__default btn-gray'
 = render 'footer-buy'
