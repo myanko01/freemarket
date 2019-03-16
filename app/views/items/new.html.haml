@@ -80,10 +80,10 @@
                       = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
                   %li.clearfix.plce
                     .l-left 販売手数料 (10%)
-                    .handling_charge.l-right -
+                    .handling_charge.l-right.rod -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right -
+                    .profitFee.l-right.rods -
           .sell-content.sell-btn-box
             %div
               %p
@@ -103,5 +103,5 @@
                   加盟店規約
                 に同意したことになります。
               = link_to '出品する', '/items/new', class: 'btn__default btn-red'
-              = link_to 'もどる', '/items/new', class: 'btn__default btn-gray'
+              = link_to 'もどる', '/users/show', class: 'btn__default btn-gray'
 = render 'footer-buy'

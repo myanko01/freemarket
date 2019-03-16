@@ -10,6 +10,5 @@ class Item < ApplicationRecord
   belongs_to_active_hash :condition
   belongs_to_active_hash :shipping_date
   belongs_to_active_hash :burden
-
 end
 
