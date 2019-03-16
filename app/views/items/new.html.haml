@@ -52,7 +52,7 @@
                 配送料の負担
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.all, :id, :name
+                = f.collection_select :burden_id, Burden.all, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 発送元の地域
