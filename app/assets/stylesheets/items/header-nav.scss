@@ -9,7 +9,7 @@
     margin: 0 auto;
     padding: 17px 0 16px;
     white-space: normal;
-    li{
+    &__navs{
       text-overflow: ellipsis;
      white-space: nowrap;
      display: inline-block;
