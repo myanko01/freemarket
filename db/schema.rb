@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_094151) do
     t.integer "parent_id"
     t.integer "lft"
     t.integer "rgt"
+    t.integer "burden_id"
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
