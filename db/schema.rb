@@ -108,6 +108,8 @@ ActiveRecord::Schema.define(version: 2019_03_16_044138) do
     t.integer "birth_month", null: false
     t.integer "birth_day", null: false
     t.bigint "address_id"
+    t.string "provider"
+    t.string "uid"
     t.index ["address_id"], name: "index_users_on_address_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
