@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  protect_from_forgery except: :done
   def index
     @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
     @mens_items = Item.includes(:images).where(category_id: 2).limit(4)
@@ -46,6 +47,9 @@ class ItemsController < ApplicationController
   end
 
   def purchase
+  end
+
+  def done
   end
 
   private

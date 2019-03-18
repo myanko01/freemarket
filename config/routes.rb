@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :images, only: [:index, :new, :edit, :create, :destroy]
     collection do
       get :purchase
+      post :done
     end
   end
   resources :categories, only: [:index, :show]
