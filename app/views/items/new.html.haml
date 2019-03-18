@@ -52,7 +52,7 @@
                 配送料の負担
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.all, :id, :name
+                = f.collection_select :burden_id, Burden.all, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 発送元の地域
@@ -64,7 +64,7 @@
                 発送までの日数
                 %span.form__require 必須
                 .select-wrap
-                = f.select :shipping_date, Item.shipping_dates.keys.to_a
+                = f.collection_select :shipping_date_id, ShippingDate.all, :id, :name
                 = fa_icon 'angle-down'
           .sell-content.clearfix
             %h3.sell-sub-head 販売価格(300〜9,999,999)
@@ -80,10 +80,10 @@
                       = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
                   %li.clearfix.plce
                     .l-left 販売手数料 (10%)
-                    .handling_charge.l-right -
+                    .handling_charge.l-right.rod -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right -
+                    .profitFee.l-right.rods -
           .sell-content.sell-btn-box
             %div
               %p
@@ -103,5 +103,5 @@
                   加盟店規約
                 に同意したことになります。
               = link_to '出品する', '/items/new', class: 'btn__default btn-red'
-              = link_to 'もどる', '/items/new', class: 'btn__default btn-gray'
+              = link_to 'もどる', '/users/show', class: 'btn__default btn-gray'
 = render 'footer-buy'
