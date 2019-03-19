@@ -3,20 +3,46 @@
     .main
         .l__single-container
             .l__single-container-head 商品の情報を入力
-            = form_for @item, html:{class: "dropzone", id: "my-awesome-dropzone"} do |f|
+            = form_for @item, method: :patch do |f|
                 .sell__upload__boxes
                     %h3.sell__upload__boxes-head 出品画像
                     %span.form__required 必須
                     %p 最大10枚までアップロードできます
-                    = f.fields_for :images do |i|
-                        .dz-message
-                            .dz-text
-                                ドラッグアンドドロップ
-                                またはクリックしてファイルをアップロード
-                                %br>/
-                            #dz-previews.dropzone-previews
-                                -# %form{:action => "", :enctype => "multipart/form-data", :method => "post"}
-                                -#     %input{:name => "file", :type => "file"}/
+                    .sell__dropbox__container.state__image__number
+                        .sell__upload__items__container
+                        .sell__upload__items.have__item
+                            %ul#sell__upload__items__list
+                        = f.fields_for :images do |i|
+                            %label.sell__upload__drop-box.have__item-0
+                                = i.file_field :images, multiple: true, name: "item[images_attributes][0][image_url]", class: "file-0"
+                                = image_tag @images.to_s
+                                %pre.visible__pc
+                                    ドラッグアンドドロップ
+                                    またはクリックしてファイルをアップロード
+
+                            %label.sell__upload__drop-box.have__item-1
+                                = i.file_field :images, multiple: true, class: "file-1"
+                                %pre.visible__pc
+                                    ドラッグアンドドロップ
+                                    またはクリックしてファイルをアップロード
+
+                            %label.sell__upload__drop-box.have__item-2
+                                = i.file_field :images, multiple: true, class: "file-2"
+                                %pre.visible__pc
+                                    ドラッグアンドドロップ
+                                    またはクリックしてファイルをアップロード
+
+                            %label.sell__upload__drop-box.have__item-3
+                                = i.file_field :images, multiple: true, class: "file-3"
+                                %pre.visible__pc
+                                    ドラッグアンドドロップ
+                                    またはクリックしてファイルをアップロード
+
+                            %label.sell__upload__drop-box.have__item-4
+                                = i.file_field :images, multiple: true, class: "file-4"
+                                %pre.visible__pc
+                                    ドラッグアンドドロップ
+                                    またはクリックしてファイルをアップロード
                 .sell-contents
                     .form-group
                         %label 商品名
@@ -55,7 +81,7 @@
                             %label 発送元の地域
                             %span.form__required 必須
                             .select-wrap
-                                = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+                                = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}
                         .form-groups
                             %label 発送までの日数
                             %span.form__required 必須

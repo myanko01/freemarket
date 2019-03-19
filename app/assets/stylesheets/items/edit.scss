@@ -15,42 +15,130 @@
             box-sizing: border-box;
             width: 620px;
             padding: 40px;
-        }
-        .dz-message {
-            width: 620px;
-            margin: 0;
-            min-height: 184px;
-            box-sizing: border-box;
-            flex: 1;
-            position: relative;
-            min-height: 116px;
-            background: $body-gray;
-            border: 1px dashed $key-gray;
-            font-size: 0;
-            text-align: center;
-            transition: box-shadow ease-out .3s;
-            cursor: pointer;
-            .dz-text {
-                position: absolute;
-                top: 50%;
-                left: 16px;
-                right: 16px;
-                text-align: center;
+            .sell__upload__boxes-head {
+                display: block;
                 font-size: 14px;
-                line-height: 1.5;
-                transform: translate(0, -50%);
-                transform: translate(0, -50%);
-                pointer-events: none;
-                white-space: pre-wrap;
-                word-wrap: break-word;
+                float: left;
+                font-weight: bold;
+            }
+
+            .sell__dropbox__container {
+                width: 620px;
+                margin: 16px auto 0;
+                display: flex;
+                .sell__upload__items__container {
+                    display: flex;
+                    .sell__upload__item {
+                        width: 116px;
+                        margin: 0 10px 10px 0;
+                        border: 1px solid #eee;
+                        vertical-align: top;
+                        display: inline-block !important;
+                        &:first-child {
+                        margin-left: 0px;
+                        }
+                        .sell__upload__figure {
+                            line-height: 116px;
+                            width: auto;
+                            padding: 0;
+                            margin: 0;
+                            height: 116px;
+                            background-color: $body-gray;
+                            align-items: center;
+                            img {
+                                transform: none;
+                                vertical-align: middle;
+                            }
+                        }
+                        .sell__upload__button {
+                            text-align: center;
+                            a {
+                                font-size: 16px;
+                                width: 50%;
+                                background-color: $body-gray;
+                                line-height: 44px;
+                                text-align: center;
+                                color: $blue;
+                                text-decoration: none;
+                                touch-action: manipulation;
+                                &:last-child {
+                                border-left: 1px solid #eee;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sell__upload__drop-box {
+                    display: block;
+                    position: relative;
+                    height: 162px;
+                    background-color: $body-gray;
+                    border: 1px dashed #ccc;
+                    font-size: 0;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: box-shadow ease-out .3s, -webkit-box-shadow ease-out .3s;
+                    input {
+                        display: none;
+                        touch-action: manipulation;
+                    }
+                    .visible__pc {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        transform: translate(0, -50%);
+                        pointer-events: none;
+                        white-space: pre-wrap;
+                        word-wrap: break-word;
+                        overflow: auto;
+                        padding: 15px;
+                        z-index: 9999;
+                    }
+                }
+                .have__item-0 {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .have__item-1 {
+                    width: 491px;
+                    display: none;
+                }
+                .have__item-2 {
+                    width: 363px;
+                    display: none;
+                }
+                .have__item-3 {
+                    width: 234px;
+                    display: none;
+                }
+                .have__item-4 {
+                    width: 106px;
+                    display: none;
+                .visible__pc {
+                    height:140px;
+                    vertical-align: middle;
+                    line-height:normal;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    transform: translate(0, -50%);
+                    pointer-events: none;
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                    overflow: auto;
+                    padding: 15px;
+                }
             }
         }
-    .sell__upload__boxes-head {
-        display: block;
-        font-size: 14px;
-        float: left;
-        font-weight: bold;
     }
+}
     .form__required {
         background: $red;
         margin: 0 0 0 8px;
@@ -60,7 +148,6 @@
         font-size: 12px;
         vertical-align: top;
     }
-  
     .sell-contents{
         border-top: 1px solid $border-gray;
         padding: 40px 0;
@@ -248,4 +335,4 @@
             float: left;
         }
     }
-}
+    
