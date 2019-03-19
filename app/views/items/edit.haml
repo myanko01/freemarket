@@ -9,7 +9,7 @@
                         %h3.sell__upload__boxes-head 出品画像
                         %span.form__required 必須
                         %p 最大10枚までアップロードできます
-                        .dz-message 
+                        .dz-message
                             .dz-text
                                 ドラッグアンドドロップ
                                 またはクリックしてファイルをアップロード
@@ -69,7 +69,7 @@
                                 .clearfix-2
                                     %label 価格
                                     %span.form__required 必須
-                                .sell__price-input 
+                                .sell__price-input
                                     = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
                             %li.plce
                                 .l-left 販売手数料 (10%)
