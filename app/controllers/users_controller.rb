@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
+    # binding.pry
   end
 
   def delete
@@ -28,6 +28,6 @@ class UsersController < ApplicationController
   end
 
   def logout
-    
+
   end
 end

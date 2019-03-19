@@ -5,20 +5,27 @@ class CardsController < ApplicationController
   end
 
   def new
-
+    # binding.pry
+    require 'payjp'
+    Payjp.api_key = 'sk_test_08cb740d0e8f1625b30fbfec'
+    Payjp::Token.create({
+      :card => {
+        :number => '4242424242424242',
+        :cvc => '123',
+        :exp_month => '2',
+        :exp_year => '2020'
+      }},
+      {
+        'X-Payjp-Direct-Token-Generate': 'true'
+      }
+      )
   end
 
   def create
-    @token = Card.create(user_id:card_params[:user_id], token:card_params[:payjp-token])
     binding.pry
-
   end
 
   def destroy
 
-  end
-  private
-  def card_params
-    params.permit(:payjp-token, :user_id)
   end
 end

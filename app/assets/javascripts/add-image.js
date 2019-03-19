@@ -1,42 +1,58 @@
-$(function(){
-    Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
-
-    // The configuration we've talked about above
-    autoProcessQueue: false,
-    uploadMultiple: true,
-    parallelUploads: 100,
-    maxFiles: 100,
-    previewsContainer: '#dz-previews',
-    addRemoveLinks: true,
-    dictRemoveFile: '削除',
-  
-    // The setting up of the dropzone
-    init: function() {
-      var myDropzone = this;
-  
-      // First change the button to actually tell Dropzone to process the queue.
-      this.element.querySelector("input[type=submit]").addEventListener("click", function(e) {
-        // Make sure that the form isn't actually being sent.
-        e.preventDefault();
-        e.stopPropagation();
-        myDropzone.processQueue();
-      });
-  
-      // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
-      // of the sending event because uploadMultiple is set to true.
-      this.on("sendingmultiple", function() {
-        // Gets triggered when the form is actually being sent.
-        // Hide the success button or the complete form.
-      });
-      this.on("successmultiple", function(files, response) {
-        // Gets triggered when the files have successfully been sent.
-        // Redirect user or notify of success.
-      });
-      this.on("errormultiple", function(files, response) {
-        // Gets triggered when there was an error sending the files.
-        // Maybe show form again, and notify user of error
-      });
+$(function() {
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+            $('#item_images_attributes_0_id').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
     }
-   
-  }
+    $("#item_images_attributes").change(function(){
+    readURL(this);
+    });
+});
+$(document).on('turbolinks:load', function() {
+    preview = $(".sell__upload__items__container");
+    inputnum = 0
+    deletenum = 0
+    number = 0
+    function buildImageHTML(file){
+            var html =
+                    `<li class="sell__upload__item">
+                        <figure class="sell__upload__figure landscape">
+                            <img src="${ file.target.result }", width="114", height="100">
+                        </figure>
+                        <div class="sell__upload__button">
+                            <a id="delete-btn-${inputnum}">編集</a>
+                            <a href="" class="sell__upload__edit">削除</a>
+                        </div>
+                    </li>`
+            preview.append(html);
+                $('.sell__upload__drop-box.have__item-'+ inputnum +'').css('display','none')
+                    inputnum +=1;
+                    console.log(html)
+                $('.sell__upload__drop-box.have__item-'+ deletenum +'').css('display','block')
+                    deletenum +=1
+      };
+
+    $('form').on('change', 'input[type="file"]',function(e) {
+        var file = e.target.files[0],
+            reader = new FileReader(),
+            $preview = $(".sell__upload__items");
+            t = this;
+        // 画像ファイル以外の場合は何もしない
+        if(file.type.indexOf("image") < 0){
+            return false;
+      };
+  
+      // ファイル読み込みが完了した際のイベント登録
+      reader.onload = (function(file) {
+        return function(e) {
+            // .prevewの領域の中にロードした画像を表示するimageタグを追加
+            buildImageHTML(e);
+        };
+      })(file);
+      reader.readAsDataURL(file);
+    });
 });
