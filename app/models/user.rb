@@ -8,9 +8,13 @@ class User < ApplicationRecord
   belongs_to_active_hash :birth_year
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    where(provider: auth.provider, uid: auth.uid).first_or_initialize do |user|
       user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
+      user.nickname = auth.info.name
     end
+  end
+
+  def self.set_password
+    Devise.friendly_token[0,20]
   end
 end
