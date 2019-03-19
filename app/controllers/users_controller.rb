@@ -7,4 +7,8 @@ class UsersController < ApplicationController
   def before_sign_up
     
   end
+
+  def logout
+    
+  end
 end
