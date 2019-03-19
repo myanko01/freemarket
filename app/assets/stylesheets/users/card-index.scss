@@ -1,14 +1,8 @@
-body{
-  position: relative;
-  min-height: 100%;
-  background: $body-gray;
-  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  font-size: 14px;
-  color: $ink;
-  line-height: 1;
+.card-box{
+  margin: 40px auto 0;
+  width: 1020px;
   .card{
-    margin: 24px auto 0;
-    padding: 0 0 40px;
+    float: right;
     width:700px;
     .card-content{
       float: none;
