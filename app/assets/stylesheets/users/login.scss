@@ -1,5 +1,4 @@
 .login {
-  height: 730px;
   width: 450px;
   background-color: $white;
   margin: 0 auto;
@@ -140,6 +139,7 @@
     }
 
   .login__box {
+    margin: 20px 0px;
     display: block;
     width: 100%;
     line-height: 48px;
@@ -152,15 +152,13 @@
     a {
       text-decoration: none;
     }
-  }
-
-    &__box-er {
+    &-er {
       background: $red;
       border: 1px solid $red;
       width: 330px;
       margin: 0 auto;
-      &-2{
-        color: $white;
-      }
+      color: $white;
+      height: 50px;
     }
+  }
 }

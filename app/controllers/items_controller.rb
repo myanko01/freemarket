@@ -16,12 +16,22 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
-    @item.images.build
+    # if user_signed_in?
+      @item = Item.new
+      @item.images.build
+    # else
+    #   redirect_to new_user_path
+    # end
   end
 
   def create
     @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      flash[:alert] = '※必須項目を入力してください'
+      render "new"
+    end
   end
 
   def edit
@@ -53,7 +63,8 @@ class ItemsController < ApplicationController
   end
 
   private
-  def item_params
-    params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
-  end
+    def item_params
+      params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+
+    end
 end
