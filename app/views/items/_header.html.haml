@@ -22,21 +22,21 @@
         %ul.user-nav
           - unless user_signed_in?
             %li.user-nav__list
-              = link_to "ログイン", root_path, class: "user-nav__list__link-sign-in"
+              = link_to "ログイン", new_user_session_path, method: :get, class: "user-nav__list__link-sign-in"
             %li.user-nav__list
-              = link_to "新規会員登録", root_path, class: "user-nav__list__link-sign-up"
+              = link_to "新規会員登録", before_sign_up_users_path, method: :get, class: "user-nav__list__link-sign-up"
           -else
             %li.user-nav__list
               = link_to root_path, class: "user-nav__list__link" do
                 %figure.mypage-icon
                   .mypage-icon__conteiner
                     = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", alt: "", width: "32"
-                    %p マイページ
+                    .user-list マイページ
             %li.user-nav__list
               = link_to "#", class: "user-nav__list__link" do
                 %i.far.fa-bell
-                %p お知らせ
+                .user-list お知らせ
             %li.user-nav__list
               = link_to "https://www.mercari.com/jp/mypage/", class: "user-nav__list__link" do
                 = fa_icon 'check'
-                %p やることリスト
+                .user-list やることリスト
