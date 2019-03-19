@@ -107,9 +107,10 @@
           list-style: none;
           &__list:first-child {
             margin: 0;
+            line-height: 38px;
           }
           &__list {
-            line-height: 45px;
+            line-height: 38px;
             margin-left: 10px;
             &__link-sign-in {
               display: block;
@@ -152,6 +153,7 @@
               }
               .mypage-icon {
                 margin: 0 10px 0 0;
+                height: 32px;
                 &__conteiner {
                   height: 45px;
                   img {
@@ -162,15 +164,17 @@
                   }
                 }
               }
-              p{
+              .user-list{
                 display: inline-block;
                 margin: 0 0 0 8px;
                 font-size: 14px;
                 vertical-align: middle;
               }
-              .far {
+              .fa-bell {
                 line-height: 45px;
                 font-size: 17px;
+                font-family:FontAwesome;
+                font-style:normal;
               }
               .fa {
                 line-height: 45px;

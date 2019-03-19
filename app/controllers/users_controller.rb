@@ -4,23 +4,11 @@ class UsersController < ApplicationController
 
   end
   
-  def new
-
-  end
-  
-  def create
-
-  end
-  
-  def edit
-
+  def before_sign_up
+    
   end
 
-  def update
-
-  end
-
-  def delete
-
+  def logout
+    
   end
 end

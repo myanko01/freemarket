@@ -1,5 +1,8 @@
-%body
-  %main.card
+- breadcrumb :card
+= render 'items/header'
+= render 'items/header-nav'
+%main.card-box
+  .card
     .card-content
       .card-content__top 支払い方法
       .card-content__main
@@ -13,3 +16,6 @@
           = link_to "/jp/help_center/category/6/", target: "blank", class: "btn-root" do
             %span 支払い方法について
             =fa_icon "angle-right"
+  = render 'users/sidebar'
+= render 'items/footer'
+= render 'items/footer-sell-btn'

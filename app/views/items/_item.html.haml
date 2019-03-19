@@ -1,12 +1,12 @@
 %section.box__item
   = link_to items_path do
     %figure.box__item__photo
-      = image_tag "briefcase.png", alt: "サンプル画像"
+      / = image_tag item.images.first.image_url, alt: "サンプル画像"
     .box__item__body
       %h3.box__item__body__name
-        ビジネスバッグ
+        = item.name
       .box__item__body__num
         .box__item__body__num__price
-          ¥2,300
+          = "¥" + item.price.to_s
         %p.box__item__body__num__tax
           (税込)

@@ -1,6 +1,13 @@
 class ItemsController < ApplicationController
   def index
-
+    @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
+    @mens_items = Item.includes(:images).where(category_id: 2).limit(4)
+    @baby_kids_items = Item.includes(:images).where(category_id: 3).limit(4)
+    @cosmetics_perfume_beauty_items = Item.includes(:images).where(category_id: 4).limit(4)
+    @chanel_items = Item.includes(:images).where(brand_id: 2).limit(4)
+    @louis_vuitton_items = Item.includes(:images).where(brand_id: 3).limit(4)
+    @supreme_items = Item.includes(:images).where(brand_id: 4).limit(4)
+    @nike_items = Item.includes(:images).where(brand_id: 5).limit(4)
   end
 
   def show
@@ -8,11 +15,22 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
+    # if user_signed_in?
+      @item = Item.new
+      @item.images.build
+    # else
+    #   redirect_to new_user_path
+    # end
   end
 
   def create
     @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      flash[:alert] = '※必須項目を入力してください'
+      render "new"
+    end
   end
 
   def edit
@@ -24,7 +42,7 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     if item.user_id == current_user.id
       item.destory
-       redirect_to '/items/items-list', notice: "商品を削除しました"
+      redirect_to '/items/items-list', notice: "商品を削除しました"
     end
   end
 
@@ -39,6 +57,7 @@ class ItemsController < ApplicationController
 
   private
     def item_params
-      params.require(:item).permit(:name, { :user_ids => [] }, :price, :detail, :prefecture_id, :condition_id, :shipping_date_id, :category_id, image_url_attributes: [:content, :_destroy, :id])
+      params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+
     end
 end
