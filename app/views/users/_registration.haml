@@ -4,7 +4,7 @@
       %p.Member__text 会員情報入力
     .Member__bottom
       .form-box#user-forms
-        = form_for @user do |f|
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           .form-box__width--top
             %label.form-box__label ニックネーム
             %span.form-box__label-req 必須
@@ -13,14 +13,24 @@
             %label.form-box__label メールアドレス
             %span.form-box__label-req 必須
             = f.text_field :email, class:'user-form', placeholder:"PC・携帯どちらでも可"
-          .form-box__width
-            %label.form-box__label パスワード
-            %span.form-box__label-req 必須
-            = f.text_field :password, class:'user-form', placeholder:"6文字以上"
-          .form-box__width
-            %label.form-box__label パスワード（確認）
-            %span.form-box__label-req 必須
-            = f.text_field :password_confirmation, class:'user-form', placeholder:"6文字以上"
+          - if @user.uid.blank?
+            .form-box__width
+              %label.form-box__label パスワード
+              %span.form-box__label-req 必須
+              = f.text_field :password, class:'user-form', placeholder:"6文字以上"
+            .form-box__width
+              %label.form-box__label パスワード（確認）
+              %span.form-box__label-req 必須
+              = f.text_field :password_confirmation, class:'user-form', placeholder:"6文字以上"
+          - else
+            .form-box__width{style: 'display: none;'}
+              %label.form-box__label パスワード
+              %span.form-box__label-req 必須
+              = f.text_field :password, class:'user-form', placeholder:"6文字以上", value: "password"
+            .form-box__width{style: 'display: none;'}
+              %label.form-box__label パスワード（確認）
+              %span.form-box__label-req 必須
+              = f.text_field :password_confirmation, class:'user-form', placeholder:"6文字以上", value: "password"
           .form-box__text
             .form-box__text-name 本人確認
             .form-box__texts

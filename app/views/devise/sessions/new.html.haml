@@ -1,17 +1,3 @@
 = render 'items/header-simple'
-.body-gray
-  .main
-    .main__top
-      %p.main__text 新規会員登録
-    .main__bottom
-      .main__box
-        .main__item
-          .main__item--black
-            = link_to "メールアドレスで登録", new_user_registration_path
-      .main__box
-        .main__item.main__item--a
-          = link_to "facebookで登録", new_user_registration_path
-      .main__box
-        .main__item.main__item--aa
-          = link_to "Googleで登録", new_user_registration_path
+= render 'users/login'
 = render 'items/footer-buy'
