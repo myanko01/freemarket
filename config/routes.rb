@@ -13,9 +13,12 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index, :show]
-  resources :users, except: [:index, :destroy] do
+  resources :users, only: [:show] do
     resources :cards, only: [:index, :new, :create, :destroy]
     resources :addresses, only: [:new, :create, :edit, :update]
+    collection do
+      get :before_sign_up
+    end
   end
   resources :brands, only: [:index, :show]
 end
