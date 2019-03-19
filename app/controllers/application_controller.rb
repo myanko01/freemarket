@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
                                                       :first_name_kana,
                                                       :birth_year_id,
                                                       :birth_month,
-                                                      :birth_day])
+                                                      :birth_day,
+                                                      :uid,
+                                                      :provider])
+
+    devise_parameter_sanitizer.permit(:account_update, keys:[:phone_number])
   end
 end
