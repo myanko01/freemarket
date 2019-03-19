@@ -1,75 +1,3 @@
-.header {
-  height: 167px;
-  text-align: center;
-
-  &__log {
-    width: 390px;
-    height: 80px;
-    line-height: 49px;
-  }
-
-  .progressbar {
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    position: relative;
-    left: 345px;
-    bottom: 0px;
-  }
-
-  .progressbar li {
-    list-style-type: none;
-    width: 11%;
-    float: left;
-    font-size: 13px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    color: $dark-gray;
-  }
-
-  .progressbar li:before {
-    width: 12px;
-    height: 12px;
-    content: no-open-quote;
-    counter-increment: initial;
-    line-height: 30px;
-    display: block;
-    text-align: center;
-    margin: 0 auto 10px auto;
-    border-radius: 50%;
-    background-color: $border-gray;
-  }
-
-  .progressbar li:after {
-    width: 100%;
-    height: 2px;
-    content: '';
-    position: absolute;
-    background-color: $border-gray;
-    top: 5px;
-    left: -50%;
-    z-index: -1;
-  }
-
-  .progressbar li:first-child:after {
-    content: none;
-  }
-
-  .progressbar li.active {
-    color: $red;
-  }
-
-  .progressbar li.active:before {
-    background-color: $red;
-    color: $white;
-  }
-
-  .progressbar li.active + li:after {
-    background-color: $red;
-  }
-}
-
 .log__item {
     width: 200px;
     height: 200px;
@@ -93,32 +21,27 @@
     border-top: 1px solid $body-gray;
     margin: 0;
     text-align: center;
-  }
 
-  .form-boxs {
-    max-width: 320px;
-    margin: 0 auto;
-    }
+    .form-box {
+      max-width: 320px;
+      margin: 0 auto;
 
-    .lob__box {
-      display: block;
-      width: 100%;
-      line-height: 48px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      -webkit-transition: all ease-out .3s;
-      transition: all ease-out .3s;
-      cursor: pointer;
-      text-align: center;
-      a {
+      .lob__box {
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        margin: 40px 0 0;
+        background: $red;
+        border: 1px solid $red;
+        color:  $white;
         text-decoration: none;
       }
     }
-
-    .lob__box-next {
-      margin: 40px 0 0;
-      background: $red;
-      border: 1px solid $red;
-      color:  $white;
-    }
+  }
 }

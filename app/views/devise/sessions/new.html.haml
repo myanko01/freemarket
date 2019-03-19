@@ -1,3 +1,31 @@
 = render 'items/header-simple'
-= render 'users/login'
+.gray-background
+  .login
+    .login__top
+      %p.login__acc アカウントをお持ちでない方はこちら
+      %p.login__signup
+        = link_to before_sign_up_users_path do
+          新規会員登録
+    .login__form
+      .login__box
+        .login__item
+          = link_to 'facebookでログイン'
+      .login__box
+        .login__items
+          = link_to 'Googleでログイン'
+    .login__form--er
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login__form--box
+          = f.text_field :email ,placeholder:"メールアドレス"
+        .login__form--box
+          = f.text_field :password ,placeholder:"パスワード"
+        .login__form--boxs
+          .login__boxs--wr
+            = image_tag("https://www.gstatic.com/recaptcha/api2/logo_48.png", class: "logo__item")
+          .login__boxs
+            %span 私はロボットではありません
+        .login__box
+          = f.submit 'ログイン', class:'login__box-er'
+        = link_to root_path do
+          パスワードをお忘れの方
 = render 'items/footer-buy'

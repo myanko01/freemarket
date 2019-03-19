@@ -2,7 +2,7 @@
 %nav.mypage-nav
   %ul.mypage-nav__list
     %li.side
-      = link_to "/users/mypage", class: "mypage-nav__list-item" do
+      = link_to "/users/#{current_user.id}", class: "mypage-nav__list-item" do
         マイページ
         %i.fa.fa-angle-right.side
     %li.side
@@ -95,6 +95,6 @@
         電話番号の確認
         %i.fa.fa-angle-right.side
     %li.side
-      = link_to "/users/logout", class: "mypage-nav__list-item" do
+      = link_to logout_users_path, class: "mypage-nav__list-item" do
         ログアウト
         %i.fa.fa-angle-right.side
