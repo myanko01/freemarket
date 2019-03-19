@@ -8,7 +8,7 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
     @address.save
-    redirect_to root_path
+    render 'users/done'
   end
 
   def edit
