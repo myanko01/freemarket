@@ -27,3 +27,6 @@
 /config/master.key
 
 public/uploads/*
+
+/config/initializers/setting.rb
+

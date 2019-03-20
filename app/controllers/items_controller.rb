@@ -17,8 +17,8 @@ class ItemsController < ApplicationController
 
   def new
     # if user_signed_in?
-      @item = Item.new
-      @item.images.build
+    @item = Item.new
+    @item.images.build
     # else
     #   redirect_to new_user_path
     # end
@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    binding.pry
     if @item.save
       redirect_to root_path
     else
@@ -57,14 +58,22 @@ class ItemsController < ApplicationController
   end
 
   def purchase
+    @id = params[:id]
   end
 
   def done
+    Payjp.api_key = PAYJP_SECRET_KEY
+    @card =Card.find_by(user_id: params[:id])
+    charge = Payjp::Charge.create(
+      :amount => 500,
+      :currency => 'jpy',
+      :customer => @card.customer_id
+      )
   end
 
   private
-    def item_params
-      params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+  def item_params
+    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
 
-    end
+  end
 end
