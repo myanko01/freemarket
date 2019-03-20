@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
     item = Item.find(params[:id])
     if item.user_id == current_user.id
       item.destory
-      redirect_to '/items/items-list', notice: "商品を削除しました"
+      redirect_to root_path, notice: "商品を削除しました"
     end
   end
 

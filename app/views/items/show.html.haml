@@ -46,7 +46,8 @@
                 =@item.condition.name
             %tr
               %th 配送料の負担
-              %td 送料込み(出品者負担)
+              %td 
+                = @item.burden.name
             %tr
               %th 配送の方法
               %td らくらくメルカリ便
@@ -57,7 +58,8 @@
                   = @item.prefecture.name
             %tr
               %th 発送の目安
-              %td 4~7日で発送
+              %td 
+                = @item.shipping_date.name
       .item__price
         %span.item__price--bold
           = "¥" + @item.price.to_s
