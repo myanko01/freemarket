@@ -2,23 +2,19 @@
 .gray-background
   .user-page
     .section.item
-      %h1.item__name 世界一速く結果を出す人は、なぜ、メールを使わないのか
+      %h1.item__name
+        = @item.name
       .item__content.clearfix
         .item__content__image
-          .item__content__image__top
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image0")
-          .item__content__image__top2
-            = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image1")
-          .item__content__image__list.clearfix
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m94035695474_1.jpg?1551453931", class: "image00")
-          .item__content__image__list.clearfix
-            = image_tag("https://static.mercdn.net/item/detail/orig/photos/m37847896309_2.jpg?1551804901", class: "image001")
+          - @item.images.each do |image|
+            .item__content__image__top
+              = image_tag "#{image.image_url}"
         %table.item__content__table
           %tbody
             %tr
               %th 出品者
               %td
-                = link_to "わたし"
+                = link_to @item.user.nickname
                 %div
                   .item-user__rating
                     = image_tag("")
@@ -35,22 +31,18 @@
             %tr
               %th カテゴリー
               %td
-                = link_to "本・ゲーム"
+                = link_to root_path do
+                  = @item.category.name
                 .large-category
-                  %i.fa.fa-angle-right
-                = link_to "本"
-                .medium-category
-                  %i.fa.fa-angle-right
-                = link_to "ビジネス"
-                .small-category
             %tr
               %th ブランド
               %td
-                = link_to "自社"
-                %div
+                = link_to "#" do
+                  = @item.brand.name
             %tr
               %th 商品の状態
-              %td 目立った傷や汚れなし
+              %td
+                =@item.condition.name
             %tr
               %th 配送料の負担
               %td 送料込み(出品者負担)
@@ -60,24 +52,21 @@
             %tr
               %th 配送元地域
               %td
-                = link_to ""
-                %div 東京都
+                = link_to "#" do
+                  = @item.prefecture.name
             %tr
               %th 発送の目安
               %td 4~7日で発送
       .item__price
-        %span.item__price--bold  ¥30000
+        %span.item__price--bold
+          = @item.price
         %span.item__price__tax (税込)
         %span.item__price__shipping-fee 送料込み
         .item__btn
           = link_to "購入画面に進む"
       .item__description
         %p.item__description--inner
-          新品購入しました。
-          とても、素敵な本です！！
-          若干カバーが大きいため、余っている状態です。
-
-          世界一速く仕事をする彼らの仕事術
+          = @item.detail
       .item__likes.clearfix
         .item__likes__left
           %button.item__button__likes
@@ -123,21 +112,12 @@
       .item-user-profile__container
         = link_to root_path, class: "item-user-profile__container-1" do
           わたしさんのその他の出品
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
+      = render @ladies_items
     .item-user-profile
       .item-user-profile__container
         = link_to root_path, class: "item-user-profile__container-1" do
           ビジネス/経済 （本・音楽・ゲーム） その他の商品
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
-      = render 'item'
+      = render @ladies_items
 = render 'items/footer'
 = render 'items/footer-sell-btn'
+

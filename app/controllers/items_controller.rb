@@ -11,7 +11,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-
+    @item = Item.find(1)
+    @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
   end
 
   def new
