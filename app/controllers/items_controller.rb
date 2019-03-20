@@ -57,6 +57,18 @@ class ItemsController < ApplicationController
     end
   end
 
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    else
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
     def item_params
       params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)

@@ -1,7 +1,7 @@
 %section.box__item
   = link_to items_path do
     %figure.box__item__photo
-      / = image_tag item.images.first.image_url, alt: "サンプル画像"
+      = image_tag item.images.first.image_url.url
     .box__item__body
       %h3.box__item__body__name
         = item.name
