@@ -4,7 +4,6 @@ Brand.create(name: "LouisVuitton", created_at: "1900-01-01", updated_at: "2000-0
 Brand.create(name: "Supreme", created_at: "1900-01-01", updated_at: "2000-01-01")
 Brand.create(name: "Nike", created_at: "1900-01-01", updated_at: "2000-01-01")
 User.create(email: "test@gmail.com", password: "testtest", reset_password_token: "test2", reset_password_sent_at: "2019-01-01", remember_created_at: "2019-01-01", users: "test", created_at: "2019-01-01", updated_at: "2019-01-01", last_name: "Tanaka", last_name_kana: "Tanaka", first_name: "Tarou", first_name_kana: "Tarou", phone_number: 00000000000 , nickname: "Tarou", birth_year_id: 1900, birth_month: 1 , birth_day: 1)
-Category.create(name: "---", created_at: "2019-01-01", updated_at: "2019-01-01")
 c1 = Category.create(name: "レディース", created_at: "2019-01-01", updated_at: "2019-01-01")
 tops = c1.children.create(name: 'トップス')
 pants = c1.children.create(name: 'パンツ')
