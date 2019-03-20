@@ -17,7 +17,6 @@
                 = fini.label :image_url, class:"upload-box" do
                   ドラッグアンドドロップまたはクリックしてファイルをアップロード
                   = fini.file_field :image_url, class: 'hidden'
-                  = image_tag "", height:"140", width:"140",class: 'item_image',alt:""
           .sell-content
             .form-group
               %label
@@ -32,11 +31,11 @@
           .sell-content.clearfixx
             %h3.sell-sub-head 商品の詳細
             .sell-form-box
-              .form-group.form-group-category#cat
+              .form-group.form-group-category
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.roots, :id, :name, {prompt: '---'}, {id: 'l_category'}
+                = f.collection_select :category_id, Category.roots, :id
                 = fa_icon 'angle-down'
               .form-group
                 商品の状態
