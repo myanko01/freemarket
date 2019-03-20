@@ -12,33 +12,33 @@
                         .sell__upload__items__container
                         .sell__upload__items.have__item
                             %ul#sell__upload__items__list
-                        = f.fields_for :images do |i|
+                        = f.fields_for :image_url do |i|
                             %label.sell__upload__drop-box.have__item-0
-                                = i.file_field :images, multiple: true, name: "item[images_attributes][0][image_url]", class: "file-0"
+                                = i.file_field :image_url, multiple: true, name: "item[images_attributes][0][image_url]", class: "file-0"
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード
 
                             %label.sell__upload__drop-box.have__item-1
-                                = i.file_field :images, multiple: true, class: "file-1"
+                                = i.file_field :image_url, multiple: true, class: "file-1"
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード
 
                             %label.sell__upload__drop-box.have__item-2
-                                = i.file_field :images, multiple: true, class: "file-2"
+                                = i.file_field :image_url, multiple: true, class: "file-2"
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード
 
                             %label.sell__upload__drop-box.have__item-3
-                                = i.file_field :images, multiple: true, class: "file-3"
+                                = i.file_field :image_url, multiple: true, class: "file-3"
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード
 
                             %label.sell__upload__drop-box.have__item-4
-                                = i.file_field :images, multiple: true, class: "file-4"
+                                = i.file_field :image_url, multiple: true, class: "file-4"
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード

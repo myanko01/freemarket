@@ -1,21 +1,25 @@
 $(function() {
+    var i = 0;
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
+            var i = 0;
             reader.onload = function (e) {
-            $('#item_images_attributes_0_id').attr('src', e.target.result);
+            $('#item_images_attributes_' + i + '_id').attr('src', e.target.result);
+            i +=1
             }
             reader.readAsDataURL(input.files[0]);
         }
     }
-    $("#item_images_attributes").change(function(){
+    $("#item_images_attributes_" + i + "_id").change(function(){
+        i +=1
     readURL(this);
     });
 });
 $(document).on('turbolinks:load', function() {
     preview = $(".sell__upload__items__container");
     inputnum = 0
-    deletenum = 0
+    deletenum = 1
     number = 0
     function buildImageHTML(file){
             var html =
@@ -31,12 +35,12 @@ $(document).on('turbolinks:load', function() {
             preview.append(html);
                 $('.sell__upload__drop-box.have__item-'+ inputnum +'').css('display','none')
                     inputnum +=1;
-                    console.log(html)
                 $('.sell__upload__drop-box.have__item-'+ deletenum +'').css('display','block')
                     deletenum +=1
       };
 
     $('form').on('change', 'input[type="file"]',function(e) {
+        console.log(e)
         var file = e.target.files[0],
             reader = new FileReader(),
             $preview = $(".sell__upload__items");
