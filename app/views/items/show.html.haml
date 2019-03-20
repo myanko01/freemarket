@@ -1,4 +1,5 @@
 = render 'items/header'
+= render 'items/header-nav'
 .gray-background
   .user-page
     .section.item
@@ -59,11 +60,12 @@
               %td 4~7日で発送
       .item__price
         %span.item__price--bold
-          = @item.price
+          = "¥" + @item.price.to_s
         %span.item__price__tax (税込)
         %span.item__price__shipping-fee 送料込み
         .item__btn
-          = link_to "購入画面に進む"
+          = link_to purchase_items_path do
+            購入画面に進む
       .item__description
         %p.item__description--inner
           = @item.detail
