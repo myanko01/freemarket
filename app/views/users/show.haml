@@ -7,8 +7,8 @@
             .mypage
                 .mypage__main
                     .mypage__main-top
-                        = image_tag "https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409", class: :"mypage__image"
-                        .h2#name 名前
+                        = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", class: :"mypage__image"
+                        .h2#name=current_user.nickname
                         .mypage__main-top-number
                             .h2#valuation 評価数
                             %span.num 0

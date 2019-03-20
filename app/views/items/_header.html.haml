@@ -26,17 +26,111 @@
             %li.user-nav__list
               = link_to "新規会員登録", before_sign_up_users_path, method: :get, class: "user-nav__list__link-sign-up"
           -else
-            %li.user-nav__list
-              = link_to root_path, class: "user-nav__list__link" do
+            %li#switch.user-nav__list
+              = link_to "/users/show", class: "user-nav__list__link" do
                 %figure.mypage-icon
                   .mypage-icon__conteiner
                     = image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", alt: "", width: "32"
                     .user-list マイページ
-            %li.user-nav__list
+              .mypage-boxes
+                .pc-header-mypage-state.text-center
+                  .user-background
+                    .user-icon
+                      =image_tag "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"
+                    %figcaption=current_user.nickname
+                  %ul.pc-header-mypage-review-listing
+                    %li
+                      =link_to("評価: #{0}","#")
+                    %li
+                      =link_to("出品数: #{0}","#")
+                  %ul.pc-header-mypage-sales-point
+                    %li.point-container
+                      %a{href: "#"}
+                        .l-left 売上金
+                        .l-right
+                          ¥ 0
+                          =fa_icon('angle-right')
+                    .clearfix
+                      %li
+                        %a{href: "#"}
+                          .l-left ポイント
+                          .l-right
+                            P 0
+                            =fa_icon('angle-right')
+                  %ul.mypage-nav-list
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        いいね！一覧
+                        =fa_icon('angle-right')
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        出品した商品 - 出品中
+                        =fa_icon('angle-right')
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        出品した商品 - 取引中
+                        =fa_icon('angle-right')
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        出品した商品 - 売却済み
+                        =fa_icon('angle-right')
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        購入した商品 - 取引中
+                        =fa_icon('angle-right')
+                    %li.side
+                      %a.mypage-nav-list-item{href: "#"}
+                        購入した商品 - 過去の取引
+                        =fa_icon('angle-right')
+            %li#switch2.user-nav__list
               = link_to "#", class: "user-nav__list__link" do
                 %i.far.fa-bell
                 .user-list お知らせ
-            %li.user-nav__list
+              .information-tab
+                %ul.information-boxes
+                  %li.information-box
+                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "information-box-image"
+                    .information-box__detail
+                      %p.information-box__detail-text 事務局から個別メッセージ
+                      .information-box__detail-time
+                        %i.fa.fa-clock-o
+                        %span １時間前
+                      %i.fa.fa-angle-right
+                  %li.information-box
+                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "information-box-image"
+                    .information-box__detail
+                      %p.information-box__detail-text 明日の
+                      .information-box__detail-time
+                        %i.fa.fa-clock-o
+                        %span 30分前
+                      %i.fa.fa-angle-right
+                  %li.information-box
+                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "information-box-image"
+                    .information-box__detail
+                      %p.information-box__detail-text 天気は
+                      .information-box__detail-time
+                        %i.fa.fa-clock-o
+                        %span 17分前
+                      %i.fa.fa-angle-right
+                  %li.information-box
+                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "information-box-image"
+                    .information-box__detail
+                      %p.information-box__detail-text 午後から
+                      .information-box__detail-time
+                        %i.fa.fa-clock-o
+                        %span ３分前
+                      %i.fa.fa-angle-right
+                  %li.information-box
+                    =image_tag "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "information-box-image"
+                    .information-box__detail
+                      %p.information-box__detail-text 雨模様
+                      .information-box__detail-time
+                        %i.fa.fa-clock-o
+                        %span たった今
+                      %i.fa.fa-angle-right
+            %li#switch3.user-nav__list
               = link_to "https://www.mercari.com/jp/mypage/", class: "user-nav__list__link" do
                 = fa_icon 'check'
                 .user-list やることリスト
+              .todo-list-boxes
+                .todo-list-box 現在やることはありません

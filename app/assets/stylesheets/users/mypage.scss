@@ -120,6 +120,7 @@ body{
                                     color: $logo-gray;
                                 }
                                 .fa-angle-right{
+                                    color: black;
                                     font-size: 30px;
                                     position: absolute;
                                     top: 50%;
@@ -185,7 +186,7 @@ body{
             }
             .icon-var{
                 float: right;
-                color: black;
+                color: $white;
             }
             .notification-contain{
                 padding: 16px;
