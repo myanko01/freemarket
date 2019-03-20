@@ -1,0 +1,85 @@
+= render 'header'
+.gray-background
+    .user-page
+        .section.item
+            %h1.item__name 
+                = @item.name
+            .item__content.clearfix
+                .item__content__image
+                    - @item.images.each do |image|
+                        .item__content__image__top
+                            = image_tag "#{image.image_url}"
+                %table.item__content__table
+                    %tbody
+                    %tr
+                        %th 出品者
+                        %td
+                            = link_to @item.user.nickname
+                    %tr
+                        %th カテゴリー
+                        %td
+                            = link_to root_path do
+                                = @item.category.name
+                            .large-category
+                    %tr
+                        %th ブランド
+                        %td
+                            = link_to "#" do
+                                = @item.brand.name
+                    %tr
+                        %th 商品の状態
+                        %td 
+                            =@item.condition.name
+                    %tr
+                        %th 配送料の負担
+                        %td 
+                            = @item.burden.name
+                    %tr
+                        %th 配送の方法
+                        %td らくらくメルカリ便
+                    %tr
+                        %th 配送元地域
+                        %td
+                            = link_to "#" do
+                                = @item.prefecture.name
+                    %tr
+                        %th 発送の目安
+                        %td 
+                            = @item.shipping_date.name
+                .item__price
+                    %span.item__price--bold
+                        = "¥" + @item.price.to_s
+                    %span.item__price__tax (税込)
+                    %span.item__price__shipping-fee 送料込み
+                .item__description
+                    %p.item__description--inner
+                        = @item.detail
+        .item-listing-box
+            .item-listing-box__change
+                = link_to "商品の編集", edit_item_path, class: "item-listing-box__change"
+            %p.item-listing-box__which or
+            .item-listing-box__stop 出品を一時停止する
+            #js-show-popup.item-listing-box__delete この商品を削除する
+            #js-popup.popup
+                .popup-body 
+                    確認</br>
+                    削除すると二度と復活できません。</br>
+                    削除する代わりに停止することもできます。</br>
+                    </br>
+                    本当に削除しますか？
+                .popup-inner.clearfix
+                    .popup-inner-btn-l
+                        = link_to "キャンセル"
+                    = link_to root_path, method: :delete, class: ".popup-inner-btn-r" do
+                        削除
+                #js-black-bg.black-background
+                  
+        .item-messages
+            .item-messages__content
+                .item-messages__content--inner
+                    .item-messages__content--inner__form
+                        %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+                        %textarea{type:"text", value:""}
+                        .sell__btn__gray
+                            %span コメントする
+= render 'footer'
