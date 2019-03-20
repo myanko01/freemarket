@@ -37,6 +37,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+    @image = @item.images.includes(:image_url)
     @item.images.build
   end
 
@@ -50,10 +51,10 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    if @item.update(item_params)
+    if @item.update(update_item_params)
       redirect_to root_path, notice: "編集が完了しました"
     else
-      render :edit
+      render :create
     end
   end
 
@@ -87,5 +88,8 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
 
+  end
+  def update_item_params
+    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:image_url, :created_at, :updated_at, :_destroy, :id]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
   end
 end
