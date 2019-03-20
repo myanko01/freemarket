@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function() {
         if(file.type.indexOf("image") < 0){
             return false;
       };
-  
+
       // ファイル読み込みが完了した際のイベント登録
       reader.onload = (function(file) {
         return function(e) {
