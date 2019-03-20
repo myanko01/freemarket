@@ -123,26 +123,27 @@
       box-sizing: border-box;
       height: 48px;
       border-radius: 4px;
+      padding-left: 125px;
       border: 1px solid $key-gray;
       background: $white;
       line-height: 1.5;
-      font-size: 16px;
+      font-size: 15px;
       width: 100%;
       margin: 8px 0 0;
-      font-weight: 200;
+      font-weight: 450;
       color: $logo-gray;
     }
   }
   .rod {
     position: relative;
     bottom: 29px;
-    left: 135px;
+    left: 160px;
 
   }
   .rods {
     position: relative;
     bottom: 35px;
-    left: 130px;
+    left: 115px;
     font-size: 30px;
     font-weight: bold;
   }

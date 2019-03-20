@@ -31,11 +31,11 @@
           .sell-content.clearfixx
             %h3.sell-sub-head 商品の詳細
             .sell-form-box
-              .form-group.form-group-category
+              .form-group.form-group-category#cat
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.roots, :id, :name
+                = f.collection_select :category_id, Category.roots, :id, :name, {prompt: '---'}, {id: 'l_category'}
                 = fa_icon 'angle-down'
               .form-group
                 商品の状態
@@ -77,13 +77,13 @@
                     価格
                     %span.form__require 必須
                     #inputPrice.l-right.sell-price-input
-                      = f.text_field :price , class: "input-default", placeholder:"例)300円", value: @item.price
+                      = f.text_field :price , class: "input-default", placeholder:"例)  300", value: @item.price
                   %li.clearfix.plce
                     .l-left 販売手数料 (10%)
                     .handling_charge.l-right.rod -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .profitFee.l-right.rods -
+                    .profitFee.l-right.rods
           .sell-content.sell-btn-box
             %div
               %p
