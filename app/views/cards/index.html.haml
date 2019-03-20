@@ -8,7 +8,7 @@
         .card-content__main__single クレジットカード一覧
         .card-content__main__second
           .l-single-content
-            = link_to "https://www.mercari.com/jp/mypage/card/create/", class: "btn-default" do
+            = link_to "/users/#{current_user.id}/cards/new", class: "btn-default" do
               %i.far.fa-credit-card
               クレジットカードを追加する
         .card-content__main__bottom
