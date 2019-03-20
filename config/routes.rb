@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   resources :items do
     resources :images, only: [:index, :new, :edit, :create, :destroy]
     collection do
-      get :purchase
+      get :purchase, :search
     end
   end
+
   resources :categories, only: [:index, :show]
   resources :users, only: [:show] do
     resources :cards, only: [:index, :new, :create, :destroy]
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
       get :before_sign_up, :logout
     end
   end
+
   resources :brands, only: [:index, :show]
 end
 

@@ -32,11 +32,11 @@
           .sell-content.clearfixx
             %h3.sell-sub-head 商品の詳細
             .sell-form-box
-              .form-group.form-group-category
+              .form-group.form-group-category#cat
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.all, :id, :name
+                = f.collection_select :category_id, Category.roots, :id, :name, {prompt: '---'}, {id: 'l_category'}
                 = fa_icon 'angle-down'
               .form-group
                 商品の状態
@@ -59,7 +59,7 @@
                 発送元の地域
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}
                 = fa_icon 'angle-down'
               .form-group
                 発送までの日数
