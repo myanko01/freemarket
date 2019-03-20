@@ -1,4 +1,20 @@
-%body
-  %main.container-main
-    %section.chapter-container
-      %h2.chapter-container__head クレジットカード情報の登録が完了しました
+= render 'items/header'
+= render 'items/header-nav'
+%main.card-box
+  .card
+    .card-content
+      .card-content__top 支払い方法
+      .card-content__main
+        .card-content__main__single クレジットカード一覧
+        .card-content__main__second
+          .l-single-content
+            = link_to "https://www.mercari.com/jp/mypage/card/create/", class: "btn-default" do
+              %i.far.fa-credit-card
+              クレジットカードを追加する
+        .card-content__main__bottom
+          = link_to "/jp/help_center/category/6/", target: "blank", class: "btn-root" do
+            %span 支払い方法について
+            =fa_icon "angle-right"
+  = render 'users/sidebar'
+= render 'items/footer'
+= render 'items/footer-sell-btn'
