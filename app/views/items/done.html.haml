@@ -1,3 +1,4 @@
+= render 'items/header-simple'
 .single-container
   %main.single-main
     %section.purchase
@@ -9,7 +10,7 @@
             = image_tag "briefcase.png", alt: "サンプル画像",class: "purchase__content__inner__image"
           %p.purchase__content__inner__name
             出来るビジネスマンのビジネスバッグ
-          %form{action: "", method: "POST", class: "purchase__content__inner__form", novalidate: "novalidate"}
+          %form{action: "/items/#{@id}/done", method: "POST", class: "purchase__content__inner__form"}
             %p.purchase__content__inner__form__item-price
               ¥ 500
               %span.purchase__content__inner__form__item-price__shipping-fee
