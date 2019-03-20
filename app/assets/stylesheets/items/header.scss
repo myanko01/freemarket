@@ -110,6 +110,7 @@
             line-height: 38px;
           }
           &__list {
+            text-decoration: none;
             line-height: 38px;
             margin-left: 10px;
             &__link-sign-in {
@@ -123,8 +124,173 @@
               text-align: center;
               border-radius: 4px;
               text-decoration: none;
-
             }
+            .mypage-boxes{
+              position:absolute;
+              top:90px;
+              z-index: 1;
+              width:320px;
+              display: none;
+              background:#fff;
+              box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+              font-size:14px;
+              .pc-header-mypage-state.text-center{
+                .user-background{
+                  padding:28px 0 0;
+                  margin:0 0 0px;
+                  height:80px;
+                  background-image:url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?6820409");
+                  background-repeat: no-repeat;
+                  background-size:320px 80px;
+                  .user-icon{
+                    img{
+                      border-radius:30px;
+                      width:60px;
+                    }
+                  }
+                  figcaption{
+                    margin: 0;
+                    padding:0;
+                    font-size:16px;
+                  }
+                }
+                .pc-header-mypage-review-listing{
+                  margin: 4px 0 0;
+                  padding:8px 8px 0;
+                  font-size:0;
+                  text-align:center;
+                  li{
+                    margin: 0 4px;
+                    display:inline-block;
+                    font-size:14px;
+                    a{
+                      text-decoration: none;
+                      display:block;
+                      font-size:14px;
+                      color:#333;
+                    }
+                  }
+                }
+                .pc-header-mypage-sales-point{
+                  text-decoration: none;
+                  width: 300px;
+                  margin:16px auto;
+                  background: #fafafa;
+                  border:1px solid #eee;
+                  li{
+                    border-top:1px solid #eee;
+                    .l-left{
+                      float: left;
+                    }
+                    .l-right{
+                      text-align: right;
+                      margin-right: 4px;
+                    }
+                  }
+                }
+              .mypage-nav-list{
+                a{
+                  margin:0;
+                }
+                .fa{
+                  float:right;
+                  line-height: 48px;
+                  width: 30px;
+                }
+                li{
+                  text-decoration: none;
+                  border-top:1px solid #eee;
+                  padding:0px;
+                  width:100%;
+                  .mypage-nav-list-item{
+                    color: black;
+                    text-decoration: none;
+                    line-height: 48px;
+                    min-height:48px;
+                    background: #fff;
+                    margin:0 0 0 16px;
+                    width:300px;
+                  }
+                }
+              }
+            }
+          }
+          .information-tab{
+            width: 320px;
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            top: 90px;
+            background-color: $white;
+            right: 250px;
+            .information-boxes{
+              list-style: none;
+              .information-box{
+                display: block;
+                padding: 16px;
+                border-bottom: solid 1px $border-gray;
+                color: $ink;
+                &-image{
+                  float: left;
+                  height: 48px;
+                  width: 48px;
+                }
+                &__detail{
+                    width: 180px;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin: 0;
+                    color: $ink;
+                    position: relative;
+                    &-text{
+                        width: 100%;
+                        text-align: left;
+                        float: left;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        max-height: 4.4em;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        line-height: 1.5;
+                        cursor: pointer;
+                    }
+                    &-time{
+                        float: left;
+                        display: block;
+                        color: $logo-gray;
+                    }
+                    .fa-angle-right{
+                      color: black;
+                        font-size: 30px;
+                        position: absolute;
+                        top: 50%;
+                        float: right;
+                        transform: translate(0, -50%);
+                    }
+                }
+              }
+            }
+          }
+          .todo-list-boxes{
+            background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?98418311");
+            background-color: $white;
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            background-size: 78px 85px;
+            padding: 140px 0 40px;
+            color: $key-gray;
+            position: absolute;
+            display: none;
+            z-index: 9999;
+            width: 320px;
+            top: 90px;
+            right: 210px;
+            .todo-list-box{
+              font-size: 16px;
+              text-align: center;
+            }
+          }
             &__link-sign-up {
               display: block;
               border: solid 1px $blue;
@@ -142,10 +308,11 @@
                 transition-duration: 0.3s;
               }
             }
+            
             &__link {
+
               text-decoration: none;
               color: $ink;
-              display: flex;
               flex-direction: row;
               &:hover {
                 color: $blue;
@@ -168,16 +335,14 @@
                 display: inline-block;
                 margin: 0 0 0 8px;
                 font-size: 14px;
-                vertical-align: middle;
+                vertical-align: top;
               }
               .fa-bell {
-                line-height: 45px;
                 font-size: 17px;
                 font-family:FontAwesome;
                 font-style:normal;
               }
               .fa {
-                line-height: 45px;
                 font-size: 16px;
               }
             }

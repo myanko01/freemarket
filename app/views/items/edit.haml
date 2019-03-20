@@ -15,7 +15,6 @@
                         = f.fields_for :images do |i|
                             %label.sell__upload__drop-box.have__item-0
                                 = i.file_field :images, multiple: true, name: "item[images_attributes][0][image_url]", class: "file-0"
-                                = image_tag @images.to_s
                                 %pre.visible__pc
                                     ドラッグアンドドロップ
                                     またはクリックしてファイルをアップロード
@@ -76,7 +75,7 @@
                             %label 配送料の負担
                             %span.form__required 必須
                             .select-wrap
-                                = f.collection_select :category_id, Category.all, :id, :name
+                                = f.collection_select :category_id, Burden.all, :id, :name
                         .form-groups
                             %label 発送元の地域
                             %span.form__required 必須
