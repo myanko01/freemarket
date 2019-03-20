@@ -38,41 +38,24 @@
         min-width: 300px;
         max-width:300px;
         min-height: 375px;
-
-        &__top{
-          position: absolute;
-          z-index: 1;
-          min-height:300px;
-        }
-        &__top2{
+        &__top:first-child{
           position: relative;
-          z-index: 0;
-          min-height: 300px;
-        }
-
-        .image0 {
+          overflow: hidden;
           height: 300px;
           width: 300px;
+          img{
+            height: 300px;
+            width: 300px;
+          }
         }
-
-        .image1 {
-          height: 300px;
-          width: 300px;
-        }
-
-        .image00 {
-          height: 75px;
-          width: 75px;
-        }
-
-        .image001 {
-          height: 75px;
-          width: 75px;
-        }
-
-        &__list{
+        &__top{
           float: left;
           height:75px;
+          width: 75px;
+          img{
+            height:75px;
+            width: 75px;
+          }
         }
       }
 
@@ -84,7 +67,6 @@
         font-size: 14px;
         width: 100%;
         margin: 0 auto;
-        
         th{
           text-align: left;
           width:39%;
@@ -304,7 +286,7 @@
         font-size: 25px;
         color: $blue;
       }
-    } 
+    }
   }
 .fa-angle-right{
   color: #0099e8;
