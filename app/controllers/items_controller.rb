@@ -11,7 +11,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-
+    @item = Item.find(1)
+    @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
   end
 
   def new
@@ -53,6 +54,18 @@ class ItemsController < ApplicationController
       redirect_to root_path, notice: "編集が完了しました"
     else
       render :create
+    end
+  end
+
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    else
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+    respond_to do |format|
+      format.html
+      format.json
     end
   end
 
