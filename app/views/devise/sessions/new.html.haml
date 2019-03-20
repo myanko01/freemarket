@@ -2,17 +2,17 @@
 .gray-background
   .login
     .login__top
-      %p.login__acc アカウントをお持ちでない方はこちら
-      %p.login__signup
+      %p.login__top-acc アカウントをお持ちでない方はこちら
+      %p.login__top-signup
         = link_to before_sign_up_users_path do
           新規会員登録
     .login__form
       .login__box
         .login__item
-          = link_to 'facebookでログイン'
+          = link_to 'facebookでログイン', user_facebook_omniauth_authorize_path
       .login__box
         .login__items
-          = link_to 'Googleでログイン'
+          = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path
     .login__form--er
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .login__form--box
