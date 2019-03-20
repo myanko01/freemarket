@@ -10,11 +10,13 @@ body{
     margin: 40px auto 0;
     width: 1020px;
     height: 100%;
+    padding: 0 0 40px;
     .chapter-container{
       float: none;
       width: 700px;
       margin: 0 auto;
       background: $white;
+      float: right;
       &__head{
        font-size: 24px;
        padding: 8px 24px;
