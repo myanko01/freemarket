@@ -17,12 +17,8 @@ class ItemsController < ApplicationController
   end
 
   def new
-    # if user_signed_in?
     @item = Item.new
     @item.images.build
-    # else
-    #   redirect_to new_user_path
-    # end
   end
 
   def create
@@ -52,7 +48,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update(update_item_params)
-      redirect_to root_path, notice: "編集が完了しました"
+      redirect_to user_path
     else
       render :create
     end

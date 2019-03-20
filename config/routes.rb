@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'items#index'
   resources :items do
+    collection do
+      get :search
+    end
     resources :images, only: [:index, :new, :edit, :create, :destroy]
     member do
-      get :purchase
+      get :purchase, :detail
       post :done
     end
   end

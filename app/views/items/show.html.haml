@@ -35,11 +35,12 @@
                 = link_to root_path do
                   = @item.category.name
                 .large-category
-            %tr
-              %th ブランド
-              %td
-                = link_to "#" do
-                  = @item.brand.name
+            - if @item.brand.present?
+              %tr
+                %th ブランド
+                %td
+                  = link_to "#" do
+                    = @item.brand.name
             %tr
               %th 商品の状態
               %td
@@ -66,7 +67,7 @@
         %span.item__price__tax (税込)
         %span.item__price__shipping-fee 送料込み
         .item__btn
-          = link_to purchase_items_path do
+          = link_to purchase_item_path do
             購入画面に進む
       .item__description
         %p.item__description--inner
