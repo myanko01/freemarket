@@ -19,19 +19,20 @@ $(function() {
 $(document).on('turbolinks:load', function() {
     preview = $(".sell__upload__items__container");
     inputnum = 0
-    deletenum = 1
+    deletenum = 0
     number = 0
     function buildImageHTML(file){
             var html =
                     `<li class="sell__upload__item">
-                        <figure class="sell__upload__figure landscape">
-                            <img src="${ file.target.result }", width="114", height="100">
-                        </figure>
-                        <div class="sell__upload__button">
-                            <a id="delete-btn-${inputnum}">編集</a>
-                            <a href="" class="sell__upload__edit">削除</a>
-                        </div>
-                    </li>`
+                        <image_tag "image.first.image_url.url">
+                            <figure class="sell__upload__figure landscape">
+                                <img src="${ file.target.result }", width="114", height="100">
+                            </figure>
+                            <div class="sell__upload__button">
+                                <a id="delete-btn-${inputnum}">編集</a>
+                                <a href="" class="sell__upload__edit">削除</a>
+                            </div>
+                        </li>`
             preview.append(html);
                 $('.sell__upload__drop-box.have__item-'+ inputnum +'').css('display','none')
                     inputnum +=1;
