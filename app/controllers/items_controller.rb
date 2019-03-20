@@ -1,14 +1,14 @@
 class ItemsController < ApplicationController
   protect_from_forgery except: :done
   def index
-    @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
-    @mens_items = Item.includes(:images).where(category_id: 2).limit(4)
-    @baby_kids_items = Item.includes(:images).where(category_id: 3).limit(4)
-    @cosmetics_perfume_beauty_items = Item.includes(:images).where(category_id: 4).limit(4)
-    @chanel_items = Item.includes(:images).where(brand_id: 2).limit(4)
-    @louis_vuitton_items = Item.includes(:images).where(brand_id: 3).limit(4)
-    @supreme_items = Item.includes(:images).where(brand_id: 4).limit(4)
-    @nike_items = Item.includes(:images).where(brand_id: 5).limit(4)
+    @ladies_items = Item.includes(:images).where(category_id: 1).order(created_at: :desc).limit(4)
+    @mens_items = Item.includes(:images).where(category_id: 2).order(created_at: :desc).limit(4)
+    @baby_kids_items = Item.includes(:images).where(category_id: 3).order(created_at: :desc).limit(4)
+    @cosmetics_perfume_beauty_items = Item.includes(:images).where(category_id: 4).order(created_at: :desc).limit(4)
+    @chanel_items = Item.includes(:images).where(brand_id: 2).order(created_at: :desc).limit(4)
+    @louis_vuitton_items = Item.includes(:images).where(brand_id: 3).order(created_at: :desc).limit(4)
+    @supreme_items = Item.includes(:images).where(brand_id: 4).order(created_at: :desc).limit(4)
+    @nike_items = Item.includes(:images).where(brand_id: 5).order(created_at: :desc).limit(4)
   end
 
   def show
@@ -86,9 +86,9 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+    params.require(:item).permit(:name, :price, :detail, :category_id, :subcategory_id, :subsubcategory, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: current_user.id)
   end
   def update_item_params
-    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:image_url, :created_at, :updated_at, :_destroy, :id]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+    params.require(:item).permit(:name, :price, :detail, :category_id, :subcategory_id, :subsubcategory, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:image_url, :created_at, :updated_at, :_destroy, :id]).merge(user_id: current_user.id)
   end
 end
