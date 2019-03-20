@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
   // Sカテゴリーのselectを追加するHTML
   function appendSselect() {
     var html =  
-    `<select name="item[subsubcategory_id]" id="s_category">
+    `<select name="item[subsubcategory]" id="s_category">
         <option value>---</option>
     </select>
     <i class="fa fa-angle-down"><i>`
