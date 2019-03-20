@@ -3,12 +3,12 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
-  
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'items#index'
   resources :items do
     resources :images, only: [:index, :new, :edit, :create, :destroy]
-    collection do
+    member do
       get :purchase
       post :done
     end
