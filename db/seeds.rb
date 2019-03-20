@@ -5,34 +5,32 @@ Brand.create(name: "Supreme", created_at: "1900-01-01", updated_at: "2000-01-01"
 Brand.create(name: "Nike", created_at: "1900-01-01", updated_at: "2000-01-01")
 User.create(email: "test@gmail.com", password: "testtest", reset_password_token: "test2", reset_password_sent_at: "2019-01-01", remember_created_at: "2019-01-01", users: "test", created_at: "2019-01-01", updated_at: "2019-01-01", last_name: "Tanaka", last_name_kana: "Tanaka", first_name: "Tarou", first_name_kana: "Tarou", phone_number: 00000000000 , nickname: "Tarou", birth_year_id: 1900, birth_month: 1 , birth_day: 1)
 
-c1 = Category.create(name: "ladies", created_at: "2019-01-01", updated_at: "2019-01-01")
-tops = c1.children.create(name: 'tops')
-['t-shirt', 'shirt', 'camisole', 'Tank top', 'knit', 'Parker', 'trainer', 'other'].each do |ss|
-  skirt.children.create(name: ss)
-end
-pants = c1.children.create(name: 'pants')
-['long', 'short', 'kakkoii'].each do |ss|
-  zubon.children.create(name: ss)
-end
-skirt = c1.children.create(name: 'skirt')
-['koshi', 'ude', 'mezamashi'].each do |ss|
-  zubon.children.create(name: ss)
-end
-accessory = c1.children.create(name: 'accessory')
-['koshi', 'ude', 'mezamashi'].each do |ss|
-  zubon.children.create(name: ss)
-end
-other = c1.children.create(name: 'other')
-['koshi', 'ude', 'mezamashi'].each do |ss|
-  zubon.children.create(name: ss)
-end
+Category.create(name: "---", created_at: "2019-01-01", updated_at: "2019-01-01")
+c1 = Category.create(name: "レディース", created_at: "2019-01-01", updated_at: "2019-01-01")
+tops = c1.children.create(name: 'トップス')
+pants = c1.children.create(name: 'パンツ')
+skirt = c1.children.create(name: 'スカート')
+accessory = c1.children.create(name: 'アクセサリー')
+other = c1.children.create(name: 'その他')
 
+tshirt = tops.children.create(name: 'Tシャツ')
+poloshirt = tops.children.create(name: 'ポロシャツ')
+jersey = tops.children.create(name: 'ジャージ')
 
-c2 = Category.create(name: "mens", created_at: "2019-01-01", updated_at: "2019-01-01")
-c3 = Category.create(name: "babyKids", created_at: "2019-01-01", updated_at: "2019-01-01")
-c4 = Category.create(name: "cosmeticsPerfumeBeauty", created_at: "2019-01-01", updated_at: "2019-01-01")
+ring = accessory.children.create(name: 'リング')
+earrings = accessory.children.create(name: 'イヤリング')
+piercing = accessory.children.create(name: 'ピアス')
+grand_other = accessory.children.create(name: 'その他')
 
-
+Category.create(name: "メンズ", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "インテリア・住まい・小物", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "本・ゲーム・音楽", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "家電・スマホ・カメラ", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "スポーツ・レジャー", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "ベビー・キッズ", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "コスメ・香水・美容", created_at: "2019-01-01", updated_at: "2019-01-01")
+Category.create(name: "その他", created_at: "2019-01-01", updated_at: "2019-01-01")
+Item.create(name: "ladies1",  price: 1000,detail: "test", user_id: 1, category_id: 1, subcategory_id: 0, subsubcategory: 0, brand_id: 1, created_at: "2019-01-01", updated_at: "2019-01-01")
 
 Item.create(name: "ladies1",  price: 1000,detail: "test", user_id: 1, category_id: 1, subcategory_id: 0, subsubcategory: 0, brand_id: 1, created_at: "2019-01-01", updated_at: "2019-01-01")
 Item.create(name: "ladies2", price: 1000,detail: "test", user_id: 1, category_id: 1, subcategory_id: 0, subsubcategory: 0, brand_id: 1, created_at: "2019-01-01", updated_at: "2019-01-01")
@@ -64,7 +62,7 @@ Item.create(name: "Supreme", price: 1000,detail: "test", user_id: 1, category_id
 Item.create(name: "Supreme", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubcategory: 0, brand_id: 4, created_at: "2019-01-01", updated_at: "2019-01-01")
 Item.create(name: "Nike", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubcategory: 0, brand_id: 5, created_at: "2019-01-01", updated_at: "2019-01-01")
 Item.create(name: "Nike", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubcategory: 0, brand_id: 5, created_at: "2019-01-01", updated_at: "2019-01-01")
-Item.create(name: "Nike", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubc三位５４９５００４５９９４t５８ategory: 0, brand_id: 5, created_at: "2019-01-01", updated_at: "2019-01-01")
+Item.create(name: "Nike", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubcategory: 0, brand_id: 5, created_at: "2019-01-01", updated_at: "2019-01-01")
 Item.create(name: "Nike", price: 1000,detail: "test", user_id: 1, category_id: 2, subcategory_id: 0, subsubcategory: 0, brand_id: 5, created_at: "2019-01-01", updated_at: "2019-01-01")
 Image.create(image_url: "ladies1", item_id: 1, created_at: "2019-01-01", updated_at: "2019-01-01")
 Image.create(image_url: "ladies2", item_id: 2, created_at: "2019-01-01", updated_at: "2019-01-01")

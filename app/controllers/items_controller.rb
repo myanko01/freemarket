@@ -23,8 +23,21 @@ class ItemsController < ApplicationController
     # end
   end
 
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    else
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def create
     @item = Item.new(item_params)
+    binding.pry
     if @item.save
       redirect_to root_path
     else
