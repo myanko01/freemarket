@@ -17,7 +17,6 @@
                 = fini.label :image_url, class:"upload-box" do
                   ドラッグアンドドロップまたはクリックしてファイルをアップロード
                   = fini.file_field :image_url, class: 'hidden'
-                  = image_tag "", height:"140", width:"140",class: 'item_image',alt:""
           .sell-content
             .form-group
               %label
@@ -36,7 +35,7 @@
                 カテゴリ
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :category_id, Category.all, :id, :name
+                = f.collection_select :category_id, Category.roots, :id, :name
                 = fa_icon 'angle-down'
               .form-group
                 商品の状態
@@ -59,7 +58,7 @@
                 発送元の地域
                 %span.form__require 必須
                 .select-wrap
-                = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+                = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: "---"}
                 = fa_icon 'angle-down'
               .form-group
                 発送までの日数
