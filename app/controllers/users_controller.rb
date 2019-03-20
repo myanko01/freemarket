@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def delete
-
+  end
 
   def before_sign_up
 

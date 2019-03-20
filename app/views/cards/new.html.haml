@@ -5,6 +5,6 @@
     %h2.chapter-container__head クレジットカード情報入力
     %form#add-card-form.chapter-container__inner{action: "/users/1/cards", method: "POST"}
       %script.payjp-button{type: "text/javascript", src: "https://checkout.pay.jp/", "data-key": "#{PAYJP_PUBLIC_KEY}"}
-  = render 'users/sidebar'
+  /= render 'users/sidebar'
 = render 'items/footer'
 = render 'items/footer-sell-btn'

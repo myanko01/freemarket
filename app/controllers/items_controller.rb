@@ -57,6 +57,7 @@ class ItemsController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
   def purchase
     @id = params[:id]
   end
@@ -69,6 +70,18 @@ class ItemsController < ApplicationController
       :currency => 'jpy',
       :customer => @card.customer_id
       )
+=======
+  def search
+    if params[:l_cat]
+      @m_cat = Category.find(params[:l_cat]).children
+    else
+      @s_cat = Category.find(params[:m_cat]).children
+    end
+    respond_to do |format|
+      format.html
+      format.json
+    end
+>>>>>>> tansioooooooo/master
   end
 
   private
