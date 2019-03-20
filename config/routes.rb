@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   root to: 'items#index'
   resources :items do
     resources :images, only: [:index, :new, :edit, :create, :destroy]
-    collection do
-      get :purchase, :search
+    member do
+      get :purchase
+      post :done
     end
   end
 

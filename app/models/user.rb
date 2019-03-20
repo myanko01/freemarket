@@ -15,4 +15,6 @@ class User < ApplicationRecord
       user.provider = auth.provider
     end
   end
+  has_many :cards
+
 end

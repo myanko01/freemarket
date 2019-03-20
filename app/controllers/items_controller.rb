@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  protect_from_forgery except: :done
   def index
     @ladies_items = Item.includes(:images).where(category_id: 1).limit(4)
     @mens_items = Item.includes(:images).where(category_id: 2).limit(4)
@@ -17,8 +18,8 @@ class ItemsController < ApplicationController
 
   def new
     # if user_signed_in?
-      @item = Item.new
-      @item.images.build
+    @item = Item.new
+    @item.images.build
     # else
     #   redirect_to new_user_path
     # end
@@ -48,13 +49,27 @@ class ItemsController < ApplicationController
     end
   end
 
-  def update 
+  def update
     @item = Item.find(params[:id])
     if @item.update(update_item_params)
       redirect_to root_path, notice: "編集が完了しました"
     else
       render :create
     end
+  end
+
+  def purchase
+    @id = params[:id]
+  end
+
+  def done
+    Payjp.api_key = PAYJP_SECRET_KEY
+    @card =Card.find_by(user_id: params[:id])
+    charge = Payjp::Charge.create(
+      :amount => 500,
+      :currency => 'jpy',
+      :customer => @card.customer_id
+      )
   end
 
   def search
@@ -70,10 +85,10 @@ class ItemsController < ApplicationController
   end
 
   private
-    def item_params
-      params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
-    end
-    def update_item_params
-      params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:image_url, :created_at, :updated_at, :_destroy, :id]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
-    end
+  def item_params
+    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:id, :image_url]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+  end
+  def update_item_params
+    params.require(:item).permit(:name, :price, :detail, :category_id, :prefecture_id, :condition_id, :shipping_date_id, :burden_id, images_attributes: [:image_url, :created_at, :updated_at, :_destroy, :id]).merge(user_id: 1, subcategory_id: 1, subsubcategory: 1)
+  end
 end
