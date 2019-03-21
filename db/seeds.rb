@@ -101,4 +101,3 @@ Image.create(image_url: open("./app/assets/images/supreme4.jpg"), item_id: 28, c
 Image.create(image_url: open("./app/assets/images/nike1.jpg"), item_id: 29, created_at: "2019-01-01", updated_at: "2019-01-01")
 Image.create(image_url: open("./app/assets/images/nike2.jpg"), item_id: 30, created_at: "2019-01-01", updated_at: "2019-01-01")
 Image.create(image_url: open("./app/assets/images/nike3.jpg"), item_id: 31, created_at: "2019-01-01", updated_at: "2019-01-01")
-Image.create(image_url: open("./app/assets/images/nike4.jpg"), item_id: 32, created_at: "2019-01-01", updated_at: "2019-01-01")
