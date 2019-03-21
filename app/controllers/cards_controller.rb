@@ -10,7 +10,6 @@ class CardsController < ApplicationController
   end
 
   def new
-    @id = params[:id]
   end
 
   def create
