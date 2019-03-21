@@ -8,6 +8,14 @@ class UsersController < ApplicationController
 
   end
 
+  def identification
+    
+  end
+
+  def profile
+
+  end
+
   def logout
 
   end
