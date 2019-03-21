@@ -71,8 +71,7 @@
                 .popup-inner.clearfix
                     .popup-inner-btn-l
                         = link_to "キャンセル"
-                    = link_to root_path, method: :delete, class: ".popup-inner-btn-r" do
-                        削除
+                    = link_to  "削除", "/items/#{@item.id}", method: "delete", class: ".popup-inner-btn-r"
                 #js-black-bg.black-background
                   
         .item-messages
