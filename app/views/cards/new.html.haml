@@ -75,7 +75,7 @@
         %p#primary-error.has-error-text
         %input{name: "after_save_callback", type: "hidden", value: ""}/
         %button#submit-button.btn-default.btn-red{type: "button"} 追加する
-    %form{action: "/users/1/cards", method: "POST"}
+    %form{action: "/users/#{params["user_id"]}/cards", method: "POST"}
       %script.payjp-button{type: "text/javascript", src: "https://checkout.pay.jp/", "data-key": "#{PAYJP_PUBLIC_KEY}", "data-text": "追加する", "data-submit-text": "追加する"}
   = render 'users/sidebar'
 = render 'items/footer'
