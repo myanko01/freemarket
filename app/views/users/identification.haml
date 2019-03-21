@@ -10,13 +10,13 @@
                         本人確認書類のアップロードについて ▶
                 .input-form__item
                     %label お名前
-                    %p 加藤尚人
+                    %p=current_user.last_name + current_user.first_name
                 .input-form__item
                     %label お名前（カナ）
-                    %p カトウナオト
+                    %p=current_user.last_name_kana + current_user.first_name_kana
                 .input-form__item
                     %label 生年月日
-                    %p 1997/1/15
+                    %p=current_user.birth_year_id.to_s + "/" + current_user.birth_month.to_s + "/" + current_user.birth_day.to_s
                 .input-form__item
                     %label 郵便番号
                     %span.input-form__icon 任意

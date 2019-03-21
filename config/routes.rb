@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :cards, only: [:index, :new, :create, :destroy]
     resources :addresses, only: [:new, :create, :edit, :update]
     collection do
-      get :before_sign_up, :logout
+      get :before_sign_up, :identification, :logout
     end
   end
 
